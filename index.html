@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Disco!!!</title>
-        <!-- Favicon -->
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
-        <!-- Web Manifest -->
-        <link rel="manifest" href="site.webmanifest">
-        <!-- Apple Touch Icon -->
-        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-        <!-- Additional PNG Icons -->
-        <link rel="icon" sizes="16x16" href="images/favicon-16x16.png">
-        <link rel="icon" sizes="32x32" href="images/favicon-32x32.png">
-        <!-- Stylesheet -->
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISCO!</title> 
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!-- Web Manifest -->
+    <link rel="manifest" href="site.webmanifest">
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <!-- Additional PNG Icons -->
+    <link rel="icon" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" sizes="32x32" href="images/favicon-32x32.png">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
 <body>
     <header>
         <h1>Chase Fagen's Travel Blog</h1>
@@ -31,22 +35,28 @@
 
     <div class="container">
         <div class="post">
-            <h2>Pre- Trip: Dallas August 18th 2024</h2>
+            <h2>Pre-Trip: Dallas August 18th 2024</h2>
             <img src="paris.jpg" alt="Eiffel Tower in Paris">
-            <p>Paris, the city of lights, is a beautiful blend of modernity and history. Walking down the Champs-Élysées, admiring the Eiffel Tower, and enjoying a croissant in a local café is the essence of Parisian life...</p>
+            <p>Paris, the city of lights, is a beautiful blend of modernity and history...</p>
         </div>
 
         <div class="post">
             <h2>Israel</h2>
             <img src="tokyo.jpg" alt="Shibuya Crossing in Tokyo">
-            <p>Tokyo is a vibrant city that never sleeps. From the bustling Shibuya Crossing to the peaceful temples, Tokyo offers a unique blend of tradition and technology...</p>
+            <p>Tokyo is a vibrant city that never sleeps...</p>
         </div>
 
         <!-- Add more posts as needed -->
+
+        <!-- Add the interactive map -->
+        <div id="map" style="height: 500px;"></div>
     </div>
 
     <footer>
         <p>&copy; 2024 Chase Fagen. All rights reserved.</p>
     </footer>
+
+    <!-- Your JavaScript code for the map -->
+    <script src="map.js"></script>
 </body>
 </html>
