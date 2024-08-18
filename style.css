@@ -1,0 +1,87 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    background-color: #444;
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Container for blog posts */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Individual blog post styling */
+.post {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.post h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.post img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.post p {
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+}
