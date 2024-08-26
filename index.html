@@ -1,9 +1,10 @@
+<!-- Home Page HTML -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DISCO!</title> 
+    <title>DISCO!</title>
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <!-- Web Manifest -->
@@ -22,34 +23,28 @@
 </head>
 <body>
     <header>
-        <h1>Chase Fagen's Travel Blog</h1>
+        <h1>Viva La Vagabond</h1>
         <p>A grain of sand on an infinite beach</p>
+        <!-- Language Translator -->
+        <div id="google_translate_element"></div>
     </header>
 
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="september-2024.html">September 2024</a>
+        <a href="#about">October 2024</a>
+        <a href="#blog">November 2024</a>
+        <a href="#contact">December 2024</a>
+        <!-- Dark Mode Toggle -->
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
     </nav>
 
     <div class="container">
         <div class="post">
-            <h2>Pre-Trip: Dallas August 18th 2024</h2>
-            <img src="paris.jpg" alt="Eiffel Tower in Paris">
-            <p>Paris, the city of lights, is a beautiful blend of modernity and history...</p>
+            <h2>Currently in Dallas, TX</h2>
+            <!-- Add the interactive map -->
+            <div id="map"></div>
         </div>
-
-        <div class="post">
-            <h2>Israel</h2>
-            <img src="tokyo.jpg" alt="Shibuya Crossing in Tokyo">
-            <p>Tokyo is a vibrant city that never sleeps...</p>
-        </div>
-
-        <!-- Add more posts as needed -->
-
-        <!-- Add the interactive map -->
-        <div id="map" style="height: 500px;"></div>
     </div>
 
     <footer>
@@ -58,5 +53,39 @@
 
     <!-- Your JavaScript code for the map -->
     <script src="map.js"></script>
+    <!-- Dark Mode Toggle Script -->
+    <script>
+        // Get the toggle button
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        // Check if dark mode was previously enabled
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+        }
+        // Toggle dark mode on button click
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            // Save the user's preference in localStorage
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('dark-mode', 'enabled');
+            } else {
+                localStorage.setItem('dark-mode', 'disabled');
+            }
+        });
+    </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
