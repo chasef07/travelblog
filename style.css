@@ -1,10 +1,60 @@
 /* Global Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
     background: linear-gradient(to right, #f8f9fa, #e9ecef);
     color: #333;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: linear-gradient(to right, #2c2c2c, #1e1e1e);
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background: #444;
+    border-bottom: 5px solid #333;
+}
+
+body.dark-mode nav {
+    background: #222;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode nav a {
+    color: #e0e0e0;
+}
+
+body.dark-mode nav a:hover {
+    color: #ff5722;
+}
+
+body.dark-mode .post {
+    background: #333;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid #444;
+}
+
+body.dark-mode .post h2 {
+    color: #ff5722;
+}
+
+body.dark-mode .post p {
+    color: #ccc;
+}
+
+body.dark-mode footer {
+    background: #222;
+    color: #e0e0e0;
 }
 
 /* Header Styling */
@@ -13,6 +63,7 @@ header {
     color: white;
     padding: 2rem;
     text-align: center;
+    position: relative; /* Added for positioning the translator widget */
     border-bottom: 5px solid #e64a19; /* Slightly darker orange border */
 }
 
@@ -24,6 +75,18 @@ header h1 {
 header p {
     font-size: 1.1rem;
     margin-top: 0.5rem;
+}
+
+/* Language Translator Widget */
+#google_translate_element {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+/* Dark Mode Toggle Button Position */
+#dark-mode-toggle {
+    margin-top: 1rem; /* Space between the translator widget and the button */
 }
 
 /* Navigation Styling */
@@ -44,12 +107,13 @@ nav a {
 }
 
 nav a:hover {
-    color: #ff5722; /* Change link color on hover */
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    color: #ff5722;
+    transform: scale(1.1);
 }
 
 /* Container for blog posts */
 .container {
+    flex: 1; /* Ensures the container expands to fill available space */
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
@@ -72,20 +136,38 @@ nav a:hover {
 
 .post h2 {
     margin-top: 0;
-    color: #ff5722; /* Match header color */
+    color: #ff5722;
 }
 
 .post img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-    border: 2px solid #e0e0e0; /* Light gray border */
+    border: 2px solid #e0e0e0;
 }
 
 .post p {
     line-height: 1.8;
     color: #666;
     font-size: 1.1rem;
+}
+
+/* Enhanced Map Styling */
+#map {
+    height: 50vh; /* Height as a percentage of viewport height */
+    width: 40vw; /* Width as a percentage of viewport width */
+    margin: 0 auto; /* Centered horizontally */
+    padding: 0;
+    box-sizing: border-box;
+    border: 2px solid #ddd; /* Light gray border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    background: linear-gradient(145deg, #e0e0e0, #f5f5f5); /* Subtle gradient background */
+}
+
+/* Hover effect for map */
+#map:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
 }
 
 /* Footer styling */
@@ -96,7 +178,7 @@ footer {
     padding: 1.5rem;
     position: relative;
     width: 100%;
-    margin-top: 2rem; /* Adjust margin if footer is not fixed */
+    margin-top: 2rem;
 }
 
 footer p {
@@ -119,4 +201,10 @@ footer p {
         padding: 1rem;
     }
 }
+
+
+
+
+
+
 

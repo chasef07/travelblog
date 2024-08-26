@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISCO DISCO!</title>
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!-- Web Manifest -->
+    <link rel="manifest" href="site.webmanifest">
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <!-- Additional PNG Icons -->
+    <link rel="icon" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" sizes="32x32" href="images/favicon-32x32.png">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Viva La Vagabond</h1>
+        <p>A grain of sand on an infinite beach</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="september-2024.html">September 2024</a>
+        <a href="#about">October 2024</a>
+        <a href="#blog">November 2024</a>
+        <a href="#contact">December 2024</a>
+        <!-- Dark Mode Toggle -->
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    </nav>
+
+    <div class="container">
+        <div class="post">
+            <h2>Pre-Trip: Dallas August 18th 2024</h2>
+            <img src="paris.jpg" alt="Eiffel Tower in Paris">
+            <p>I told my manager I was resigning on Monday. I was scheduled to have my 1-1 Thursday, then postponed to Friday, then postponed to Monday. It was supposed to be at 1530 but when I arrived to the office she asked if we can do the 1-1 right now. I said sure because I was ready to go. I was inevitably a little nervous, my heart racing as I am about to  solidify a huge life decision and change the course. My manager and I first start talking about my tasks and I am watching us talk from a bird’s eye view thinking how none of this will matter in the next 10 minutes. I am tactfully waiting for the right time to tell her. It becomes robotic, going through updates, no presence or emotion, just straight tasks. I decide to soften my manager up in preparation and ask her about her weekend. Immediately her demeanor changed. It is interesting how deep corporate people are in to acting. We were going through corporate tasks like robots and immediately when I probe or make a human connection outside of work she opens up. There is no human connection in the workplace, it is a dog eat dog world. She changes her demeanor and starts contemplating on her life, taking her out of her acting place in the workplace which has no existential consequences and taking her to the things that matter. Once she opens and softened up I say how I wanted to discuss my career goals since we did not discuss them in my mid year review last week. I then pause, for a solid five seconds, my heart beating and all my life’s work coalescing to this one moment. Even though I rehearsed this many times I still froze. With lack of anything better to say I simply state “ I am going to travel the world for the next year”. She was not surprised but just taking it in. She immediately was understanding and compassionate and really just wanted the best for me. It was sush a relief. Leading up to it people in my ear saying “what if they ask you to leave imedaitely” or “what if she is combative…”. She thought my idea was awesome and wants to follow along the blogs and vlogs.She understood how much I love to travel and I explained how this is the golidlocks zone for the time in my life to do it while I am young and single and have savings. I explained how I vlaue here as a friend and mentor. She even asked if considered a leave of absence. This was thoughtful but however defeats the whole purpose of letting go for my trip. I politely said thank you but said I am no tplanning on returning to Dallas. We talked as humans about life and relationships. She kind of expected this since she realized I was not as engaed the last six months. She realized this was “not enough” for me. She added that the SVP of all of BMS told her that I was going to be the first one to leave. He had this intuition based on my linkedin activity where I interact with my friend’s post which highlight this perspective of living to work and not working to live. I thought this was really cool honestly. At the end we shared an embrace and I gave her time to process everything.
+</p>
+        </div>
+
+        <div class="post">
+            <h2>Israel</h2>
+            <img src="tokyo.jpg" alt="Shibuya Crossing in Tokyo">
+            <p>Tokyo is a vibrant city that never sleeps...</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Chase Fagen. All rights reserved.</p>
+    </footer>
+
+    <!-- Dark Mode Toggle Script -->
+    <script>
+        // Get the toggle button
+        const toggleButton = document.getElementById('dark-mode-toggle');
+
+        // Check if dark mode was previously enabled
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+        }
+
+        // Toggle dark mode on button click
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+
+            // Save the user's preference in localStorage
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('dark-mode', 'enabled');
+            } else {
+                localStorage.setItem('dark-mode', 'disabled');
+            }
+        });
+    </script>
+</body>
+</html>
+
+

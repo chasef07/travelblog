@@ -1,20 +1,27 @@
-// Initialize the map
-var map = L.map('map').setView([51.505, -0.09], 2); // Default view
+// Ensure the DOM is fully loaded before executing the script
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize the map with a better initial view
+    var map = L.map('map').setView([31.0461, 34.8516], 2); // Centered on Israel with zoom level 6
 
-// Add a tile layer
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+    // Add a tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 18
+    }).addTo(map);
 
-// Add markers for your travel locations
-var locations = [
-    { lat: 48.8566, lng: 2.3522, title: 'Paris' },
-    { lat: 35.6895, lng: 139.6917, title: 'Tokyo' }
-    // Add more locations as needed
-];
+    // Add markers for your travel locations
+    var locations = [
+        { lat: 32.7767, lng: -96.7970, title: 'Dallas' }
+        // Add more locations as needed
+    ];
 
-locations.forEach(function(location) {
-    L.marker([location.lat, location.lng])
-        .addTo(map)
-        .bindPopup(location.title);
+    locations.forEach(function(location) {
+        L.marker([location.lat, location.lng])
+            .addTo(map)
+            .bindPopup(location.title);
+    });
 });
+
+
+
+
