@@ -20,14 +20,22 @@
     <header>
         <h1>Viva La Vagabond</h1>
         <p>A grain of sand on an infinite beach</p>
+        <!-- Language Translator -->
+        <div id="google_translate_element"></div>
     </header>
 
     <nav>
         <a href="index.html">Home</a>
-        <a href="september-2024.html">September 2024</a>
-        <a href="#about">October 2024</a>
-        <a href="#blog">November 2024</a>
-        <a href="#contact">December 2024</a>
+        <!-- Dropdown Menu for Dates -->
+        <div class="dropdown">
+            <button class="dropbtn">Travel Dates</button>
+            <div class="dropdown-content">
+                <a href="september-2024.html">September 2024</a>
+                <a href="#about">October 2024</a>
+                <a href="#blog">November 2024</a>
+                <a href="#contact">December 2024</a>
+            </div>
+        </div>
         <!-- Dark Mode Toggle -->
         <button id="dark-mode-toggle">Toggle Dark Mode</button>
     </nav>
@@ -73,7 +81,20 @@
             }
         });
     </script>
+
+    <!-- Google Translate Widget Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'es,he',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
+
 
 
