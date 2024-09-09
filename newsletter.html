@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISCO DISCO!</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Mailchimp Form Specific Styling */
+        #mc_embed_signup {
+            background: #ffffff; /* Matches the form’s container background */
+            border-radius: 10px; /* Rounded corners to match the post styling */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow to match other elements */
+            padding: 2rem; /* Consistent padding */
+            margin: 0 auto; /* Centering the form */
+            max-width: 600px; /* Matches the form width */
+        }
+
+        #mc_embed_signup h2 {
+            color: #ff5722; /* Vibrant orange for the heading */
+            margin-bottom: 1rem; /* Space below heading */
+        }
+
+        #mc_embed_signup .mc-field-group label {
+            color: #333; /* Text color for labels */
+        }
+
+        #mc_embed_signup input[type="email"],
+        #mc_embed_signup input[type="text"] {
+            border: 1px solid #ddd; /* Light gray border to match form fields */
+            border-radius: 5px; /* Rounded corners */
+            padding: 0.5rem; /* Consistent padding */
+            margin-bottom: 1rem; /* Space below input fields */
+            width: 100%; /* Full width input fields */
+            box-sizing: border-box; /* Ensures padding is included in width */
+        }
+
+        #mc_embed_signup input[type="submit"] {
+            background: #ff5722; /* Vibrant orange for submit button */
+            color: white;
+            border: none;
+            border-radius: 5px; /* Rounded corners */
+            padding: 0.75rem 1.5rem; /* Consistent button padding */
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s; /* Smooth background transition */
+        }
+
+        #mc_embed_signup input[type="submit"]:hover {
+            background: #e64a19; /* Darker orange on hover */
+        }
+
+        #mc_embed_signup .refferal_badge {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Viva La Vagabond</h1>
+        <p>A grain of sand on an infinite beach</p>
+        <div id="google_translate_element"></div>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Travel Dates</button>
+            <div class="dropdown-content">
+                <a href="september-2024.html">September 2024</a>
+                <a href="#about">October 2024</a>
+                <a href="#blog">November 2024</a>
+                <a href="#contact">December 2024</a>
+            </div>
+        </div>
+        <a href="packing-checklist.html">Packing Checklist</a>
+        <a href="newsletter.html">Newsletter</a>
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    </nav>
+
+    <main>
+        <div id="mailchimp-form-container" style="display: block;">
+            <!-- Mailchimp Form Content -->
+            <div id="mc_embed_signup">
+                <!-- The Mailchimp form will be dynamically inserted here -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Chase Fagen. All rights reserved.</p>
+    </footer>
+
+        <!-- JavaScript for Lazy Loading and Dark Mode -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const container = document.getElementById('mailchimp-form-container');
+                const toggleButton = document.getElementById('dark-mode-toggle');
+                const body = document.body;
+                
+                // Lazy-load Mailchimp form
+                setTimeout(() => {
+                    container.innerHTML = `
+                        <div id="mc_embed_signup">
+                            <form action="https://github.us8.list-manage.com/subscribe/post?u=faf543e99df0a016ae02c145f&amp;id=ad88c66e4d&amp;f_id=00ec2be3f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                                <div id="mc_embed_signup_scroll">
+                                    <h2>Join the Disco Revolution</h2>
+                                    <div class="mc-field-group">
+                                        <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                                        <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="">
+                                    </div>
+                                    <div class="mc-field-group">
+                                        <label for="mce-FNAME">First Name </label>
+                                        <input type="text" name="FNAME" class="text" id="mce-FNAME" value="">
+                                    </div>
+                                    <div class="mc-field-group">
+                                        <label for="mce-LNAME">Last Name </label>
+                                        <input type="text" name="LNAME" class="text" id="mce-LNAME" value="">
+                                    </div>
+                                    <div id="mce-responses" class="clear foot">
+                                        <div class="response" id="mce-error-response" style="display: none;"></div>
+                                        <div class="response" id="mce-success-response" style="display: none;"></div>
+                                    </div>
+                                    <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                                        <input type="text" name="b_faf543e99df0a016ae02c145f_ad88c66e4d" tabindex="-1" value="">
+                                    </div>
+                                    <div class="optionalParent">
+                                        <div class="clear foot">
+                                            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    `;
+                    // Load Mailchimp script
+                    const script = document.createElement('script');
+                    script.src = "//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js";
+                    script.async = true;
+                    document.body.appendChild(script);
+                    
+                    const inlineScript = document.createElement('script');
+                    inlineScript.innerHTML = `
+                        (function($) {
+                            window.fnames = new Array();
+                            window.ftypes = new Array();
+                            fnames[0] = 'EMAIL'; ftypes[0] = 'email';
+                            fnames[1] = 'FNAME'; ftypes[1] = 'text';
+                            fnames[2] = 'LNAME'; ftypes[2] = 'text';
+                        }(jQuery));
+                        var $mcj = jQuery.noConflict(true);
+                    `;
+                    document.body.appendChild(inlineScript);
+                    
+                    // Show the container after the form is loaded
+                    container.style.display = 'block';
+                }, 1000); // Delay of 1 second before loading the form
+    
+                // Dark Mode Toggle
+                toggleButton.addEventListener('click', () => {
+                    body.classList.toggle('dark-mode');
+                    // Save preference in localStorage
+                    if (body.classList.contains('dark-mode')) {
+                        localStorage.setItem('dark-mode', 'enabled');
+                    } else {
+                        localStorage.setItem('dark-mode', 'disabled');
+                    }
+                });
+    
+                // Apply saved preference on page load
+                if (localStorage.getItem('dark-mode') === 'enabled') {
+                    body.classList.add('dark-mode');
+                }
+            });
+        </script>
+    
+        <!-- Google Translate Widget Script -->
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'en',
+                    includedLanguages: 'es,he',
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                }, 'google_translate_element');
+            }
+        </script>
+        <script async src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </body>
+    </html>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  

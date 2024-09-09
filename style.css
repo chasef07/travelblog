@@ -9,6 +9,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
+    min-height: 100vh; /* Ensures full height layout */
     margin: 0;
     padding: 0;
     background: linear-gradient(to right, #f8f9fa, #e9ecef);
@@ -105,6 +106,54 @@ nav a:hover {
     transform: scale(1.1);
 }
 
+/* Dropdown Menu Styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 10; /* Ensure the dropdown is above other content */
+}
+
+.dropbtn {
+    background-color: #333;
+    color: white;
+    padding: 10px 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.dropbtn:hover {
+    background-color: #444;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0; /* Aligns dropdown under the button */
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10; /* Ensure dropdown items are above other elements */
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #ff5722;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 /* Container for blog posts */
 .container {
     flex: 1; /* Ensures the container expands to fill available space */
@@ -167,9 +216,6 @@ nav a:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
 }
 
-
-
-
 /* Footer styling */
 footer {
     background: #333;
@@ -178,8 +224,66 @@ footer {
     padding: 1.5rem;
     position: relative;
     width: 100%;
-    margin-top: 2rem;
+    margin-top: auto; /* Keeps footer pinned to the bottom */
     box-sizing: border-box; /* Ensures padding is included within the width */
+}
+
+/* Mailchimp Form Specific Styling */
+#newsletter-page #mc_embed_signup {
+    background: #ffffff; /* Matches the form’s container background */
+    border-radius: 10px; /* Rounded corners to match the post styling */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow to match other elements */
+    padding: 2rem; /* Consistent padding */
+    margin: 0 auto; /* Centering the form */
+    max-width: 600px; /* Matches the form width */
+    position: relative; /* Ensures the logo is not clipped */
+}
+
+#newsletter-page #mc_embed_signup h2 {
+    color: #ff5722; /* Vibrant orange for the heading */
+    margin-bottom: 1rem; /* Space below heading */
+    font-size: 1.5rem; /* Adjust font size for better visibility */
+}
+
+#newsletter-page #mc_embed_signup .mc-field-group label {
+    color: #333; /* Text color for labels */
+}
+
+#newsletter-page #mc_embed_signup input[type="email"],
+#newsletter-page #mc_embed_signup input[type="text"] {
+    border: 1px solid #ddd; /* Light gray border to match form fields */
+    border-radius: 5px; /* Rounded corners */
+    padding: 0.5rem; /* Consistent padding */
+    margin-bottom: 1rem; /* Space below input fields */
+    width: 100%; /* Full width input fields */
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+#newsletter-page #mc_embed_signup input[type="submit"] {
+    background: #ff5722; /* Vibrant orange for submit button */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    padding: 0.75rem 1.5rem; /* Consistent button padding */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+#newsletter-page #mc_embed_signup input[type="submit"]:hover {
+    background: #e64a19; /* Darker orange on hover */
+}
+
+#newsletter-page #mc_embed_signup .refferal_badge {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Ensure the badge is visible */
+}
+
+#newsletter-page #mc_embed_signup .refferal_badge img {
+    max-width: 100%; /* Ensure the logo fits within the container */
+    height: auto; /* Maintain aspect ratio */
 }
 
 /* Responsive Design */
@@ -188,68 +292,25 @@ footer {
         display: block;
         margin: 0.5rem 0;
     }
-    
+
     .container {
         padding: 1rem;
         max-width: 100%; /* Prevent overflow */
     }
-    
+
     .post {
         padding: 1rem;
     }
-    
+
     #map {
-        width: 100%; /* Full width on small screens */
-        height: 40vh; /* Adjust height as needed */
+        width: 95vw; /* Expanded to nearly full width on smaller screens */
+        height: 40vh; /* Slightly reduced height for mobile */
     }
 }
 
-/* Dropdown Menu Styling */
-.dropdown {
-    position: relative;
-    display: inline-block;
-    z-index: 10; /* Ensure the dropdown is above other content */
-}
 
-.dropbtn {
-    background-color: #333;
-    color: white;
-    padding: 10px 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
 
-.dropbtn:hover {
-    background-color: #444;
-}
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 10; /* Ensure dropdown items are above other elements */
-}
-
-.dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    transition: background-color 0.3s;
-}
-
-.dropdown-content a:hover {
-    background-color: #ff5722;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
 
 
 
