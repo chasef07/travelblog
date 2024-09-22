@@ -1,4 +1,8 @@
 /* Global Styles */
+* {
+    box-sizing: border-box; /* Ensures padding is included within element width */
+}
+
 html, body {
     height: 100%;
     margin: 0;
@@ -10,11 +14,9 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Ensures full height layout */
-    margin: 0;
     padding: 0;
     background: linear-gradient(to right, #f8f9fa, #e9ecef);
     color: #333;
-    box-sizing: border-box; /* Ensures padding is included within element width */
 }
 
 /* Dark Mode Styles */
@@ -68,7 +70,6 @@ header {
     text-align: center;
     position: relative; /* Added for positioning the translator widget */
     border-bottom: 5px solid #e64a19; /* Slightly darker orange border */
-    box-sizing: border-box; /* Ensures padding is included within the width */
 }
 
 /* Language Translator Widget */
@@ -90,7 +91,6 @@ nav {
     padding: 1rem 0;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box; /* Ensures padding is included within the width */
 }
 
 nav a {
@@ -160,7 +160,6 @@ nav a:hover {
     max-width: 100%; /* Ensures container does not exceed viewport width */
     margin: 0 auto;
     padding: 2rem;
-    box-sizing: border-box; /* Ensures padding is included within the width */
 }
 
 /* Individual blog post styling */
@@ -171,7 +170,6 @@ nav a:hover {
     margin-bottom: 2rem;
     padding: 1.5rem;
     transition: box-shadow 0.3s, transform 0.3s;
-    box-sizing: border-box; /* Ensures padding is included within the width */
 }
 
 .post:hover {
@@ -184,18 +182,39 @@ nav a:hover {
     color: #ff5722;
 }
 
+/* Image Control */
 .post img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    border: 2px solid #e0e0e0;
+    max-width: 100px; /* Set the maximum width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounds the corners to match the post styling */
+    border: 2px solid #e0e0e0; /* Adds a subtle border around the image */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    object-fit: cover; /* Ensures images are cropped to fit their container */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.post p {
-    line-height: 1.8;
-    color: #666;
-    font-size: 1.1rem;
+.post img:hover {
+    transform: scale(1.05); /* Grows the image slightly on hover */
 }
+
+/* Packing Checklist Styling */
+.packing-checklist {
+    display: flex; /* Use flexbox for side-by-side layout */
+    justify-content: center; /* Center the images */
+    flex-wrap: wrap; /* Allow wrapping to the next line if needed */
+    gap: 1rem; /* Add space between the images */
+}
+
+.packing-checklist img {
+    max-width: 600px; /* Increase the width limit */
+    height: auto; /* Maintain aspect ratio */
+    display: inline-block; /* Ensure images are displayed side by side */
+    margin: 1rem; /* Center the image and add some margin */
+    border-radius: 8px; /* Optional: adds rounded corners to the image */
+    object-fit: cover; /* Ensure images are cropped to fit their container */
+}
+
 
 /* Map Styling */
 #map {
@@ -203,7 +222,6 @@ nav a:hover {
     width: 80vw; /* Default width for larger screens */
     margin: 0 auto; /* Centered horizontally */
     padding: 0;
-    box-sizing: border-box;
     border: 2px solid #ddd; /* Light gray border */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
     border-radius: 8px; /* Rounded corners */
@@ -225,7 +243,6 @@ footer {
     position: relative;
     width: 100%;
     margin-top: auto; /* Keeps footer pinned to the bottom */
-    box-sizing: border-box; /* Ensures padding is included within the width */
 }
 
 /* Mailchimp Form Specific Styling */
@@ -256,7 +273,6 @@ footer {
     padding: 0.5rem; /* Consistent padding */
     margin-bottom: 1rem; /* Space below input fields */
     width: 100%; /* Full width input fields */
-    box-sizing: border-box; /* Ensures padding is included in width */
 }
 
 #newsletter-page #mc_embed_signup input[type="submit"] {
@@ -264,59 +280,17 @@ footer {
     color: white;
     border: none;
     border-radius: 5px; /* Rounded corners */
-    padding: 0.75rem 1.5rem; /* Consistent button padding */
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s; /* Smooth background transition */
+    padding: 0.75rem 1.5rem; /* Corrected padding */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
 }
 
 #newsletter-page #mc_embed_signup input[type="submit"]:hover {
     background: #e64a19; /* Darker orange on hover */
 }
 
-#newsletter-page #mc_embed_signup .refferal_badge {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    width: 100%; /* Ensure the badge is visible */
+/* Accessibility Enhancements */
+:focus {
+    outline: 2px dashed #ff5722; /* Add outline for focused elements */
+    outline-offset: 2px; /* Space between outline and element */
 }
-
-#newsletter-page #mc_embed_signup .refferal_badge img {
-    max-width: 100%; /* Ensure the logo fits within the container */
-    height: auto; /* Maintain aspect ratio */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav a {
-        display: block;
-        margin: 0.5rem 0;
-    }
-
-    .container {
-        padding: 1rem;
-        max-width: 100%; /* Prevent overflow */
-    }
-
-    .post {
-        padding: 1rem;
-    }
-
-    #map {
-        width: 95vw; /* Expanded to nearly full width on smaller screens */
-        height: 40vh; /* Slightly reduced height for mobile */
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
