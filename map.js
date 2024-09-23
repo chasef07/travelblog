@@ -11,9 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add markers for your travel locations
     var locations = [
-        { lat: 32.7767, lng: -96.7970, title: 'Dallas' },
+        { lat: 32.7767, lng: -96.7970, title: 'Dallas, Texas' },
         { lat: 27.9759, lng: -82.8001, title: 'Clearwater, Florida' },
-        { lat: 40.7128, lng: -74.0060, title: 'New York, New York', highlight: true }
+        { lat: 40.7128, lng: -74.0060, title: 'New York, New York'},
+        { lat: 41.9028, lng: 12.4964, title: 'Rome, Italy' },
+        { lat: 31.7683, lng: 35.2137, title: 'Jerusalem, Israel' }
     ];
 
     // Create an array for the coordinates to connect
