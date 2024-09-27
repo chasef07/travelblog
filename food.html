@@ -4,31 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DISCO DISCO!</title>
-    <!-- Favicon -->
+    <!-- Favicon and icons -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <!-- Web Manifest -->
     <link rel="manifest" href="site.webmanifest">
-    <!-- Apple Touch Icon -->
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <!-- Additional PNG Icons -->
     <link rel="icon" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="icon" sizes="32x32" href="images/favicon-32x32.png">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add styles for food list */
+        .food-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .food-item img {
+            width: 150px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .food-description {
+            max-width: 600px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Viva La Vagabond</h1>
         <p>A grain of sand on an infinite beach</p>
-        <!-- Language Translator -->
         <div id="google_translate_element"></div>
     </header>
 
-
     <nav>
         <a href="index.html">Home</a>
-         <!-- Dropdown Menu for Dates -->
-         <div class="dropdown">
+        <div class="dropdown">
             <button class="dropbtn">Travel Dates</button>
             <div class="dropdown-content">
                 <a href="september-2024.html">September 2024</a>
@@ -36,14 +46,34 @@
                 <a href="#blog">November 2024</a>
                 <a href="#contact">December 2024</a>
             </div>
-        </div> 
-        <a href="food.html">Food</a>      
+        </div>
+        <a href="food.html">Food</a>
         <a href="packing-checklist.html">Packing Checklist</a>
         <a href="newsletter.html">Newsletter</a>
-        <!-- Dark Mode Toggle -->
         <button id="dark-mode-toggle">Toggle Dark Mode</button>
     </nav>
 
+    <!-- Israel Food Section -->
+    <section>
+        <h2>Israel</h2>
+        
+        <!-- Food Item 1 -->
+        <div class="food-item">
+            <img src="images/IMG_etrog.jpg" alt="Etrog">
+            <div class="food-description">
+                <strong>Etrogat</strong> - The flavor of Jerusalem. A juice mxiture of Etrog, khat, and grapefruit. Found at the Etrog Man store. Click <a href="https://adf.org.au/drug-facts/khat/" target="_blank">here</a> </li> to learn about the stimulatn drug khat used by Somali pirates.
+            </div>
+        </div>
+        
+        <!-- Food Item 2 -->
+        <div class="food-item">
+            <img src="images/IMG_shwarma.jpg" alt="Shawarma">
+            <div class="food-description">
+                <strong>Shawarma</strong> - Thinly sliced meat, typically lamb, chicken, turkey, beef, or a mixture of all. Served in pita or laffa bread. Traditionally topped with hummus, tahini, <a href="https://en.wikipedia.org/wiki/Amba_(condiment)" target="_blank">amba</a> </li>, schug, and/or harissa.
+            </div>
+        </div>
+
+    </section>
 
     <footer>
         <p>&copy; 2024 Chase Fagen. All rights reserved.</p>
@@ -51,19 +81,13 @@
 
     <!-- Dark Mode Toggle Script -->
     <script>
-        // Get the toggle button
         const toggleButton = document.getElementById('dark-mode-toggle');
-
-        // Check if dark mode was previously enabled
         if (localStorage.getItem('dark-mode') === 'enabled') {
             document.body.classList.add('dark-mode');
         }
 
-        // Toggle dark mode on button click
         toggleButton.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
-
-            // Save the user's preference in localStorage
             if (document.body.classList.contains('dark-mode')) {
                 localStorage.setItem('dark-mode', 'enabled');
             } else {
