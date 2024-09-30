@@ -110,7 +110,7 @@ nav a:hover {
 .dropdown {
     position: relative;
     display: inline-block;
-    z-index: 10; /* Ensure the dropdown is above other content */
+    z-index: 1000; /* Increase z-index to avoid any content overlap */
 }
 
 .dropbtn {
@@ -131,11 +131,12 @@ nav a:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    left: 0; /* Aligns dropdown under the button */
+    left: 0;
+    top: 100%; /* Ensure the dropdown appears just below the button */
     background-color: #333;
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 10; /* Ensure dropdown items are above other elements */
+    z-index: 1000; /* Ensure dropdown content is above other elements */
 }
 
 .dropdown-content a {
@@ -153,6 +154,7 @@ nav a:hover {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 
 /* Container for blog posts */
 .container {
@@ -288,6 +290,27 @@ footer {
 #newsletter-page #mc_embed_signup input[type="submit"]:hover {
     background: #e64a19; /* Darker orange on hover */
 }
+
+.countries-visited {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .flag-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .flag-item {
+    text-align: center;
+  }
+  
+  .flag-item img {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+  }
+  
 
 /* Accessibility Enhancements */
 :focus {
