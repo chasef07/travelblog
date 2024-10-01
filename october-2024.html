@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DISCO!</title>
+    <title>DISCO DISCO!</title>
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <!-- Web Manifest -->
@@ -15,10 +15,6 @@
     <link rel="icon" sizes="32x32" href="images/favicon-32x32.png">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
     <header>
@@ -27,6 +23,7 @@
         <!-- Language Translator -->
         <div id="google_translate_element"></div>
     </header>
+
 
     <nav>
         <a href="index.html">Home</a>
@@ -39,8 +36,8 @@
                 <a href="#blog">November 2024</a>
                 <a href="#contact">December 2024</a>
             </div>
-        </div>  
-        <a href="food.html">Food</a>
+        </div> 
+        <a href="food.html">Food</a>      
         <a href="packing-checklist.html">Packing Checklist</a>
         <a href="newsletter.html">Newsletter</a>
         <!-- Dark Mode Toggle -->
@@ -48,56 +45,37 @@
     </nav>
 
     <div class="container">
-        <!-- Number of countries visited and flags -->
-        <div class="countries-visited">
-            <h2>Number of countries visited: 2</h2>
-            <div class="flag-container">
-                <div class="flag-item">
-                    <img src="images/italy-flag.jpg" alt="Country 1 Flag">
-                    <p>Italy</p>
-                </div>
-                <div class="flag-item">
-                    <img src="images/israel-flag.jpg" alt="Country 2 Flag">
-                    <p>Israel</p>
-                </div>
-            </div>
-        </div>
 
         <div class="post">
-            <h2>Currently in Tel Aviv, Israel</h2>
-            <!-- Add the interactive map -->
-            <div id="map"></div>
+            <h2>Tuesday October 1st 2024, Tel Aviv, Israel</h2>
+        
+            <p> Stay Tuned </p>
+                
         </div>
+
+        
+
+        
     </div>
 
     <footer>
         <p>&copy; 2024 Chase Fagen. All rights reserved.</p>
     </footer>
 
-    <!-- Your JavaScript code for the map -->
-    <script src="map.js"></script>
-    <!-- Google Translate Script -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'es,he', // Add other language codes if needed
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <!-- Dark Mode Toggle Script -->
     <script>
         // Get the toggle button
         const toggleButton = document.getElementById('dark-mode-toggle');
+
         // Check if dark mode was previously enabled
         if (localStorage.getItem('dark-mode') === 'enabled') {
             document.body.classList.add('dark-mode');
         }
+
         // Toggle dark mode on button click
         toggleButton.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
+
             // Save the user's preference in localStorage
             if (document.body.classList.contains('dark-mode')) {
                 localStorage.setItem('dark-mode', 'enabled');
@@ -106,5 +84,20 @@
             }
         });
     </script>
+
+    <!-- Google Translate Widget Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'es,he',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
+
+
+
