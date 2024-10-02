@@ -310,6 +310,33 @@ footer {
     width: 50px; /* Adjust size as needed */
     height: auto;
   }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Aspect ratio of 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35%;
+    height: 35%;
+}
+
+.video-description {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333; /* You can change the color to match your theme */
+    text-align: center;
+}
+
+
+
+
+
   
 
 /* Accessibility Enhancements */
