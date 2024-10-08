@@ -1,19 +1,19 @@
 /* Global Styles */
 * {
-    box-sizing: border-box; /* Ensures padding is included within element width */
+    box-sizing: border-box;
 }
 
 html, body {
     height: 100%;
     margin: 0;
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    overflow-x: hidden;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensures full height layout */
+    min-height: 100vh;
     padding: 0;
     background: linear-gradient(to right, #f8f9fa, #e9ecef);
     color: #333;
@@ -31,7 +31,7 @@ body.dark-mode header {
 }
 
 body.dark-mode nav {
-    background: #222;
+    background: #002b36;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
@@ -40,7 +40,7 @@ body.dark-mode nav a {
 }
 
 body.dark-mode nav a:hover {
-    color: #ff5722;
+    color: #e67e22;
 }
 
 body.dark-mode .post {
@@ -50,7 +50,7 @@ body.dark-mode .post {
 }
 
 body.dark-mode .post h2 {
-    color: #ff5722;
+    color: #e67e22;
 }
 
 body.dark-mode .post p {
@@ -58,18 +58,18 @@ body.dark-mode .post p {
 }
 
 body.dark-mode footer {
-    background: #222;
+    background: #002b36;
     color: #e0e0e0;
 }
 
 /* Header Styling */
 header {
-    background: #ff5722; /* Vibrant orange */
+    background: #006064; /* Teal */
     color: white;
     padding: 2rem;
     text-align: center;
-    position: relative; /* Added for positioning the translator widget */
-    border-bottom: 5px solid #e64a19; /* Slightly darker orange border */
+    position: relative;
+    border-bottom: 5px solid #004d40; /* Darker teal */
 }
 
 /* Language Translator Widget */
@@ -81,12 +81,12 @@ header {
 
 /* Dark Mode Toggle Button Position */
 #dark-mode-toggle {
-    margin-top: 1rem; /* Space between the translator widget and the button */
+    margin-top: 1rem;
 }
 
 /* Navigation Styling */
 nav {
-    background: #333;
+    background: #004d40; /* Dark teal */
     color: white;
     padding: 1rem 0;
     text-align: center;
@@ -102,7 +102,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ff5722;
+    color: #ff5722; /* Bright orange accent */
     transform: scale(1.1);
 }
 
@@ -110,11 +110,11 @@ nav a:hover {
 .dropdown {
     position: relative;
     display: inline-block;
-    z-index: 1000; /* Increase z-index to avoid any content overlap */
+    z-index: 1000;
 }
 
 .dropbtn {
-    background-color: #333;
+    background-color: #004d40;
     color: white;
     padding: 10px 16px;
     font-size: 16px;
@@ -125,18 +125,17 @@ nav a:hover {
 }
 
 .dropbtn:hover {
-    background-color: #444;
+    background-color: #006064;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
     left: 0;
-    top: 100%; /* Ensure the dropdown appears just below the button */
-    background-color: #333;
+    top: 100%;
+    background-color: #004d40;
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* Ensure dropdown content is above other elements */
 }
 
 .dropdown-content a {
@@ -155,11 +154,10 @@ nav a:hover {
     display: block;
 }
 
-
 /* Container for blog posts */
 .container {
-    flex: 1; /* Ensures the container expands to fill available space */
-    max-width: 100%; /* Ensures container does not exceed viewport width */
+    flex: 1;
+    max-width: 100%;
     margin: 0 auto;
     padding: 2rem;
 }
@@ -186,134 +184,134 @@ nav a:hover {
 
 /* Image Control */
 .post img {
-    max-width: 300px; /* Set the maximum width for images */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Rounds the corners to match the post styling */
-    border: 2px solid #e0e0e0; /* Adds a subtle border around the image */
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #e0e0e0;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    object-fit: cover; /* Ensures images are cropped to fit their container */
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
 .post img:hover {
-    transform: scale(1.05); /* Grows the image slightly on hover */
+    transform: scale(1.05);
 }
 
 /* Packing Checklist Styling */
 .packing-checklist {
-    display: flex; /* Use flexbox for side-by-side layout */
-    justify-content: center; /* Center the images */
-    flex-wrap: wrap; /* Allow wrapping to the next line if needed */
-    gap: 1rem; /* Add space between the images */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .packing-checklist img {
-    max-width: 600px; /* Increase the width limit */
-    height: auto; /* Maintain aspect ratio */
-    display: inline-block; /* Ensure images are displayed side by side */
-    margin: 1rem; /* Center the image and add some margin */
-    border-radius: 8px; /* Optional: adds rounded corners to the image */
-    object-fit: cover; /* Ensure images are cropped to fit their container */
+    max-width: 600px;
+    height: auto;
+    display: inline-block;
+    margin: 1rem;
+    border-radius: 8px;
+    object-fit: cover;
 }
-
 
 /* Map Styling */
 #map {
-    height: 50vh; /* Height as a percentage of viewport height */
-    width: 80vw; /* Default width for larger screens */
-    margin: 0 auto; /* Centered horizontally */
+    height: 50vh;
+    width: 80vw;
+    margin: 0 auto;
     padding: 0;
-    border: 2px solid #ddd; /* Light gray border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
-    border-radius: 8px; /* Rounded corners */
-    background: linear-gradient(145deg, #e0e0e0, #f5f5f5); /* Subtle gradient background */
-    z-index: 1; /* Lower z-index to ensure it stays behind the dropdown */
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background: linear-gradient(145deg, #e0e0e0, #f5f5f5);
+    z-index: 1;
 }
 
-/* Hover effect for map */
 #map:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer styling */
 footer {
-    background: #333;
+    background: #004d40;
     color: white;
     text-align: center;
     padding: 1.5rem;
     position: relative;
     width: 100%;
-    margin-top: auto; /* Keeps footer pinned to the bottom */
+    margin-top: auto;
 }
 
 /* Mailchimp Form Specific Styling */
 #newsletter-page #mc_embed_signup {
-    background: #ffffff; /* Matches the form’s container background */
-    border-radius: 10px; /* Rounded corners to match the post styling */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow to match other elements */
-    padding: 2rem; /* Consistent padding */
-    margin: 0 auto; /* Centering the form */
-    max-width: 600px; /* Matches the form width */
-    position: relative; /* Ensures the logo is not clipped */
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 600px;
+    position: relative;
 }
 
 #newsletter-page #mc_embed_signup h2 {
-    color: #ff5722; /* Vibrant orange for the heading */
-    margin-bottom: 1rem; /* Space below heading */
-    font-size: 1.5rem; /* Adjust font size for better visibility */
+    color: #ff5722;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
 }
 
 #newsletter-page #mc_embed_signup .mc-field-group label {
-    color: #333; /* Text color for labels */
+    color: #333;
 }
 
 #newsletter-page #mc_embed_signup input[type="email"],
 #newsletter-page #mc_embed_signup input[type="text"] {
-    border: 1px solid #ddd; /* Light gray border to match form fields */
-    border-radius: 5px; /* Rounded corners */
-    padding: 0.5rem; /* Consistent padding */
-    margin-bottom: 1rem; /* Space below input fields */
-    width: 100%; /* Full width input fields */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
 }
 
 #newsletter-page #mc_embed_signup input[type="submit"] {
-    background: #ff5722; /* Vibrant orange for submit button */
+    background: #ff5722;
     color: white;
     border: none;
-    border-radius: 5px; /* Rounded corners */
-    padding: 0.75rem 1.5rem; /* Corrected padding */
-    cursor: pointer; /* Change cursor on hover */
-    transition: background-color 0.3s; /* Smooth transition for background color */
+    border-radius: 5px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 #newsletter-page #mc_embed_signup input[type="submit"]:hover {
-    background: #e64a19; /* Darker orange on hover */
+    background: #e64a19;
 }
 
+/* Countries visited section */
 .countries-visited {
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  .flag-container {
+}
+
+.flag-container {
     display: flex;
     justify-content: center;
     gap: 20px;
-  }
-  
-  .flag-item {
-    text-align: center;
-  }
-  
-  .flag-item img {
-    width: 50px; /* Adjust size as needed */
-    height: auto;
-  }
+}
 
-  .video-container {
+.flag-item {
+    text-align: center;
+}
+
+.flag-item img {
+    width: 50px;
+    height: auto;
+}
+
+/* Video container */
+.video-container {
     position: relative;
-    padding-bottom: 56.25%; /* Aspect ratio of 16:9 */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
 }
@@ -329,18 +327,14 @@ footer {
 .video-description {
     margin-top: 10px;
     font-size: 16px;
-    color: #333; /* You can change the color to match your theme */
+    color: #333;
     text-align: center;
 }
 
-
-
-
-
-  
-
 /* Accessibility Enhancements */
 :focus {
-    outline: 2px dashed #ff5722; /* Add outline for focused elements */
-    outline-offset: 2px; /* Space between outline and element */
+    outline: 2px dashed #ff5722;
+    outline-offset: 2px;
 }
+
+
