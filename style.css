@@ -343,17 +343,28 @@ footer {
 .flag-container {
     display: flex;
     justify-content: center;
+    align-items: flex-start; /* Align flags to the top */
     gap: 20px;
 }
 
 .flag-item {
-    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center both image and text */
+    text-align: center; /* Center the country name */
 }
 
 .flag-item img {
-    width: 50px;
-    height: auto;
+    width: 50px; /* Set a uniform width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 8px; /* Add some space between the flag and text */
 }
+
+.flag-item p {
+    margin: 0; /* Remove any default margin */
+    font-size: 14px; /* Adjust text size if necessary */
+}
+
 
 /* Video container */
 .video-container {
