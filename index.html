@@ -28,11 +28,59 @@
         <div id="google_translate_element"></div>
     </header>
 
+
+    
+
+<!-- Stock Ticker Section -->
+<section id="stock-ticker">
+    <h2>Live Stock Market Updates</h2>
+    <!-- TradingView stock ticker widget -->
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js">
+    {
+        "symbols": [
+            {
+                "description": "Bloom Energy",
+                "proName": "NYSE:BE"
+            },
+            {
+                "description": "Ethereum",
+                "proName": "CRYPTOCAP:ETHUSD"
+            },
+            {
+                "description": "Cava",
+                "proName": "NYSE:CAVA"
+            },
+            {
+                "description": "Nvidia",
+                "proName": "NASDAQ:NVDA"
+            },
+            {
+                "description": "Mobileye",
+                "proName": "NASDAQ:MBLY"
+            },
+            {
+                "description": "Tesla",
+                "proName": "NASDAQ:TSLA"
+            }
+        ],
+        "colorTheme": "light",
+        "isTransparent": false,
+        "displayMode": "adaptive",
+        "locale": "en"
+    }
+    </script>
+</section>
+
+
+
+
+
+
     <nav>
         <a href="index.html">Home</a>
          <!-- Dropdown Menu for Dates -->
          <div class="dropdown">
-            <button class="dropbtn">Travel Dates</button>
+            <button class="dropbtn">Blogs</button>
             <div class="dropdown-content">
                 <a href="september-2024.html">September 2024</a>
                 <a href="october-2024.html">October 2024</a>
@@ -48,21 +96,19 @@
         <button id="dark-mode-toggle">Toggle Dark Mode</button>
     </nav>
 
+
+
     <div class="container">
         <!-- Number of countries visited and flags -->
         <div class="countries-visited">
-            <h2>Number of countries visited: 3</h2>
+            <h2>Number of countries visited: 2</h2>
             <div class="flag-container">
                 <div class="flag-item">
-                    <img src="images/italy-flag.jpg" alt="Country 1 Flag">
-                    <p>Italy</p>
-                </div>
-                <div class="flag-item">
-                    <img src="images/israel-flag2.jpg" alt="Country 2 Flag">
+                    <img src="images/israel-flag2.jpg" alt="Country 1 Flag">
                     <p>Israel</p>
                 </div>
                 <div class="flag-item">
-                    <img src="images/Georgia.jpg" alt="Country 3 Flag">
+                    <img src="images/Georgia.jpg" alt="Country 2 Flag">
                     <p>Georgia</p>
                 </div>
             </div>
@@ -115,3 +161,4 @@
     </script>
 </body>
 </html>
+
