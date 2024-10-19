@@ -72,18 +72,6 @@ header {
     border-bottom: 5px solid #004d40; /* Darker teal */
 }
 
-/* Language Translator Widget */
-#google_translate_element {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-}
-
-/* Dark Mode Toggle Button Position */
-#dark-mode-toggle {
-    margin-top: 1rem;
-}
-
 /* Navigation Styling */
 nav {
     background: #004d40; /* Dark teal */
