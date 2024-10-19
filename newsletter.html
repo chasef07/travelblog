@@ -71,7 +71,7 @@
     <header>
         <h1>Chase's Travelmania</h1>
         <p>Focus. Strength. Humility. Vigor</p>
-        <div id="google_translate_element"></div>
+
     </header>
 
     <nav>
@@ -89,7 +89,7 @@
         <a href="vlogs.html">Vlogs</a>
         <a href="packing-checklist.html">Packing Checklist</a>
         <a href="newsletter.html">Newsletter</a>
-        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+
     </nav>
 
     <main>
@@ -170,35 +170,7 @@
                     container.style.display = 'block';
                 }, 1000); // Delay of 1 second before loading the form
     
-                // Dark Mode Toggle
-                toggleButton.addEventListener('click', () => {
-                    body.classList.toggle('dark-mode');
-                    // Save preference in localStorage
-                    if (body.classList.contains('dark-mode')) {
-                        localStorage.setItem('dark-mode', 'enabled');
-                    } else {
-                        localStorage.setItem('dark-mode', 'disabled');
-                    }
-                });
-    
-                // Apply saved preference on page load
-                if (localStorage.getItem('dark-mode') === 'enabled') {
-                    body.classList.add('dark-mode');
-                }
-            });
-        </script>
-    
-        <!-- Google Translate Widget Script -->
-        <script type="text/javascript">
-            function googleTranslateElementInit() {
-                new google.translate.TranslateElement({
-                    pageLanguage: 'en',
-                    includedLanguages: 'es,he',
-                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-                }, 'google_translate_element');
-            }
-        </script>
-        <script async src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+   
     </body>
     </html>
     

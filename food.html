@@ -33,7 +33,6 @@
     <header>
         <h1>Chase's Travelmania</h1>
         <p>Focus. Strength. Humility. Vigor</p>
-        <div id="google_translate_element"></div>
     </header>
 
     <nav>
@@ -51,7 +50,6 @@
         <a href="vlogs.html">Vlogs</a>
         <a href="packing-checklist.html">Packing Checklist</a>
         <a href="newsletter.html">Newsletter</a>
-        <button id="dark-mode-toggle">Toggle Dark Mode</button>
     </nav>
 
 
@@ -143,33 +141,5 @@
         <p>&copy; 2024 Chase Fagen. All rights reserved.</p>
     </footer>
 
-    <!-- Dark Mode Toggle Script -->
-    <script>
-        const toggleButton = document.getElementById('dark-mode-toggle');
-        if (localStorage.getItem('dark-mode') === 'enabled') {
-            document.body.classList.add('dark-mode');
-        }
-
-        toggleButton.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            if (document.body.classList.contains('dark-mode')) {
-                localStorage.setItem('dark-mode', 'enabled');
-            } else {
-                localStorage.setItem('dark-mode', 'disabled');
-            }
-        });
-    </script>
-
-    <!-- Google Translate Widget Script -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'es,he',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-        }
-    </script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
