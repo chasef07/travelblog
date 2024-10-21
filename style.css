@@ -331,9 +331,10 @@ footer {
 .flag-container {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align flags to the top */
+    align-items: center; /* Align flags to the center vertically */
     gap: 20px;
 }
+
 
 .flag-item {
     display: flex;
