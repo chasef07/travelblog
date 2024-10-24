@@ -19,48 +19,6 @@ body {
     color: #333;
 }
 
-/* Dark Mode Styles */
-body.dark-mode {
-    background: linear-gradient(to right, #2c2c2c, #1e1e1e);
-    color: #e0e0e0;
-}
-
-body.dark-mode header {
-    background: #444;
-    border-bottom: 5px solid #333;
-}
-
-body.dark-mode nav {
-    background: #002b36;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-body.dark-mode nav a {
-    color: #e0e0e0;
-}
-
-body.dark-mode nav a:hover {
-    color: #e67e22;
-}
-
-body.dark-mode .post {
-    background: #333;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    border: 1px solid #444;
-}
-
-body.dark-mode .post h2 {
-    color: #e67e22;
-}
-
-body.dark-mode .post p {
-    color: #ccc;
-}
-
-body.dark-mode footer {
-    background: #002b36;
-    color: #e0e0e0;
-}
 
 /* Header Styling */
 header {
