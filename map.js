@@ -9,15 +9,17 @@ document.addEventListener('DOMContentLoaded', function() {
         maxZoom: 18
     }).addTo(map);
 
-    // Add markers for your travel locations
+// Add markers for your travel locations
 var locations = [
     { lat: 32.7767, lng: -96.7970, title: 'Dallas, Texas' },
     { lat: 27.9759, lng: -82.8001, title: 'Clearwater, Florida' },
     { lat: 40.7128, lng: -74.0060, title: 'New York, New York' },
     { lat: 41.9028, lng: 12.4964, title: 'Rome, Italy' },
     { lat: 31.7683, lng: 35.2137, title: 'Jerusalem, Israel' },
-    { lat: 41.7151, lng: 44.8271, title: 'Tbilisi, Georgia' } // Added Tbilisi, Georgia
+    { lat: 41.7151, lng: 44.8271, title: 'Tbilisi, Georgia' },
+    { lat: -1.286389, lng: 36.817223, title: 'Nairobi, Kenya' } // Added Nairobi, Kenya
 ];
+
 
 
     // Create an array for the coordinates to connect
