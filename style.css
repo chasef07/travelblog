@@ -23,7 +23,7 @@ body {
 header {
     background: #006064; /* Teal */
     color: white;
-    padding: 2rem;
+    padding: 1rem 2rem;
     text-align: center;
     position: relative;
     border-bottom: 5px solid #004d40; /* Darker teal */
@@ -33,19 +33,21 @@ header {
 nav {
     background: #004d40; /* Dark teal */
     color: white;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1000;
 }
 
 /* General Navigation Links Styling */
 nav a, .dropbtn {
     color: white;
     text-decoration: none;
-    margin: 0 1.2rem;
+    margin: 0 1rem;
     font-weight: normal;
     font-size: inherit;
-    padding: 0.3rem 0.5rem; /* Normal padding */
+    padding: 0.5rem 1rem;
     border-radius: 5px;
     transition: color 0.3s, background-color 0.3s, outline 0.3s;
 }
@@ -54,43 +56,35 @@ nav a, .dropbtn {
 nav a:hover, .dropbtn:hover {
     color: #ffffff;
     background-color: #ff5722;
-    outline: none; /* Remove outline for general links */
 }
 
 /* Specific Hover Effect for Blog Date Links */
 nav a.date-link:hover {
-    outline: 1px solid #ff5722; /* Smaller outline */
-    outline-offset: 1px; /* Adjusted offset for a tighter fit */
-    padding: 0.1rem 0.2rem; /* Reduced padding for compactness */
+    outline: 1px solid #ff5722;
+    outline-offset: 1px;
+    padding: 0.3rem 0.5rem;
 }
-
 
 /* Dropdown Menu Styling */
 .dropdown {
     position: relative;
     display: inline-block;
-    z-index: 1000;
 }
 
 .dropbtn {
     background-color: #004d40;
     color: white;
     padding: 10px 16px;
-    font-weight: inherit; /* Inherit font weight */
-    font-size: inherit; /* Inherit font size */
+    font-weight: inherit;
+    font-size: inherit;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.dropbtn:hover {
-    background-color: #006064;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    left: -20px;
+    left: 0;
     top: 100%;
     background-color: #004d40;
     min-width: 160px;
@@ -102,7 +96,6 @@ nav a.date-link:hover {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    font-weight: inherit; /* Match the parent font weight */
     transition: background-color 0.3s;
 }
 
@@ -160,9 +153,10 @@ nav a.date-link:hover {
 
 /* Mobile Optimizations */
 @media (max-width: 768px) {
-    .post img {
-        max-width: 100%;
-        height: auto;
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .container {
@@ -188,13 +182,9 @@ nav a.date-link:hover {
         height: 100%;
     }
 
-    nav {
-        padding: 0.5rem 0;
-    }
-
     nav a, .dropbtn {
-        margin: 0 0.1rem; /* Reduced spacing on mobile */
-        padding: 0.15rem 0.2rem; /* Smaller padding for mobile */
+        margin: 0 0.1rem;
+        padding: 0.3rem 0.6rem;
     }
 
     footer {
@@ -237,7 +227,6 @@ nav a.date-link:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     background: linear-gradient(145deg, #e0e0e0, #f5f5f5);
-    z-index: 1;
 }
 
 #map:hover {
@@ -263,7 +252,6 @@ footer {
     padding: 2rem;
     margin: 0 auto;
     max-width: 600px;
-    position: relative;
 }
 
 #newsletter-page #mc_embed_signup h2 {
@@ -308,33 +296,30 @@ footer {
 .flag-container {
     display: flex;
     justify-content: center;
-    align-items: center; /* Align flags to the center vertically */
-    flex-wrap: wrap; /* Allow flags to wrap onto new lines */
-    gap: 10px; /* Adjust spacing between flags */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .flag-item {
     display: flex;
-    flex-direction: column; /* Stack image and text vertically */
-    align-items: center; /* Center both image and text */
-    text-align: center; /* Center the country name */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .flag-item img {
     width: 50px;
-    height: 30px; /* Set a specific height for uniformity */
+    height: 30px;
     margin-bottom: 4px;
-    object-fit: cover; /* Ensures image fills the box without stretching */
+    object-fit: cover;
 }
 
 .flag-item p {
     margin: 0;
     font-size: 14px;
-    line-height: 1.2; /* Ensure consistent spacing for text */
+    line-height: 1.2;
 }
-
-
-
 
 /* Video container */
 .video-container {
@@ -359,6 +344,7 @@ footer {
     flex-wrap: wrap;
     margin-bottom: 2rem;
 }
+
 
 
 
