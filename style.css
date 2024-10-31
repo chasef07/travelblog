@@ -29,6 +29,12 @@ header {
     border-bottom: 5px solid #004d40; /* Darker teal */
 }
 
+@media (max-width: 768px) {
+    header {
+        padding: 1rem; /* Reduced padding on smaller screens */
+    }
+}
+
 /* Navigation Styling */
 nav {
     background: #004d40; /* Dark teal */
@@ -38,7 +44,6 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* General Navigation Links Styling */
 nav a, .dropbtn {
     color: white;
     text-decoration: none;
@@ -47,23 +52,14 @@ nav a, .dropbtn {
     font-size: inherit;
     padding: 0.3rem 0.5rem; /* Normal padding */
     border-radius: 5px;
-    transition: color 0.3s, background-color 0.3s, outline 0.3s;
+    transition: all 0.3s ease; /* Consistent transition */
 }
 
-/* Hover Effect for All Links */
 nav a:hover, .dropbtn:hover {
     color: #ffffff;
     background-color: #ff5722;
-    outline: none; /* Remove outline for general links */
+    outline: none;
 }
-
-/* Specific Hover Effect for Blog Date Links */
-nav a.date-link:hover {
-    outline: 1px solid #ff5722; /* Smaller outline */
-    outline-offset: 1px; /* Adjusted offset for a tighter fit */
-    padding: 0.1rem 0.2rem; /* Reduced padding for compactness */
-}
-
 
 /* Dropdown Menu Styling */
 .dropdown {
@@ -76,15 +72,20 @@ nav a.date-link:hover {
     background-color: #004d40;
     color: white;
     padding: 10px 16px;
-    font-weight: inherit; /* Inherit font weight */
-    font-size: inherit; /* Inherit font size */
+    font-weight: inherit;
+    font-size: inherit;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
 }
 
 .dropbtn:hover {
     background-color: #006064;
+    border-bottom: 2px solid #ff5722; /* Enhanced hover effect */
+}
+
+.dropbtn:focus {
+    outline: 2px solid #ff5722;
 }
 
 .dropdown-content {
@@ -92,9 +93,9 @@ nav a.date-link:hover {
     position: absolute;
     left: -16px;
     top: 100%;
-    background-color: #004d40;
+    background-color: #006064; /* Adjusted color for contrast */
     min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
 }
 
 .dropdown-content a {
@@ -102,7 +103,7 @@ nav a.date-link:hover {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    font-weight: inherit; /* Match the parent font weight */
+    font-weight: inherit;
     transition: background-color 0.3s;
 }
 
@@ -114,7 +115,28 @@ nav a.date-link:hover {
     display: block;
 }
 
-/* Container for blog posts */
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    nav a {
+        font-size: 0.9rem;
+        margin: 0 0.5rem;
+        padding: 0.4rem 0.5rem; /* Adjusted for smaller screens */
+    }
+
+    nav {
+        padding: 0.5rem 0;
+    }
+
+    .post h2 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+}
+
+/* Blog Post and General Content Styling */
 .container {
     flex: 1;
     max-width: 100%;
@@ -122,7 +144,6 @@ nav a.date-link:hover {
     padding: 2rem;
 }
 
-/* Individual blog post styling */
 .post {
     background: #ffffff;
     border-radius: 10px;
@@ -142,7 +163,6 @@ nav a.date-link:hover {
     color: #ff5722;
 }
 
-/* Image Control */
 .post img {
     max-width: 300px;
     height: auto;
@@ -156,53 +176,6 @@ nav a.date-link:hover {
 
 .post img:hover {
     transform: scale(1.05);
-}
-
-/* Mobile Optimizations */
-@media (max-width: 768px) {
-    .post img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .container {
-        padding: 1rem;
-    }
-
-    .post {
-        padding: 1rem;
-        width: 100%;
-    }
-
-    .packing-checklist {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .packing-checklist img {
-        max-width: 90%;
-    }
-
-    .video-container iframe {
-        width: 100%;
-        height: 100%;
-    }
-
-    nav {
-        padding: 0.5rem 0;
-    }
-
-    footer {
-        padding: 1rem;
-    }
-
-    body {
-        font-size: 16px;
-    }
-
-    .post h2 {
-        font-size: 1.5rem;
-    }
 }
 
 /* Packing Checklist Styling */
@@ -220,6 +193,17 @@ nav a.date-link:hover {
     margin: 1rem;
     border-radius: 8px;
     object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .packing-checklist {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .packing-checklist img {
+        max-width: 90%;
+    }
 }
 
 /* Map Styling */
@@ -248,6 +232,12 @@ footer {
     position: relative;
     width: 100%;
     margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 1rem;
+    }
 }
 
 /* Mailchimp Form Specific Styling */
@@ -294,7 +284,7 @@ footer {
     background: #e64a19;
 }
 
-/* Countries visited section */
+/* Countries Visited Section */
 .countries-visited {
     text-align: center;
     margin-bottom: 20px;
@@ -303,35 +293,32 @@ footer {
 .flag-container {
     display: flex;
     justify-content: center;
-    align-items: center; /* Align flags to the center vertically */
-    flex-wrap: wrap; /* Allow flags to wrap onto new lines */
-    gap: 10px; /* Adjust spacing between flags */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .flag-item {
     display: flex;
-    flex-direction: column; /* Stack image and text vertically */
-    align-items: center; /* Center both image and text */
-    text-align: center; /* Center the country name */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .flag-item img {
     width: 50px;
-    height: 30px; /* Set a specific height for uniformity */
+    height: 30px;
     margin-bottom: 4px;
-    object-fit: cover; /* Ensures image fills the box without stretching */
+    object-fit: cover;
 }
 
 .flag-item p {
     margin: 0;
     font-size: 14px;
-    line-height: 1.2; /* Ensure consistent spacing for text */
+    line-height: 1.2;
 }
 
-
-
-
-/* Video container */
+/* Video Container */
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -354,6 +341,7 @@ footer {
     flex-wrap: wrap;
     margin-bottom: 2rem;
 }
+
 
 
 
