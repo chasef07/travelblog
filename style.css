@@ -155,9 +155,15 @@ nav a.date-link:hover {
 @media (max-width: 768px) {
     nav {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        justify-content: space-around;
+        padding: 0.5rem 0;
     }
+
+    nav a, .dropbtn {
+        margin: 0 0.3rem; /* Slightly smaller spacing on mobile */
+        padding: 0.3rem 0.6rem; /* Reduced padding for mobile */
+    }
+
 
     .container {
         padding: 1rem;
@@ -180,11 +186,6 @@ nav a.date-link:hover {
     .video-container iframe {
         width: 100%;
         height: 100%;
-    }
-
-    nav a, .dropbtn {
-        margin: 0 0.1rem;
-        padding: 0.3rem 0.6rem;
     }
 
     footer {
