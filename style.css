@@ -192,6 +192,11 @@ nav a.date-link:hover {
         padding: 0.5rem 0;
     }
 
+    nav a, .dropbtn {
+        margin: 0 0.4rem; /* Reduced spacing on mobile */
+        padding: 0.15rem 0.2rem; /* Smaller padding for mobile */
+    }
+
     footer {
         padding: 1rem;
     }
