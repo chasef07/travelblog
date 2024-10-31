@@ -42,7 +42,7 @@ nav {
 nav a, .dropbtn {
     color: white;
     text-decoration: none;
-    margin: 0 1.5rem;
+    margin: 0 1.2rem;
     font-weight: normal;
     font-size: inherit;
     padding: 0.3rem 0.5rem; /* Normal padding */
@@ -63,10 +63,6 @@ nav a.date-link:hover {
     outline-offset: 1px; /* Adjusted offset for a tighter fit */
     padding: 0.1rem 0.2rem; /* Reduced padding for compactness */
 }
-
-
-
-
 
 
 /* Dropdown Menu Styling */
@@ -94,7 +90,7 @@ nav a.date-link:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    left: -16px;
+    left: -20px;
     top: 100%;
     background-color: #004d40;
     min-width: 160px;
