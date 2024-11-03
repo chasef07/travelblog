@@ -17,9 +17,11 @@ var locations = [
     { lat: 41.9028, lng: 12.4964, title: 'Rome, Italy' },
     { lat: 31.7683, lng: 35.2137, title: 'Jerusalem, Israel' },
     { lat: 41.7151, lng: 44.8271, title: 'Tbilisi, Georgia' },
-    { lat: 25.2048, lng: 55.2708, title: 'Dubai, UAE' }, // Added Dubai, UAE
-    { lat: -1.286389, lng: 36.817223, title: 'Nairobi, Kenya' } // Nairobi, Kenya
+    { lat: 25.2048, lng: 55.2708, title: 'Dubai, UAE' },
+    { lat: -1.286389, lng: 36.817223, title: 'Nairobi, Kenya' },
+    { lat: -3.3869, lng: 36.6829, title: 'Arusha, Tanzania' } // Added Arusha, Tanzania
 ];
+
 
 
 
