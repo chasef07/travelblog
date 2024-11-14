@@ -15,37 +15,37 @@ body {
     flex-direction: column;
     min-height: 100vh;
     padding: 0;
-    background: linear-gradient(to right, #2c2c2c, #333); /* Charcoal gradient */
-    color: #f0f0f0; /* Light text for contrast */
+    background: linear-gradient(to right, #ececec, #f5f5f5); /* Light grey gradient */
+    color: #333; /* Darker text for contrast */
 }
 
 /* Header Styling */
 header {
-    background: #d32f2f; /* Bold red */
+    background: #ff6b6b; /* Soft coral red */
     color: white;
     padding: 2rem;
     text-align: center;
     position: relative;
-    border-bottom: 5px solid #b71c1c; /* Darker red */
+    border-bottom: 5px solid #ff4f4f; /* Slightly darker coral */
 }
 
 @media (max-width: 768px) {
     header {
-        padding: 1rem; /* Reduced padding on smaller screens */
+        padding: 1rem;
     }
 }
 
 /* Navigation Styling */
 nav {
-    background: #212121; /* Dark charcoal */
-    color: white;
+    background: #f5f5f5; /* Light background */
+    color: #333;
     padding: 1rem 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav a, .dropbtn {
-    color: white;
+    color: #333;
     text-decoration: none;
     margin: 0 1.5rem;
     font-weight: normal;
@@ -57,7 +57,7 @@ nav a, .dropbtn {
 
 nav a:hover, .dropbtn:hover {
     color: white;
-    background-color: #c2185b; /* Dark pink/red hover */
+    background-color: #ff4081; /* Vivid pink */
     outline: none;
 }
 
@@ -69,8 +69,8 @@ nav a:hover, .dropbtn:hover {
 }
 
 .dropbtn {
-    background-color: #212121; /* Charcoal */
-    color: white;
+    background-color: #f5f5f5; /* Light */
+    color: #333;
     padding: 10px 16px;
     font-weight: inherit;
     font-size: inherit;
@@ -80,12 +80,12 @@ nav a:hover, .dropbtn:hover {
 }
 
 .dropbtn:hover {
-    background-color: #c2185b; /* Dark pink/red hover */
-    border-bottom: 2px solid #9c1c4c; /* Darker red */
+    background-color: #ff4081; /* Vivid pink */
+    border-bottom: 2px solid #ff2b6d; /* Slightly darker pink */
 }
 
 .dropbtn:focus {
-    outline: 2px solid #c2185b;
+    outline: 2px solid #ff4081;
 }
 
 .dropdown-content {
@@ -93,9 +93,9 @@ nav a:hover, .dropbtn:hover {
     position: absolute;
     left: -16px;
     top: 100%;
-    background-color: #d32f2f; /* Red */
+    background-color: #ff6b6b; /* Coral red */
     min-width: 160px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown-content a {
@@ -107,7 +107,7 @@ nav a:hover, .dropbtn:hover {
 }
 
 .dropdown-content a:hover {
-    background-color: #9c1c4c; /* Darker red hover */
+    background-color: #ff2b6d; /* Darker pink hover */
 }
 
 .dropdown:hover .dropdown-content {
@@ -144,29 +144,29 @@ nav a:hover, .dropbtn:hover {
 }
 
 .post {
-    background: #444; /* Darker background */
+    background: #f7f7f7; /* Light grey */
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     margin-bottom: 2rem;
     padding: 1.5rem;
     transition: box-shadow 0.3s, transform 0.3s;
 }
 
 .post:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     transform: translateY(-5px);
 }
 
 .post h2 {
     margin-top: 0;
-    color: #d32f2f; /* Red header */
+    color: #ff6b6b; /* Coral red header */
 }
 
 .post img {
     max-width: 300px;
     height: auto;
     border-radius: 10px;
-    border: 2px solid #555;
+    border: 2px solid #ddd;
     margin-top: 1rem;
     margin-bottom: 1rem;
     object-fit: cover;
@@ -211,21 +211,21 @@ nav a:hover, .dropbtn:hover {
     width: 80vw;
     margin: 0 auto;
     padding: 0;
-    border: 2px solid #555;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    background: linear-gradient(145deg, #666, #777); /* Charcoal effect */
+    background: linear-gradient(145deg, #e0e0e0, #f5f5f5); /* Soft light gradient */
     z-index: 1;
 }
 
 #map:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Footer Styling */
 footer {
-    background: #212121; /* Dark charcoal */
-    color: white;
+    background: #f5f5f5; /* Light grey */
+    color: #333;
     text-align: center;
     padding: 1.5rem;
     position: relative;
@@ -241,9 +241,9 @@ footer {
 
 /* Mailchimp Form Specific Styling */
 #newsletter-page #mc_embed_signup {
-    background: #333; /* Dark background */
+    background: #f7f7f7; /* Very light grey */
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     padding: 2rem;
     margin: 0 auto;
     max-width: 600px;
@@ -251,18 +251,18 @@ footer {
 }
 
 #newsletter-page #mc_embed_signup h2 {
-    color: #d32f2f; /* Red */
+    color: #ff6b6b; /* Coral red */
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
 
 #newsletter-page #mc_embed_signup .mc-field-group label {
-    color: #f0f0f0; /* Light text */
+    color: #333; /* Darker text */
 }
 
 #newsletter-page #mc_embed_signup input[type="email"],
 #newsletter-page #mc_embed_signup input[type="text"] {
-    border: 1px solid #444;
+    border: 1px solid #ddd;
     border-radius: 5px;
     padding: 0.5rem;
     margin-bottom: 1rem;
@@ -270,7 +270,7 @@ footer {
 }
 
 #newsletter-page #mc_embed_signup input[type="submit"] {
-    background: #c2185b; /* Dark pink/red */
+    background: #ff4081; /* Vivid pink */
     color: white;
     border: none;
     border-radius: 5px;
@@ -280,7 +280,7 @@ footer {
 }
 
 #newsletter-page #mc_embed_signup input[type="submit"]:hover {
-    background: #9c1c4c; /* Darker red */
+    background: #ff2b6d; /* Darker pink */
 }
 
 /* Countries Visited Section */
@@ -334,32 +334,53 @@ footer {
 }
 
 /* Styles for transportation and currency sections */
-    .transport-item {
-        margin-bottom: 20px;
-        }
-    .transport-description {
-            max-width: 600px;
-        }
-    .currency-conversion {
-        font-weight: bold;
-        margin-top: 10px;
-        color: #e0e0e0; /* Light color for better contrast */
-        }
+.transport-item {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: #fafafa; /* Slightly off-white */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
 
+.transport-item h3 {
+    color: #333;
+}
+
+.transport-item p {
+    color: #555;
+}
+
+      
 /* Add styles for food list */
-    .food-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-    .food-item img {
-            width: 150px;
-            height: auto;
-            margin-right: 20px;
-        }
-    .food-description {
-            max-width: 600px;
-        }       
+.food-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #fafafa; /* Lighter background for food items */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.food-item img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.food-item img:hover {
+    transform: scale(1.05);
+}
+
+.food-description {
+    max-width: 600px;
+    color: #333; /* Darker text for readability */
+    font-size: 1rem;
+    line-height: 1.5;
+}
 
 
 
