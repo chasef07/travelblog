@@ -19,8 +19,12 @@ var locations = [
     { lat: 41.7151, lng: 44.8271, title: 'Tbilisi, Georgia' },
     { lat: 25.2048, lng: 55.2708, title: 'Dubai, UAE' },
     { lat: -1.286389, lng: 36.817223, title: 'Nairobi, Kenya' },
-    { lat: -3.3869, lng: 36.6829, title: 'Arusha, Tanzania' } // Added Arusha, Tanzania
+    { lat: -3.3869, lng: 36.6829, title: 'Arusha, Tanzania' },
+    { lat: -4.2871, lng: 39.5944, title: 'Diani Beach, Kenya' },
+    { lat: -1.286389, lng: 36.817223, title: 'Nairobi, Kenya' },
+    { lat: -1.94995, lng: 30.05885, title: 'Kigali, Rwanda' } // Added Kigali, Rwanda
 ];
+
 
 
 

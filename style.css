@@ -317,6 +317,13 @@ footer {
     line-height: 1.2;
 }
 
+/* Specific style for Rwanda flag */
+.flag-item.flag-rwanda img {
+    width: 60px; /* Adjust width to maintain aspect ratio */
+    height: auto; /* Let the height adjust automatically */
+    object-fit: contain; /* Ensure the image fits well */
+}
+
 /* Video Container */
 .video-container {
     position: relative;
