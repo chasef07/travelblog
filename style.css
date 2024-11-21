@@ -48,7 +48,7 @@ nav a, .dropbtn {
     color: #333;
     text-decoration: none;
     margin: 0 1.5rem;
-    font-weight: normal;
+    font-weight: normal; /* Ensure normal weight */
     font-size: inherit;
     padding: 0.3rem 0.5rem;
     border-radius: 5px;
@@ -119,6 +119,7 @@ nav a:hover, .dropbtn:hover {
     nav a {
         font-size: 0.9rem;
         margin: 0 0.5rem;
+        font-weight: normal; /* Override if necessary */
         padding: 0.4rem 0.5rem;
     }
 
