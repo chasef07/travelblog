@@ -23,13 +23,9 @@ var locations = [
     { lat: -4.2871, lng: 39.5944, title: 'Diani Beach, Kenya' },
     { lat: -1.286389, lng: 36.817223, title: 'Nairobi, Kenya' },
     { lat: -1.94995, lng: 30.05885, title: 'Kigali, Rwanda' },
-    { lat: 9.010793, lng: 38.761252, title: 'Addis Ababa, Ethiopia' } // Added Addis Ababa
+    { lat: 9.010793, lng: 38.761252, title: 'Addis Ababa, Ethiopia' }, // Added Addis Ababa
+    { lat: 25.2048, lng: 55.2708, title: 'Dubai, UAE' },
 ];
-
-
-
-
-
 
 
     // Create an array for the coordinates to connect
