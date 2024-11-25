@@ -15,10 +15,15 @@
     <link rel="icon" sizes="32x32" href="images/favicon-32x32.png">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmycMUSSKZkk77QpEXMmSi2d3Ynlz1gTc&callback=initMap" async defer></script>
+    <style>
+        /* Style the map container */
+        #map {
+            height: 400px; /* Adjust height as needed */
+            width: 100%; /* Full width */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -26,42 +31,42 @@
         <p>Fear Mediocrity</p>
     </header>
 
-<!-- Stock Ticker Section -->
-<section id="stock-ticker">
-    <!-- TradingView stock ticker widget -->
-    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js">
-    {
-        "symbols": [
-            {
-                "description": "Bloom Energy",
-                "proName": "NYSE:BE"
-            },
-            {
-                "description": "Cava",
-                "proName": "NYSE:CAVA"
-            },
-            {
-                "description": "Nvidia",
-                "proName": "NASDAQ:NVDA"
-            },
-            {
-                "description": "Mobileye",
-                "proName": "NASDAQ:MBLY"
-            },
-            {
-                "description": "Tesla",
-                "proName": "NASDAQ:TSLA"
-            }
-        ],
-        "colorTheme": "light",
-        "isTransparent": false,
-        "displayMode": "adaptive",
-        "locale": "en"
-    }
-    </script>
-</section>
+    <!-- Stock Ticker Section -->
+    <section id="stock-ticker">
+        <!-- TradingView stock ticker widget -->
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js">
+        {
+            "symbols": [
+                {
+                    "description": "Bloom Energy",
+                    "proName": "NYSE:BE"
+                },
+                {
+                    "description": "Cava",
+                    "proName": "NYSE:CAVA"
+                },
+                {
+                    "description": "Nvidia",
+                    "proName": "NASDAQ:NVDA"
+                },
+                {
+                    "description": "Mobileye",
+                    "proName": "NASDAQ:MBLY"
+                },
+                {
+                    "description": "Tesla",
+                    "proName": "NASDAQ:TSLA"
+                }
+            ],
+            "colorTheme": "light",
+            "isTransparent": false,
+            "displayMode": "adaptive",
+            "locale": "en"
+        }
+        </script>
+    </section>
 
-        <nav>
+    <nav>
         <a href="index.html">Home</a>
         <div class="dropdown">
             <button class="dropbtn">Blogs</button>
@@ -104,27 +109,90 @@
                     <p>Rwanda</p>
                 </div>
                 <div class="flag-item">
-                    <img src="images/AE-flag.jpg" alt="Country 5 Flag">
+                    <img src="images/AE-flag.jpg" alt="Country 6 Flag">
                     <p>UAE</p>
                 </div>
             </div>
         </div>
     </div>
-    
-        <div class="post">
-            <h2>Currently in Dubai, UAE</h2>
-            <!-- Add the interactive map -->
-            <div id="map"></div>
-        </div>
+
+    <div class="post">
+        <h2>Currently in Dubai, UAE</h2>
+        <!-- Add the interactive map -->
+        <div id="map"></div>
     </div>
 
     <footer>
         <p>&copy; 2024 Chase Fagen. All rights reserved.</p>
     </footer>
 
-    <!-- Your JavaScript code for the map -->
-    <script src="map.js"></script>
-
-</body>
-</html>
-
+    <script>
+        function initMap() {
+            var mapOptions = {
+                zoom: 2,
+                center: { lat: 31.0461, lng: 34.8516 }, // Center the map on Israel
+            };
+    
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    
+            // Define the marker locations and titles
+            var locations = [
+                { lat: 32.7767, lng: -96.7970, title: 'Dallas, USA' },
+                { lat: 27.9759, lng: -82.8001, title: 'Clearwater, USA' },
+                { lat: 40.7128, lng: -74.0060, title: 'New York, USA' },
+                { lat: 41.9028, lng: 12.4964, title: 'Rome, Italy' },
+                { lat: 31.7683, lng: 35.2137, title: 'Jerusalem, Israel' },
+                { lat: 41.7151, lng: 44.8271, title: 'Tbilisi, Georgia' },
+                { lat: 25.2048, lng: 55.2708, title: 'Dubai, UAE' },
+                { lat: -1.286389, lng: 36.817223, title: 'Nairobi, Kenya' },
+                { lat: -3.3869, lng: 36.6829, title: 'Arusha, Tanzania' },
+                { lat: -4.2871, lng: 39.5944, title: 'Diani Beach, Kenya' },
+                { lat: -1.94995, lng: 30.05885, title: 'Kigali, Rwanda' },
+                { lat: 9.010793, lng: 38.761252, title: 'Addis Ababa, Ethiopia' },
+                { lat: 25.2048, lng: 55.2708, title: 'Dubai, UAE' },
+            ];
+    
+            // Create an InfoWindow object for displaying city and country
+            var infoWindow = new google.maps.InfoWindow();
+    
+            // Add markers for each location
+            locations.forEach(function(location) {
+                var marker = new google.maps.Marker({
+                    position: { lat: location.lat, lng: location.lng },
+                    map: map,
+                    title: location.title,
+                });
+    
+                // Add a click event to display the city and country
+                marker.addListener('click', function() {
+                    infoWindow.setContent(`<h3>${location.title}</h3>`);
+                    infoWindow.open(map, marker);
+                });
+            });
+    
+            // Create a polyline connecting all the markers with an enhanced appearance
+            var pathCoordinates = locations.map(function(location) {
+                return { lat: location.lat, lng: location.lng };
+            });
+    
+            var polyline = new google.maps.Polyline({
+                path: pathCoordinates,
+                geodesic: true,
+                strokeColor: '#FF0000', // Line color
+                strokeOpacity: 0.8,
+                strokeWeight: 3,
+                icons: [{
+                    icon: {
+                        path: google.maps.SymbolPath.FORWARD_OPEN_ARROW, // Arrow symbol
+                        scale: 4, // Adjust size
+                        strokeColor: '#FF0000', // Arrow color
+                    },
+                    offset: '100%', // Position the arrow at the end
+                    repeat: '100px' // Repeat arrows along the path
+                }],
+            });
+    
+            polyline.setMap(map);
+        }
+    </script>
+    

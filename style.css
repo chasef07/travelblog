@@ -208,20 +208,70 @@ nav a:hover, .dropbtn:hover {
 
 /* Map Styling */
 #map {
-    height: 50vh;
-    width: 80vw;
-    margin: 0 auto;
-    padding: 0;
-    border: 2px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    background: linear-gradient(145deg, #e0e0e0, #f5f5f5); /* Soft light gradient */
-    z-index: 1;
+    width: 100%;
+    height: 500px; /* Adjust as needed */
+    position: relative;
+    overflow: hidden;
 }
 
-#map:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+/* Reset Google Maps elements minimally */
+#map * {
+    box-sizing: border-box; /* Prevent sizing issues */
 }
+
+.gm-style img {
+    margin: 0;
+    padding: 0;
+    display: block;
+    max-width: none; /* Prevent images from scaling improperly */
+}
+
+.gm-style button {
+    all: unset; /* Reset only Google Maps buttons */
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    background: transparent;
+    border: none;
+    width: auto;
+    height: auto;
+}
+
+/* Adjust zoom control styles */
+.gm-style button {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background */
+    border-radius: 4px;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: background-color 0.3s ease;
+}
+
+.gm-style button:hover {
+    background-color: #e0e0e0; /* Slightly darker on hover */
+}
+
+/* Optional: Adjust the widget container to avoid weird alignment */
+.gm-control-active {
+    padding: 8px;
+    margin: 8px;
+}
+
+/* Fix captions (infowindows) */
+.gm-style .gm-style-iw {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Match your website font */
+    font-size: 14px; /* Adjust caption size */
+    color: #333; /* Ensure readability */
+    padding: 10px;
+    line-height: 1.5;
+    max-width: 200px; /* Prevent overly wide captions */
+    word-wrap: break-word;
+}
+
+
+
+
+
+
 
 /* Footer Styling */
 footer {
