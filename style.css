@@ -290,50 +290,6 @@ footer {
     }
 }
 
-/* Mailchimp Form Specific Styling */
-#newsletter-page #mc_embed_signup {
-    background: #f7f7f7; /* Very light grey */
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    padding: 2rem;
-    margin: 0 auto;
-    max-width: 600px;
-    position: relative;
-}
-
-#newsletter-page #mc_embed_signup h2 {
-    color: #ff6b6b; /* Coral red */
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
-
-#newsletter-page #mc_embed_signup .mc-field-group label {
-    color: #333; /* Darker text */
-}
-
-#newsletter-page #mc_embed_signup input[type="email"],
-#newsletter-page #mc_embed_signup input[type="text"] {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    width: 100%;
-}
-
-#newsletter-page #mc_embed_signup input[type="submit"] {
-    background: #ff4081; /* Vivid pink */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 0.75rem 1.5rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#newsletter-page #mc_embed_signup input[type="submit"]:hover {
-    background: #ff2b6d; /* Darker pink */
-}
-
 /* Countries Visited Section */
 .countries-visited {
     text-align: center;
@@ -366,13 +322,6 @@ footer {
     margin: 0;
     font-size: 14px;
     line-height: 1.2;
-}
-
-/* Specific style for Rwanda flag */
-.flag-item.flag-rwanda img {
-    width: 60px; /* Adjust width to maintain aspect ratio */
-    height: auto; /* Let the height adjust automatically */
-    object-fit: contain; /* Ensure the image fits well */
 }
 
 /* Video Container */
