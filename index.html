@@ -85,7 +85,7 @@
     <div class="container">
         <!-- Number of countries visited and flags -->
         <div class="countries-visited">
-            <h2>Number of countries visited: 6</h2>
+            <h2>Number of countries visited: 7</h2>
             <div class="flag-container">
                 <div class="flag-item">
                     <img src="images/IS-flag.jpg" alt="Country 1 Flag">
@@ -111,12 +111,16 @@
                     <img src="images/AE-flag.jpg" alt="Country 6 Flag">
                     <p>UAE</p>
                 </div>
+                <div class="flag-item">
+                    <img src="images/nepalflag.jpg" alt="Country 7 Flag">
+                    <p>Nepal</p>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="post">
-        <h2>Currently in Dubai, UAE</h2>
+        <h2>Currently in Kathmandu, Nepal</h2>
         <!-- Add the interactive map -->
         <div id="map"></div>
     </div>
@@ -128,7 +132,7 @@
     <script>
         function initMap() {
             var mapOptions = {
-                zoom: 2,
+                zoom: 1,
                 center: { lat: 31.0461, lng: 34.8516 }, // Center the map on Israel
             };
     
@@ -149,7 +153,9 @@
                 { lat: -1.94995, lng: 30.05885, title: 'Kigali, Rwanda' },
                 { lat: 9.010793, lng: 38.761252, title: 'Addis Ababa, Ethiopia' },
                 { lat: 25.2048, lng: 55.2708, title: 'Dubai, UAE' },
-            ];
+                { lat: 27.7172, lng: 85.3240, title: 'Kathmandu, Nepal' }
+                ];
+
     
             // Create an InfoWindow object for displaying city and country
             var infoWindow = new google.maps.InfoWindow();
