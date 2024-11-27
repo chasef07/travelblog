@@ -21,12 +21,12 @@ body {
 
 /* Header Styling */
 header {
-    background: #ff6b6b; /* Soft coral red */
+    background: #1e3a8a; /* Dark blue */
     color: white;
     padding: 2rem;
     text-align: center;
     position: relative;
-    border-bottom: 5px solid #ff4f4f; /* Slightly darker coral */
+    border-bottom: 5px solid #16316e; /* Slightly darker blue */
 }
 
 @media (max-width: 768px) {
@@ -48,7 +48,7 @@ nav a, .dropbtn {
     color: #333;
     text-decoration: none;
     margin: 0 1.5rem;
-    font-weight: normal; /* Ensure normal weight */
+    font-weight: normal;
     font-size: inherit;
     padding: 0.3rem 0.5rem;
     border-radius: 5px;
@@ -57,7 +57,7 @@ nav a, .dropbtn {
 
 nav a:hover, .dropbtn:hover {
     color: white;
-    background-color: #ff4081; /* Vivid pink */
+    background-color: #f59e0b; /* Gold */
     outline: none;
 }
 
@@ -80,12 +80,12 @@ nav a:hover, .dropbtn:hover {
 }
 
 .dropbtn:hover {
-    background-color: #ff4081; /* Vivid pink */
-    border-bottom: 2px solid #ff2b6d; /* Slightly darker pink */
+    background-color: #f59e0b; /* Gold */
+    border-bottom: 2px solid #d97706; /* Darker gold */
 }
 
 .dropbtn:focus {
-    outline: 2px solid #ff4081;
+    outline: 2px solid #f59e0b;
 }
 
 .dropdown-content {
@@ -93,7 +93,7 @@ nav a:hover, .dropbtn:hover {
     position: absolute;
     left: -16px;
     top: 100%;
-    background-color: #ff6b6b; /* Coral red */
+    background-color: #1e3a8a; /* Dark blue */
     min-width: 160px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -107,7 +107,7 @@ nav a:hover, .dropbtn:hover {
 }
 
 .dropdown-content a:hover {
-    background-color: #ff2b6d; /* Darker pink hover */
+    background-color: #16316e; /* Slightly darker blue */
 }
 
 .dropdown:hover .dropdown-content {
@@ -119,7 +119,7 @@ nav a:hover, .dropbtn:hover {
     nav a {
         font-size: 0.9rem;
         margin: 0 0.5rem;
-        font-weight: normal; /* Override if necessary */
+        font-weight: normal;
         padding: 0.4rem 0.5rem;
     }
 
@@ -160,7 +160,7 @@ nav a:hover, .dropbtn:hover {
 
 .post h2 {
     margin-top: 0;
-    color: #ff6b6b; /* Coral red header */
+    color: #1e3a8a; /* Dark blue header */
 }
 
 .post img {
@@ -209,68 +209,37 @@ nav a:hover, .dropbtn:hover {
 /* Map Styling */
 #map {
     width: 100%;
-    height: 500px; /* Adjust as needed */
+    height: 500px;
     position: relative;
     overflow: hidden;
-}
-
-/* Reset Google Maps elements minimally */
-#map * {
-    box-sizing: border-box; /* Prevent sizing issues */
 }
 
 .gm-style img {
     margin: 0;
     padding: 0;
     display: block;
-    max-width: none; /* Prevent images from scaling improperly */
+    max-width: none;
 }
 
 .gm-style button {
-    all: unset; /* Reset only Google Maps buttons */
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    background: transparent;
-    border: none;
-    width: auto;
-    height: auto;
-}
-
-/* Adjust zoom control styles */
-.gm-style button {
-    background-color: rgba(255, 255, 255, 0.9); /* Light background */
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 4px;
     padding: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s ease;
 }
 
 .gm-style button:hover {
-    background-color: #e0e0e0; /* Slightly darker on hover */
+    background-color: #e0e0e0;
 }
 
-/* Optional: Adjust the widget container to avoid weird alignment */
-.gm-control-active {
-    padding: 8px;
-    margin: 8px;
-}
 
-/* Fix captions (infowindows) */
-.gm-style .gm-style-iw {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Match your website font */
-    font-size: 14px; /* Adjust caption size */
-    color: #333; /* Ensure readability */
-    padding: 10px;
-    line-height: 1.5;
-    max-width: 200px; /* Prevent overly wide captions */
-    word-wrap: break-word;
-}
+
 
 
 /* Footer Styling */
 footer {
-    background: #f5f5f5; /* Light grey */
+    background: #f5f5f5;
     color: #333;
     text-align: center;
     padding: 1.5rem;
@@ -335,30 +304,12 @@ footer {
     height: 100%;
 }
 
-/* Styles for transportation and currency sections */
-.transport-item {
-    margin-bottom: 2rem;
-    padding: 2rem;
-    background: #fafafa; /* Slightly off-white */
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.transport-item h3 {
-    color: #333;
-}
-
-.transport-item p {
-    color: #555;
-}
-
-      
-/* Add styles for food list */
+/* Food List */
 .food-item {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    background-color: #fafafa; /* Lighter background for food items */
+    background-color: #fafafa;
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -379,10 +330,14 @@ footer {
 
 .food-description {
     max-width: 600px;
-    color: #333; /* Darker text for readability */
+    color: #333;
     font-size: 1rem;
     line-height: 1.5;
 }
+
+
+
+
 
 
 
