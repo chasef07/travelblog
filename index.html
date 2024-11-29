@@ -127,13 +127,35 @@
     <script>
         function initMap() {
             var mapOptions = {
-                zoom: 1,
-                center: { lat: 31.0461, lng: 34.8516 }, // Center the map on Israel
+                zoom: 2,
+                center: { lat: 20.0, lng: 0.0 }, // Global center
+                styles: [ // Custom styles for a modern look
+                    {
+                        featureType: 'all',
+                        elementType: 'geometry',
+                        stylers: [{ color: '#ebe3cd' }]
+                    },
+                    {
+                        featureType: 'all',
+                        elementType: 'labels.text.fill',
+                        stylers: [{ color: '#523735' }]
+                    },
+                    {
+                        featureType: 'all',
+                        elementType: 'labels.text.stroke',
+                        stylers: [{ color: '#f5f1e6' }]
+                    },
+                    {
+                        featureType: 'water',
+                        elementType: 'geometry.fill',
+                        stylers: [{ color: '#c9c9c9' }]
+                    },
+                ],
             };
     
             var map = new google.maps.Map(document.getElementById('map'), mapOptions);
     
-            // Define the marker locations and titles
+            // Marker locations and titles
             var locations = [
                 { lat: 32.7767, lng: -96.7970, title: 'Dallas, USA' },
                 { lat: 27.9759, lng: -82.8001, title: 'Clearwater, USA' },
@@ -147,49 +169,60 @@
                 { lat: -4.2871, lng: 39.5944, title: 'Diani Beach, Kenya' },
                 { lat: -1.94995, lng: 30.05885, title: 'Kigali, Rwanda' },
                 { lat: 9.010793, lng: 38.761252, title: 'Addis Ababa, Ethiopia' },
-                { lat: 25.2048, lng: 55.2708, title: 'Dubai, UAE' },
+                {lat: 25.2048, lng: 55.2708, title: 'Dubai, UAE' },
                 { lat: 27.7172, lng: 85.3240, title: 'Kathmandu, Nepal' }
-                ];
-
+            ];
     
-            // Create an InfoWindow object for displaying city and country
             var infoWindow = new google.maps.InfoWindow();
     
-            // Add markers for each location
-            locations.forEach(function(location) {
+            // Add markers
+            var bounds = new google.maps.LatLngBounds();
+            locations.forEach(function (location) {
                 var marker = new google.maps.Marker({
                     position: { lat: location.lat, lng: location.lng },
                     map: map,
                     title: location.title,
+                    animation: google.maps.Animation.DROP, // Animated drop effect
+                    icon: {
+                        url: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png' // Custom marker icon
+                    }
                 });
     
-                // Add a click event to display the city and country
-                marker.addListener('click', function() {
-                    infoWindow.setContent(`<h3>${location.title}</h3>`);
+                bounds.extend(marker.position);
+    
+                marker.addListener('click', function () {
+                    infoWindow.setContent(
+                        `<div style="text-align: center;">
+                            <h3 style="margin: 0; color: #333;">${location.title}</h3>
+                        </div>`
+                    );
                     infoWindow.open(map, marker);
                 });
             });
     
-            // Create a polyline connecting all the markers with an enhanced appearance
-            var pathCoordinates = locations.map(function(location) {
+            map.fitBounds(bounds);
+    
+            // Draw a polyline
+            var pathCoordinates = locations.map(function (location) {
                 return { lat: location.lat, lng: location.lng };
             });
     
             var polyline = new google.maps.Polyline({
                 path: pathCoordinates,
                 geodesic: true,
-                strokeColor: '#FF0000', // Line color
+                strokeColor: '#FF5733', // Softer orange line
                 strokeOpacity: 0.8,
-                strokeWeight: 3,
-                icons: [{
-                    icon: {
-                        path: google.maps.SymbolPath.FORWARD_OPEN_ARROW, // Arrow symbol
-                        scale: 4, // Adjust size
-                        strokeColor: '#FF0000', // Arrow color
+                strokeWeight: 2,
+                icons: [
+                    {
+                        icon: {
+                            path: google.maps.SymbolPath.FORWARD_OPEN_ARROW,
+                            scale: 3,
+                            strokeColor: '#FF5733',
+                        },
+                        offset: '100%',
                     },
-                    offset: '100%', // Position the arrow at the end
-                    repeat: '100px' // Repeat arrows along the path
-                }],
+                ],
             });
     
             polyline.setMap(map);
