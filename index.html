@@ -231,6 +231,14 @@
             });
     
             polyline.setMap(map);
+
+            // Automatically adjust map bounds on window resize
+            window.addEventListener('resize', function () {
+            var center = map.getCenter(); // Get the current center
+            google.maps.event.trigger(map, 'resize'); // Trigger map resize
+            map.setCenter(center); // Restore the center after resizing
+}           );
+
         }
     </script>
     

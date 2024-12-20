@@ -194,7 +194,17 @@ nav a:hover, .dropbtn:hover {
     border: 1px solid #ccc; /* Added border */
 }
 
+@media (max-width: 768px) {
+    #map {
+        height: 300px; /* Reduced height for smaller screens */
+    }
+}
 
+@media (max-width: 480px) {
+    #map {
+        height: 200px; /* Further reduction for very small screens */
+    }
+}
 
 /* Footer Styling */
 footer {
