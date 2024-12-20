@@ -194,12 +194,7 @@ nav a:hover, .dropbtn:hover {
     border: 1px solid #ccc; /* Added border */
 }
 
-@media (max-width: 768px) {
-    #map {
-        width: 90%; /* Adjusted for mobile */
-        margin: 0 auto; /* Center map on smaller screens */
-    }
-}
+
 
 /* Footer Styling */
 footer {
