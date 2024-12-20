@@ -191,6 +191,14 @@ nav a:hover, .dropbtn:hover {
     height: 500px;
     position: relative;
     overflow: hidden;
+    border: 1px solid #ccc; /* Added border */
+}
+
+@media (max-width: 768px) {
+    #map {
+        width: 90%; /* Adjusted for mobile */
+        margin: 0 auto; /* Center map on smaller screens */
+    }
 }
 
 /* Footer Styling */
@@ -217,14 +225,29 @@ footer {
 .flag-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 10px;
 }
 
+.flag-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 .flag-item img {
     width: 50px;
-    height: auto;
+    height: 30px;
     margin-bottom: 4px;
+    object-fit: cover;
+}
+
+.flag-item p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.2;
 }
 
 /* Food List */
@@ -256,6 +279,7 @@ footer {
     font-size: 1rem;
     line-height: 1.5;
 }
+
 
 
 
