@@ -48,13 +48,13 @@ header {
 
 @media (max-width: 768px) {
     header {
-        padding: 2rem 0.5rem;
+        padding: 2rem; /* Reverted to original mobile padding */
     }
 }
 
 /* Navigation Styling */
 nav {
-    background: var(--primary-color); /* Change to primary color to contrast with other tabs */
+    background: var(--primary-color);
     padding: 1rem 0;
     display: flex;
     justify-content: center;
@@ -130,6 +130,9 @@ nav a:hover, .dropbtn:hover {
         margin: 0 0.5rem;
         padding: 0.4rem 0.6rem;
     }
+    nav {
+        padding: 0.5rem 0; /* Reverted to original mobile padding */
+    }
 }
 
 /* Blog Post Styling */
@@ -161,7 +164,7 @@ nav a:hover, .dropbtn:hover {
 }
 
 .post img {
-    max-width: 300px; /* Reverted back to original dimensions */
+    max-width: 300px;
     height: auto;
     border-radius: 10px;
     margin-top: 1rem;
@@ -190,6 +193,12 @@ nav a:hover, .dropbtn:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+@media (max-width: 768px) {
+    .packing-checklist img {
+        max-width: 90%; /* Reverted to original mobile adjustment */
+    }
+}
+
 /* Map Styling */
 #map {
     width: 100%;
@@ -202,13 +211,13 @@ nav a:hover, .dropbtn:hover {
 
 @media (max-width: 768px) {
     #map {
-        height: 300px;
+        height: 300px; /* Reverted to original mobile adjustment */
     }
 }
 
 @media (max-width: 480px) {
     #map {
-        height: 200px;
+        height: 200px; /* Reverted to original mobile adjustment */
     }
 }
 
@@ -219,6 +228,12 @@ footer {
     text-align: center;
     padding: 1.5rem;
     margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 1rem; /* Reverted to original mobile padding */
+    }
 }
 
 /* Countries Visited Section */
