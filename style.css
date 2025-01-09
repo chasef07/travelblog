@@ -48,7 +48,7 @@ header {
 
 @media (max-width: 768px) {
     header {
-        padding: 2rem; /* Reverted to original mobile padding */
+        padding: 2rem;
     }
 }
 
@@ -59,6 +59,8 @@ nav {
     display: flex;
     justify-content: center;
     box-shadow: none;
+    z-index: 1000;
+    position: relative;
 }
 
 nav a, .dropbtn {
@@ -125,13 +127,19 @@ nav a:hover, .dropbtn:hover {
 
 /* Responsive Navigation Adjustments */
 @media (max-width: 768px) {
-    nav a, .dropbtn {
-        font-size: 0.9rem;
-        margin: 0 0.5rem;
-        padding: 0.4rem 0.6rem;
-    }
     nav {
-        padding: 0.5rem 0; /* Reverted to original mobile padding */
+        padding: 0.5rem 0;
+        flex-wrap: wrap;
+    }
+    nav a, .dropbtn {
+        font-size: 0.8rem;
+        margin: 0 0.3rem;
+        padding: 0.3rem 0.5rem;
+    }
+    .dropdown-content {
+        width: 100%;
+        left: 0;
+        transform: none;
     }
 }
 
@@ -195,7 +203,7 @@ nav a:hover, .dropbtn:hover {
 
 @media (max-width: 768px) {
     .packing-checklist img {
-        max-width: 90%; /* Reverted to original mobile adjustment */
+        max-width: 90%;
     }
 }
 
@@ -211,13 +219,13 @@ nav a:hover, .dropbtn:hover {
 
 @media (max-width: 768px) {
     #map {
-        height: 300px; /* Reverted to original mobile adjustment */
+        height: 300px;
     }
 }
 
 @media (max-width: 480px) {
     #map {
-        height: 200px; /* Reverted to original mobile adjustment */
+        height: 200px;
     }
 }
 
@@ -232,7 +240,7 @@ footer {
 
 @media (max-width: 768px) {
     footer {
-        padding: 1rem; /* Reverted to original mobile padding */
+        padding: 1rem;
     }
 }
 
