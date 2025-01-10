@@ -3,169 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lone Horizons</title>
-    <!-- Favicon and icons -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="icon" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="icon" sizes="32x32" href="images/favicon-32x32.png">
-    <!-- Stylesheet -->
+    <title>Lone Horizons - Transportation</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="preload" href="fonts/Poppins/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Poppins/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <script src="scripts.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Lone Horizons</h1>
-        <p>...</p>
+    <header class="header">
+        <div class="header-content">
+            <h1>Lone Horizons</h1>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="transportation.html" class="active">Transportation</a></li>
+                <li><a href="vlogs.html">Vlogs</a></li>
+                <li><a href="packing-checklist.html">Packing Checklist</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <div class="dropdown">
-            <button class="dropbtn">Blogs</button>
-            <div class="dropdown-content">
-                <a href="january-2025.html">January 2025</a>
-                <a href="december-2024.html">December 2024</a>
-                <a href="november-2024.html">November 2024</a>
-                <a href="october-2024.html">October 2024</a>
-                <a href="september-2024.html">September 2024</a>
-            </div>
-        </div>
-        <a href="food.html">Food</a>
-        <a href="transportation.html">Transportation</a>
-        <a href="vlogs.html">Vlogs</a>
-        <a href="packing-checklist.html">Packing Checklist</a>
-    </nav>
-
-
-            <!-- Thailand Section -->
-            <section>
-                <h2>Thailand</h2>
-                <div class="transport-item">
-                    <div class="transport-description">
-                        Since Thailand is a tourist playground, there is robust transportation infrastructure. You can either book transportation through 12Go App or any hotel/hostel. Transportation ranges from high speed ferries to islands to 10 person shuttles. The public transport is not widely used, it is mostly tourist specific transportation infrastructure. Thailand transport score: 8.2/10
-                    </div>
+    <main class="transportation-page">
+        <section class="transport-section">
+            <h2>Thailand</h2>
+            <div class="transport-item">
+                <div class="transport-description">
+                    <p>Since Thailand is a tourist playground, there is robust transportation infrastructure. You can either book transportation through 12Go App or any hotel/hostel. Transportation ranges from high-speed ferries to islands to 10-person shuttles. The public transport is not widely used; it is mostly tourist-specific transportation infrastructure. <strong>Thailand transport score: 8.2/10</strong></p>
                 </div>
                 <div class="currency-conversion">
                     <p>Currency Conversion: 10 USD ≈ 345 THB (Thai Baht)</p>
-                    <p>Main languages: Thai, English, Russian </p>
+                    <p>Main languages: Thai, English, Russian</p>
                 </div>
-            </section>
-        <!-- Nepal Section -->
-            <section>
-                <h2>Nepal</h2>
-                <div class="transport-item">
-                    <div class="transport-description">
-                        Kathmandu is a small city with tight streets. There are often traffic jams due to motorbikes and cars wizzing around. There are not really any street lights or street signs. The only way to get around is via taxi, which you have to hail. There is a ride share app but I have not tried it. Nepal transport score: 4.9/10
-                    </div>
-                </div>
-                <div class="currency-conversion">
-                    <p>Currency Conversion: 10 USD ≈ 1350 NPR (Nepalese Rupee)</p>
-                    <p>Main languages: Nepali, Chinese, Hindi, Englih </p>
-                </div>
-            </section>
-
-            <!-- UAE Section -->
-            <section>
-                <h2>UAE</h2>
-                <div class="transport-item">
-                    <div class="transport-description">
-                        Dubai is easy to get around. You can hop in a taxi or uber anywhere. There is also a metro system that requires a distinct metro card, but it takes a long time. UAE transport score: 6.9/10
-                    </div>
-                </div>
-                <div class="currency-conversion">
-                    <p>Currency Conversion: 10 USD ≈ 37 AED (UAE Dirham)</p>
-                    <p>Main languages: Arabic, English, Russian, Chinese </p>
-                </div>
-            </section>
-
-        <!-- Rwanda Section -->
-        <section>
-            <h2>Rwanda</h2>
-            <div class="transport-item">
-                <div class="transport-description">
-                    In Kigali there are thousands of motorcycle taxis. You can get one wherever on the side of the street. A ride for ten minutes costs 75 cents. There is a bus system but it is not extensive. The city is layered with hills so getting around on the motorcycles is quick, easy, and efficient. Rwanda transport score: 6.7/10
-                </div>
-            </div>
-            <div class="currency-conversion">
-                <p>Currency Conversion: 10 USD ≈ 13,500 RWF (Rwandan Francs)</p>
-                <p>Main languages: Kinyarwanda, French, English, Swahili </p>
             </div>
         </section>
 
-    <!-- Tanzania Section -->
-    <section>
-        <h2>Tanzania</h2>
-        <div class="transport-item">
-            <div class="transport-description">
-                The best way to get around in Tanzania is by taxi or public shuttle. Similar to Kenyan matatus, Tanzania has dala-dalas, which are small, crowded, and unpredictable in schedule. Tanzania transport score: 4.1/10
+        <section class="transport-section">
+            <h2>Nepal</h2>
+            <div class="transport-item">
+                <div class="transport-description">
+                    <p>Kathmandu is a small city with tight streets. There are often traffic jams due to motorbikes and cars whizzing around. There are not really any street lights or street signs. The only way to get around is via taxi, which you have to hail. There is a ride-share app but I have not tried it. <strong>Nepal transport score: 4.9/10</strong></p>
+                </div>
+                <div class="currency-conversion">
+                    <p>Currency Conversion: 10 USD ≈ 1350 NPR (Nepalese Rupee)</p>
+                    <p>Main languages: Nepali, Chinese, Hindi, English</p>
+                </div>
             </div>
-        </div>
-        <div class="currency-conversion">
-            <p>Currency Conversion: 10 USD ≈ 27,000 TZS (Tanzanian Shilling)</p>
-            <p>Main languages: Swahili, English</p>
-        </div>
-    </section>
+        </section>
 
-    <!-- Kenya Section -->
-    <section>
-        <h2>Kenya</h2>
-        <div class="transport-item">
-            <div class="transport-description">
-                Uber is the main mode of transport in Kenya. A 45-minute Uber ride can cost less than 10 USD. You can also order a motorcycle for a cheaper, quicker option. Trains connect Nairobi to Mombasa, and buses travel to Tanzania and Uganda. Matatus, privately-owned minibuses, operate on set routes but don’t follow strict schedules. Many are decorated with vibrant designs and even Israeli flags. Kenya transport score: 6.2/10
+        <section class="transport-section">
+            <h2>UAE</h2>
+            <div class="transport-item">
+                <div class="transport-description">
+                    <p>Dubai is easy to get around. You can hop in a taxi or Uber anywhere. There is also a metro system that requires a distinct metro card, but it takes a long time. <strong>UAE transport score: 6.9/10</strong></p>
+                </div>
+                <div class="currency-conversion">
+                    <p>Currency Conversion: 10 USD ≈ 37 AED (UAE Dirham)</p>
+                    <p>Main languages: Arabic, English, Russian, Chinese</p>
+                </div>
             </div>
-        </div>
-        <div class="currency-conversion">
-            <p>Currency Conversion: 10 USD ≈ 1,300 KES (Kenyan Shilling)</p>
-            <p>Main languages: Swahili, English</p>
-        </div>
-    </section>
+        </section>
 
-    <!-- Georgia Section -->
-    <section>
-        <h2>Georgia</h2>
-        <div class="transport-item">
-            <div class="transport-description">
-                In Tbilisi, a scenic cable car ride runs from Rike Park to the Narikala Fortress. The bus system in Tbilisi is efficient, with dedicated lanes and easy mobile payments. Buses cost 1 GEL (about 37 cents) and even have USB-C charging capabilities. Trains connect Tbilisi to Batumi, and car rentals are available for exploring smaller cities. Georgia transport score: 8.8/10
+        <section class="transport-section">
+            <h2>Rwanda</h2>
+            <div class="transport-item">
+                <div class="transport-description">
+                    <p>In Kigali, there are thousands of motorcycle taxis. You can get one wherever on the side of the street. A ride for ten minutes costs 75 cents. There is a bus system but it is not extensive. The city is layered with hills so getting around on the motorcycles is quick, easy, and efficient. <strong>Rwanda transport score: 6.7/10</strong></p>
+                </div>
+                <div class="currency-conversion">
+                    <p>Currency Conversion: 10 USD ≈ 13,500 RWF (Rwandan Francs)</p>
+                    <p>Main languages: Kinyarwanda, French, English, Swahili</p>
+                </div>
             </div>
-        </div>
-        <div class="currency-conversion">
-            <p>Currency Conversion: 10 USD ≈ 27 GEL (Georgian Lari)</p>
-            <p>Main languages: Georgian, Russian, English</p>
-        </div>
-    </section>
+        </section>
 
-    <!-- Israel Section -->
-    <section>
-        <h2>Israel</h2>
-        <div class="transport-item">
-            <div class="transport-description">
-                Israel has robust public transport. Trains connect the airport to major cities, and the Jerusalem Light Rail provides local service. A Rav Kav card is required for public transit. For ride-hailing, Gett is an alternative to Uber, and the Moovit app helps with navigation. Buses are extensive but Google Maps sometimes lacks accurate timing. Israel transport score: 7.8/10
+        <section class="transport-section">
+            <h2>Tanzania</h2>
+            <div class="transport-item">
+                <div class="transport-description">
+                    <p>The best way to get around in Tanzania is by taxi or public shuttle. Similar to Kenyan matatus, Tanzania has dala-dalas, which are small, crowded, and unpredictable in schedule. <strong>Tanzania transport score: 4.1/10</strong></p>
+                </div>
+                <div class="currency-conversion">
+                    <p>Currency Conversion: 10 USD ≈ 27,000 TZS (Tanzanian Shilling)</p>
+                    <p>Main languages: Swahili, English</p>
+                </div>
             </div>
-        </div>
-        <div class="currency-conversion">
-            <p>Currency Conversion: 10 USD ≈ 38 ILS (Israeli New Shekel)</p>
-            <p>Main languages: Hebrew, English, French, Russian</p>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <p>&copy; 2025 Chase Fagen. All rights reserved.</p>
-    
-            <div class="social-media">
-                <a href="https://www.instagram.com/chasef07/" target="_blank" aria-label="Instagram">
-                    <img src="images/instagram-brands-solid.svg" alt="Instagram">
-                </a>
-                <a href="https://x.com/chasef07" target="_blank" aria-label="Twitter">
-                    <img src="images/x-twitter-brands-solid.svg" alt="Twitter">
-                </a>
-                <a href="https://www.facebook.com/chase.fagen" target="_blank" aria-label="Facebook">
-                    <img src="images/facebook-brands-solid.svg" alt="Facebook">
-                </a>
+        <section class="transport-section">
+            <h2>Kenya</h2>
+            <div class="transport-item">
+                <div class="transport-description">
+                    <p>Uber is the main mode of transport in Kenya. A 45-minute Uber ride can cost less than 10 USD. You can also order a motorcycle for a cheaper, quicker option. Trains connect Nairobi to Mombasa, and buses travel to Tanzania and Uganda. Matatus, privately-owned minibuses, operate on set routes but don’t follow strict schedules. Many are decorated with vibrant designs and even Israeli flags. <strong>Kenya transport score: 6.2/10</strong></p>
+                </div>
+                <div class="currency-conversion">
+                    <p>Currency Conversion: 10 USD ≈ 1,300 KES (Kenyan Shilling)</p>
+                    <p>Main languages: Swahili, English</p>
+                </div>
             </div>
+        </section>
+
+        <section class="transport-section">
+            <h2>Georgia</h2>
+            <div class="transport-item">
+                <div class="transport-description">
+                    <p>In Tbilisi, a scenic cable car ride runs from Rike Park to the Narikala Fortress. The bus system in Tbilisi is efficient, with dedicated lanes and easy mobile payments. Buses cost 1 GEL (about 37 cents) and even have USB-C charging capabilities. Trains connect Tbilisi to Batumi, and car rentals are available for exploring smaller cities. <strong>Georgia transport score: 8.8/10</strong></p>
+                </div>
+                <div class="currency-conversion">
+                    <p>Currency Conversion: 10 USD ≈ 27 GEL (Georgian Lari)</p>
+                    <p>Main languages: Georgian, Russian, English</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="transport-section">
+            <h2>Israel</h2>
+            <div class="transport-item">
+                <div class="transport-description">
+                    <p>Israel has robust public transport. Trains connect the airport to major cities, and the Jerusalem Light Rail provides local service. A Rav Kav card is required for public transit. For ride-hailing, Gett is an alternative to Uber, and the Moovit app helps with navigation. Buses are extensive but Google Maps sometimes lacks accurate timing. <strong>Israel transport score: 7.8/10</strong></p>
+                </div>
+                <div class="currency-conversion">
+                    <p>Currency Conversion: 10 USD ≈ 38 ILS (Israeli New Shekel)</p>
+                    <p>Main languages: Hebrew, English, French, Russian</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Chase Fagen. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://www.instagram.com/chasef07/" target="_blank" aria-label="Instagram">
+                <img src="images/instagram-brands-solid.svg" alt="Instagram">
+            </a>
+            <a href="https://x.com/chasef07" target="_blank" aria-label="Twitter">
+                <img src="images/x-twitter-brands-solid.svg" alt="Twitter">
+            </a>
+            <a href="https://www.facebook.com/chase.fagen" target="_blank" aria-label="Facebook">
+                <img src="images/facebook-brands-solid.svg" alt="Facebook">
+            </a>
+        </div>
     </footer>
-
 </body>
 </html>
 

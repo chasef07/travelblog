@@ -3,200 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lone Horizons</title>
-    <!-- Favicon and icons -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="icon" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="icon" sizes="32x32" href="images/favicon-32x32.png">
-    <!-- Stylesheet -->
+    <title>Lone Horizons - Food</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="preload" href="fonts/Poppins/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Poppins/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <script src="scripts.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Lone Horizons</h1>
-        <p>...</p>
+    <header class="header">
+        <div class="header-content">
+            <h1>Lone Horizons</h1>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="food.html" class="active">Food</a></li>
+                <li><a href="transportation.html">Transportation</a></li>
+                <li><a href="vlogs.html">Vlogs</a></li>
+                <li><a href="packing-checklist.html">Packing Checklist</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <div class="dropdown">
-            <button class="dropbtn">Blogs</button>
-            <div class="dropdown-content">
-                <a href="january-2025.html">January 2025</a>
-                <a href="december-2024.html">December 2024</a>
-                <a href="november-2024.html">November 2024</a>
-                <a href="october-2024.html">October 2024</a>
-                <a href="september-2024.html">September 2024</a>
-            </div>
-        </div>
-        <a href="food.html">Food</a>
-        <a href="transportation.html">Transportation</a>
-        <a href="vlogs.html">Vlogs</a>
-        <a href="packing-checklist.html">Packing Checklist</a>
-    </nav>
-
-
-    <section>
-        <h2>Thailand</h2>
-
-        <div class="food-item">
-            <img src="images/mango2.jpg" alt="mango2" loading="lazy">
-            <div class="food-description">
-                <strong>Mango sticky rice</strong> - Sweet mangoes with creamy coconut-infused sticky rice. This delightful combination of textures and flavors is a tropical treat, often garnished with sesame seeds or mung beans for a perfect balance of sweetness and nuttiness
-            </div>
-        </div>
-        
-
-
-    <section>
-        <h2>Nepal</h2>
-
-        <div class="food-item">
-            <img src="images/nakcheese.jpg" alt="nakcheese" loading="lazy">
-            <div class="food-description">
-                <strong>Nak cheese</strong> -  A rare and flavorful cheese made from the milk of female yaks, or "naks," in Nepal's high-altitude regions. Known for its earthy taste and firm texture, it’s a delicacy often enjoyed in soups, curries, or as a savory snack in Himalayan cuisine.
-            </div>
-        </div>
-        
-        <!-- Food Item 1 -->
-       <div class="food-item">
-            <img src="images/thkali.jpg" alt="thkali" loading="lazy">
-            <div class="food-description">
-                <strong>Thakali</strong> - A traditional food from the Thakali people of Nepal's Mustang region, known for its flavorful dal-bhat-tarkari (lentils, rice, and vegetables), tangy pickles, and unique spices. Often served as a set meal, it strikes a perfect balance of spicy, sour, and umami flavors, with options like buckwheat pancakes and grilled meats adding variety.
-            </div>
-        </div>
-
-        <!-- Food Item 2 -->
-       <div class="food-item">
-            <img src="images/momo.jpg" alt="momo" loading="lazy">
-            <div class="food-description">
-                <strong>Momo</strong> - A popular Nepali dumpling filled with spiced meat (like chicken or buffalo) or vegetables, wrapped in a soft flour dough. Typically steamed or fried, momo is served with a tangy tomato-based dipping sauce (achar). 
-            </div>
-        </div>
-
-
-    <section>
-        <h2>East Africa</h2>
-
-
-        <!-- Food Item 1 -->
-       <div class="food-item">
-        <img src="images/nyama.jpg" alt="Ugali" loading="lazy">
-        <div class="food-description">
-            <strong>Nyama Choma</strong> -  Nyama Choma translates to "roasted meat" in Swahili. It's a beloved delicacy and often considered the ultimate barbecue experience in the region. Typically, goat meat is used, but beef or chicken can also be prepared. The meat is marinated minimally, often with just salt, and then roasted or grilled slowly over an open flame or charcoal until it's tender and flavorful.
-        </div>
-    </div>
-        
-        <!-- Food Item 1 -->
-       <div class="food-item">
-            <img src="images/ugali.jpg" alt="Ugali" loading="lazy">
-            <div class="food-description">
-                <strong>Ugali</strong> -  A simple, dense porridge made from maize (corn) flour and water, cooked until it reaches a thick, dough-like consistency. Typically, ugali is eaten with the hands and served as a side dish alongside stews, vegetables, and meats.
-            </div>
-        </div>
-
-
-        <section>
-            <h2>Georgia</h2>
-            
-            <!-- Food Item 1 -->
-           <div class="food-item">
-                <img src="images/churchy.jpg" alt="Churchkhela" loading="lazy">
+    <main class="food-page">
+        <section class="food-section">
+            <h2>Thailand</h2>
+            <div class="food-item">
+                <img src="images/mango2.jpg" alt="Mango Sticky Rice" loading="lazy">
                 <div class="food-description">
-                    <strong>Churchkhela</strong> - Almonds, walnuts, or hazelnuts are threaded onto a string and dipped in thickend grape must or fruit jucies and dried in the shape of a sausage.
+                    <h3>Mango Sticky Rice</h3>
+                    <p>Sweet mangoes with creamy coconut-infused sticky rice. This delightful combination of textures and flavors is a tropical treat, often garnished with sesame seeds or mung beans for a perfect balance of sweetness and nuttiness.</p>
                 </div>
             </div>
+        </section>
 
-            <!-- Food Item 2 -->
+        <section class="food-section">
+            <h2>Nepal</h2>
+            <div class="food-item">
+                <img src="images/nakcheese.jpg" alt="Nak Cheese" loading="lazy">
+                <div class="food-description">
+                    <h3>Nak Cheese</h3>
+                    <p>A rare and flavorful cheese made from the milk of female yaks, or "naks," in Nepal's high-altitude regions. Known for its earthy taste and firm texture, it’s a delicacy often enjoyed in soups, curries, or as a savory snack in Himalayan cuisine.</p>
+                </div>
+            </div>
+            <div class="food-item">
+                <img src="images/thkali.jpg" alt="Thakali" loading="lazy">
+                <div class="food-description">
+                    <h3>Thakali</h3>
+                    <p>A traditional food from the Thakali people of Nepal's Mustang region, known for its flavorful dal-bhat-tarkari (lentils, rice, and vegetables), tangy pickles, and unique spices. Often served as a set meal, it strikes a perfect balance of spicy, sour, and umami flavors, with options like buckwheat pancakes and grilled meats adding variety.</p>
+                </div>
+            </div>
+            <div class="food-item">
+                <img src="images/momo.jpg" alt="Momo" loading="lazy">
+                <div class="food-description">
+                    <h3>Momo</h3>
+                    <p>A popular Nepali dumpling filled with spiced meat (like chicken or buffalo) or vegetables, wrapped in a soft flour dough. Typically steamed or fried, momo is served with a tangy tomato-based dipping sauce (achar).</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="food-section">
+            <h2>East Africa</h2>
+            <div class="food-item">
+                <img src="images/nyama.jpg" alt="Nyama Choma" loading="lazy">
+                <div class="food-description">
+                    <h3>Nyama Choma</h3>
+                    <p>Nyama Choma translates to "roasted meat" in Swahili. It's a beloved delicacy and often considered the ultimate barbecue experience in the region. Typically, goat meat is used, but beef or chicken can also be prepared. The meat is marinated minimally, often with just salt, and then roasted or grilled slowly over an open flame or charcoal until it's tender and flavorful.</p>
+                </div>
+            </div>
+            <div class="food-item">
+                <img src="images/ugali.jpg" alt="Ugali" loading="lazy">
+                <div class="food-description">
+                    <h3>Ugali</h3>
+                    <p>A simple, dense porridge made from maize (corn) flour and water, cooked until it reaches a thick, dough-like consistency. Typically, ugali is eaten with the hands and served as a side dish alongside stews, vegetables, and meats.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="food-section">
+            <h2>Georgia</h2>
+            <div class="food-item">
+                <img src="images/churchy.jpg" alt="Churchkhela" loading="lazy">
+                <div class="food-description">
+                    <h3>Churchkhela</h3>
+                    <p>Almonds, walnuts, or hazelnuts are threaded onto a string and dipped in thickened grape must or fruit juices and dried in the shape of a sausage.</p>
+                </div>
+            </div>
             <div class="food-item">
                 <img src="images/kinkhali.jpg" alt="Khinkali" loading="lazy">
                 <div class="food-description">
-                    <strong>Khinkali</strong> - A dumpling made of twisted knobs of dough stuffed with meat.
+                    <h3>Khinkali</h3>
+                    <p>A dumpling made of twisted knobs of dough stuffed with meat.</p>
                 </div>
             </div>
-
-
-            <!-- Food Item 2 -->
             <div class="food-item">
                 <img src="images/khacha.jpg" alt="Khachapuri" loading="lazy">
                 <div class="food-description">
-                    <strong>Khachapuri</strong> - A bread dish filled with cheese. Adjaruli khachapur, pictured here, contains an egg. Imeruli and Megruli are other varieties of Khachapuri with extra cheeses.
+                    <h3>Khachapuri</h3>
+                    <p>A bread dish filled with cheese. Adjaruli khachapuri, pictured here, contains an egg. Imeruli and Megruli are other varieties of Khachapuri with extra cheeses.</p>
                 </div>
             </div>
+        </section>
 
-    <!-- Israel Food Section -->
-    <section>
-        <h2>Israel</h2>
-        
-        <!-- Food Item 2 -->
-        <div class="food-item">
-            <img src="images/IMG_etrog.jpg" alt="Etrog" loading="lazy">
-            <div class="food-description">
-                <strong>Etrogat</strong> - The flavor of Jerusalem. A juice mxiture of Etrog, khat, and grapefruit. Found at the Etrog Man store. Click <a href="https://adf.org.au/drug-facts/khat/" target="_blank">here</a> </li> to learn about the stimulant drug khat used by Somali pirates.
+        <section class="food-section">
+            <h2>Israel</h2>
+            <div class="food-item">
+                <img src="images/IMG_etrog.jpg" alt="Etrogat" loading="lazy">
+                <div class="food-description">
+                    <h3>Etrogat</h3>
+                    <p>The flavor of Jerusalem. A juice mixture of Etrog, khat, and grapefruit. Found at the Etrog Man store. <a href="https://adf.org.au/drug-facts/khat/" target="_blank">Learn about khat here</a>.</p>
+                </div>
             </div>
+            <div class="food-item">
+                <img src="images/IMG_shwarma.jpg" alt="Shawarma" loading="lazy">
+                <div class="food-description">
+                    <h3>Shawarma</h3>
+                    <p>Thinly sliced meat, typically lamb, chicken, turkey, beef, or a mixture of all. Served in pita or laffa bread. Traditionally topped with hummus, tahini, <a href="https://en.wikipedia.org/wiki/Amba_(condiment)" target="_blank">amba</a>, schug, and/or harissa.</p>
+                </div>
+            </div>
+            <div class="food-item">
+                <img src="images/shakshuk.jpg" alt="Shakshuka" loading="lazy">
+                <div class="food-description">
+                    <h3>Shakshuka</h3>
+                    <p>A dish of poached eggs in a spicy tomato and pepper sauce, often served with bread.</p>
+                </div>
+            </div>
+            <div class="food-item">
+                <img src="images/mafrum.jpg" alt="Mafrum" loading="lazy">
+                <div class="food-description">
+                    <h3>Mafrum</h3>
+                    <p>A Libyan Jewish stuffed vegetable dish. Root vegetables, typically potatoes, are hollowed out and filled with a blend of ground meat and spices. These stuffed vegetables are then fried and simmered in a tomato-based sauce.</p>
+                </div>
+            </div>
+            <div class="food-item">
+                <img src="images/dbecha.jpg" alt="T’Becha" loading="lazy">
+                <div class="food-description">
+                    <h3>T’Becha</h3>
+                    <p>A Libyan slow-cooked beef dish which is really a stew. Cumin and garlic rule this dish, along with slow-cooked beef and dried white beans, and the result is warm, nourishing, and supremely tasty.</p>
+                </div>
+            </div>
+            <div class="food-item">
+                <img src="images/shaburak.jpg" alt="Shamburak" loading="lazy">
+                <div class="food-description">
+                    <h3>Shamburak</h3>
+                    <p>A Kurdish-Syrian pastry served with a filling of your choice. Served hot and crispy straight from the taboon oven. Inside every pastry is Indian mashed potato, fried onion, chimichurri sauce, and a meat of your choice. Go to Ishtabach in Jerusalem to try.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Chase Fagen. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://www.instagram.com/chasef07/" target="_blank" aria-label="Instagram">
+                <img src="images/instagram-brands-solid.svg" alt="Instagram">
+            </a>
+            <a href="https://x.com/chasef07" target="_blank" aria-label="Twitter">
+                <img src="images/x-twitter-brands-solid.svg" alt="Twitter">
+            </a>
+            <a href="https://www.facebook.com/chase.fagen" target="_blank" aria-label="Facebook">
+                <img src="images/facebook-brands-solid.svg" alt="Facebook">
+            </a>
         </div>
-        
-        <!-- Food Item 2 -->
-        <div class="food-item">
-            <img src="images/IMG_shwarma.jpg" alt="Shawarma" loading="lazy">
-            <div class="food-description">
-                <strong>Shawarma</strong> - Thinly sliced meat, typically lamb, chicken, turkey, beef, or a mixture of all. Served in pita or laffa bread. Traditionally topped with hummus, tahini, <a href="https://en.wikipedia.org/wiki/Amba_(condiment)" target="_blank">amba</a> </li>, schug, and/or harissa.
-            </div>
-        </div>
-
-        <!-- Food Item 3 -->
-        <div class="food-item">
-            <img src="images/shakshuk.jpg" alt="Shakshuka" loading="lazy">
-            <div class="food-description">
-                <strong>Shakshuka</strong> - A dish of poached eggs in a spicy tomato and pepper sauce, often served with bread.
-            </div>
-        </div>
-
-        <!-- Food Item 4 -->
-        <div class="food-item">
-            <img src="images/mafrum.jpg" alt="Mafrum" loading="lazy">
-            <div class="food-description">
-                <strong>Mafrum</strong> - A Libyan Jewish stuffed vegetable dish. Root vegetables, typically potatoes, are hollowed out and filled with a blend of ground meat and spices. These stuffed vegetables are then fried and simmered in a tomato-based sauce.
-            </div>
-        </div>
-
-        <!-- Food Item 5 -->
-        <div class="food-item">
-            <img src="images/dbecha.jpg" alt="dbecha" loading="lazy">
-            <div class="food-description">
-                <strong>T’Becha</strong> - A Libyan slow-cooked beef dish which is really a stew. Cumin and garlic rule this dish, along with slow-cooked beef and dried white beans, and the result is warm, nourishing and supremely tasty.
-            </div>
-        </div>
-
-                <!-- Food Item 5 -->
-        <div class="food-item">
-            <img src="images/shaburak.jpg" alt="Shamburak" loading="lazy">
-            <div class="food-description">
-                <strong>Shamburak</strong> - A Kurdish-Syrian pastry served with a filling of your choice. Served hot and crispy straight from the taboon oven. Inside every pastry is Indian mashed potato, fried onion, chimichurri sauce,, and a meat of your choice. Go to Ishtabach in Jerusalem to try.
-            </div>
-        </div>
-        
-
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Chase Fagen. All rights reserved.</p>
-    
-            <div class="social-media">
-                <a href="https://www.instagram.com/chasef07/" target="_blank" aria-label="Instagram">
-                    <img src="images/instagram-brands-solid.svg" alt="Instagram">
-                </a>
-                <a href="https://x.com/chasef07" target="_blank" aria-label="Twitter">
-                    <img src="images/x-twitter-brands-solid.svg" alt="Twitter">
-                </a>
-                <a href="https://www.facebook.com/chase.fagen" target="_blank" aria-label="Facebook">
-                    <img src="images/facebook-brands-solid.svg" alt="Facebook">
-                </a>
-            </div>
     </footer>
-
 </body>
 </html>
