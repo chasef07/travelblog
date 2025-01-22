@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
         { name: 'Rwanda', flag: 'Flag_of_Rwanda.jpg' },
         { name: 'UAE', flag: 'AE-flag.jpg' },
         { name: 'Nepal', flag: 'nepalflag.jpg' },
-        { name: 'Thailand', flag: 'TH-flag.jpg' }
+        { name: 'Thailand', flag: 'TH-flag.jpg' },
+        { name: 'Laos', flag: 'LA-flag.jpg' }
     ];
 
     // Data for blog posts
@@ -90,7 +91,8 @@ function initMap() {
         { lat: 9.010793, lng: 38.761252, title: 'Addis Ababa, Ethiopia' },
         { lat: 25.2048, lng: 55.2708, title: 'Dubai, UAE' },
         { lat: 27.7172, lng: 85.3240, title: 'Kathmandu, Nepal' },
-        { lat: 13.7563, lng: 100.5018, title: 'Bangkok, Thailand' }
+        { lat: 13.7563, lng: 100.5018, title: 'Bangkok, Thailand' },
+        { lat: 19.8864, lng: 102.1355, title: 'Luang Prabang, Laos' }
     ];
 
     var infoWindow = new google.maps.InfoWindow();
