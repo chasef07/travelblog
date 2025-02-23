@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
         { name: 'UAE', flag: 'AE-flag.jpg' },
         { name: 'Nepal', flag: 'nepalflag.jpg' },
         { name: 'Thailand', flag: 'TH-flag.jpg' },
-        { name: 'Laos', flag: 'LA-flag.jpg' }
+        { name: 'Laos', flag: 'LA-flag.jpg' },
+        { name: 'Cambodia', flag: 'CB-flag.jpg' },
     ];
 
     // Data for blog posts
@@ -93,7 +94,8 @@ function initMap() {
         { lat: 25.2048, lng: 55.2708, title: 'Dubai, UAE' },
         { lat: 27.7172, lng: 85.3240, title: 'Kathmandu, Nepal' },
         { lat: 13.7563, lng: 100.5018, title: 'Bangkok, Thailand' },
-        { lat: 19.8864, lng: 102.1355, title: 'Luang Prabang, Laos' }
+        { lat: 19.8864, lng: 102.1355, title: 'Luang Prabang, Laos' },
+        { lat: 11.5564, lng: 104.9282, title: 'Phnom Penh, Cambodia' }
     ];
 
     var infoWindow = new google.maps.InfoWindow();
