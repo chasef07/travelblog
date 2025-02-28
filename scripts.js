@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Data for blog posts
     const blogs = [
+        { title: 'March 2025', link: 'march-2025.html' },
         { title: 'February 2025', link: 'february-2025.html' },
         { title: 'January 2025', link: 'january-2025.html' },
         { title: 'December 2024', link: 'december-2024.html' },
