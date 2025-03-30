@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { name: 'Laos', flag: 'LA-flag.jpg' },
         { name: 'Cambodia', flag: 'CB-flag.jpg' },
         { name: 'China', flag: 'CH-flag.jpg' },
+        { name: 'Vietnam', flag: 'VM-flag.jpg' },
     ];
 
     // Data for blog posts
