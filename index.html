@@ -8,68 +8,124 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preload" href="fonts/Poppins/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/Poppins/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="scripts.js" defer></script>
 </head>
 <body>
     <header class="header">
         <div class="header-content">
-            <h1>Lone Horizons</h1>
+            <div class="logo">
+                <svg class="world-icon" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                </svg>
+                <h1>Lone Horizons</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#journey">Journey</a></li>
+                    <li><a href="#blogs">Travel Blog</a></li>
+                    <li><a href="food.html">Food</a></li>
+                    <li><a href="transportation.html">Transport</a></li>
+                    <li><a href="vlogs.html">Vlogs</a></li>
+                    <li><a href="packing-checklist.html">Packing</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#blogs">Blogs</a></li>
-                <li><a href="food.html">Food</a></li>
-                <li><a href="transportation.html">Transportation</a></li>
-                <li><a href="vlogs.html">Vlogs</a></li>
-                <li><a href="packing-checklist.html">Packing Checklist</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
-        <section id="home" class="hero-section">
-            <div class="hero-content">
-                <h2>Currently in Hanoi, Vietnam</h2>
-                <button class="btn-primary" onclick="toggleMap()">Click to Explore the Route</button>
+        <section id="hero" class="hero-section">
+            <div class="slideshow">
+                <!-- Slides will be added dynamically via JS -->
             </div>
-            <div id="map" class="map-container"></div>
+            <div class="hero-content">
+                <div class="location-badge">
+                    <svg class="location-icon" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    <span>Currently exploring</span>
+                    <h2>Pu Luong, Vietnam</h2>
+                </div>
+            </div>
         </section>
 
-        <section id="countries" class="section-padding">
+        <section id="journey" class="journey-section">
+            <h2 class="section-title">The Journey So Far</h2>
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
+        </section>
+
+        <section id="countries" class="countries-section">
             <h2 class="section-title">Countries Visited</h2>
             <div class="flags-grid">
                 <!-- Flags will be dynamically added here via JS -->
             </div>
         </section>
 
-        <section id="blogs" class="section-padding">
-            <h2 class="section-title">Latest Blogs</h2>
-            <div class="blog-posts">
-                <!-- Blog posts will be dynamically added here via JS -->
+        <section id="blogs" class="blogs-section">
+            <h2 class="section-title">Latest Adventures</h2>
+            <div class="blog-grid">
+                <!-- Blog previews will be dynamically added here via JS -->
+            </div>
+        </section>
+
+        <section id="highlights" class="highlights-section">
+            <h2 class="section-title">Travel Highlights</h2>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <img src="images/khacha.jpg" alt="Food experiences" loading="lazy">
+                    <div class="highlight-content">
+                        <h3>Food Adventures</h3>
+                        <p>From street food to fine dining, explore the flavors of the world</p>
+                        <a href="food.html" class="btn-primary">Discover More</a>
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <img src="images/flight.jpg" alt="Transportation guide" loading="lazy">
+                    <div class="highlight-content">
+                        <h3>Getting Around</h3>
+                        <p>Tips and tricks for navigating transportation across continents</p>
+                        <a href="transportation.html" class="btn-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <img src="images/IMG_2629.jpg" alt="Packing guide" loading="lazy">
+                    <div class="highlight-content">
+                        <h3>Packing Guide</h3>
+                        <p>Essential items and tips for long-term travel</p>
+                        <a href="packing-checklist.html" class="btn-primary">View Checklist</a>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="stock-ticker" class="ticker-section">
             <div class="ticker-container">
-                <div class="ticker-label">Market Watch:</div>
+                <div class="ticker-label">Market Watch</div>
                 <div class="ticker-content">
-                    <!-- TradingView stock ticker widget -->
-                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js">
-                    {
-                        "symbols": [
-                            {"description":"Bloom Energy","proName":"NYSE:BE"},
-                            {"description":"Cava","proName":"NYSE:CAVA"},
-                            {"description":"Nvidia","proName":"NASDAQ:NVDA"},
-                            {"description":"Mobileye","proName":"NASDAQ:MBLY"},
-                            {"description":"Tesla","proName":"NASDAQ:TSLA"}
-                        ],
-                        "colorTheme":"dark",
-                        "isTransparent":true,
-                        "displayMode":"adaptive",
-                        "locale":"en"
-                    }
-                    </script>
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                        {
+                            "symbols": [
+                                {"description":"Bloom Energy","proName":"NYSE:BE"},
+                                {"description":"Cava","proName":"NYSE:CAVA"},
+                                {"description":"Nvidia","proName":"NASDAQ:NVDA"},
+                                {"description":"Mobileye","proName":"NASDAQ:MBLY"},
+                                {"description":"Tesla","proName":"NASDAQ:TSLA"}
+                            ],
+                            "colorTheme": "dark",
+                            "isTransparent": true,
+                            "displayMode": "adaptive",
+                            "locale": "en"
+                        }
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
                 </div>
             </div>
         </section>
@@ -77,15 +133,18 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2025 Chase Fagen. All rights reserved.</p>
+            <div class="footer-info">
+                <p>&copy; 2025 Lone Horizons</p>
+                <p>Created by Chase Fagen</p>
+            </div>
             <div class="social-media">
-                <a href="https://www.instagram.com/chasef07/" target="_blank" aria-label="Instagram">
+                <a href="https://www.instagram.com/chasef07/" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram">
                     <img src="images/instagram-brands-solid.svg" alt="Instagram">
                 </a>
-                <a href="https://x.com/chasef07" target="_blank" aria-label="X (Twitter)">
+                <a href="https://x.com/chasef07" target="_blank" rel="noopener noreferrer" aria-label="Follow on X (Twitter)">
                     <img src="images/x-twitter-brands-solid.svg" alt="X (Twitter)">
                 </a>
-                <a href="https://www.facebook.com/chase.fagen" target="_blank" aria-label="Facebook">
+                <a href="https://www.facebook.com/chase.fagen" target="_blank" rel="noopener noreferrer" aria-label="Follow on Facebook">
                     <img src="images/facebook-brands-solid.svg" alt="Facebook">
                 </a>
             </div>

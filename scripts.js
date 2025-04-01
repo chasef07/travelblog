@@ -1,150 +1,354 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Load Google Maps API
-    var script = document.createElement('script');
-    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAmycMUSSKZkk77QpEXMmSi2d3Ynlz1gTc&callback=initMap";
-    script.async = true;
-    script.defer = true;
-    document.head.appendChild(script);
-
     // Data for flags
     const countries = [
-        { name: 'Israel', flag: 'IS-flag.jpg' },
-        { name: 'Georgia', flag: 'GG-flag.jpg' },
-        { name: 'Kenya', flag: 'KE-flag.jpg' },
-        { name: 'Tanzania', flag: 'TZ-flag.jpg' },
-        { name: 'Rwanda', flag: 'Flag_of_Rwanda.jpg' },
-        { name: 'UAE', flag: 'AE-flag.jpg' },
-        { name: 'Nepal', flag: 'nepalflag.jpg' },
-        { name: 'Thailand', flag: 'TH-flag.jpg' },
-        { name: 'Laos', flag: 'LA-flag.jpg' },
-        { name: 'Cambodia', flag: 'CB-flag.jpg' },
-        { name: 'China', flag: 'CH-flag.jpg' },
-        { name: 'Vietnam', flag: 'VM-flag.jpg' },
+        { name: 'Israel', flag: 'IS-flag.jpg', coordinates: [31.7683, 35.2137] },
+        { name: 'Georgia', flag: 'GG-flag.jpg', coordinates: [41.7151, 44.8271] },
+        { name: 'Kenya', flag: 'KE-flag.jpg', coordinates: [-1.286389, 36.817223] },
+        { name: 'Tanzania', flag: 'TZ-flag.jpg', coordinates: [-6.1630, 35.7516] },
+        { name: 'Rwanda', flag: 'Flag_of_Rwanda.jpg', coordinates: [-1.9403, 29.8739] },
+        { name: 'UAE', flag: 'AE-flag.jpg', coordinates: [25.2048, 55.2708] },
+        { name: 'Nepal', flag: 'nepalflag.jpg', coordinates: [27.7172, 85.3240] },
+        { name: 'Thailand', flag: 'TH-flag.jpg', coordinates: [13.7563, 100.5018] },
+        { name: 'Laos', flag: 'LA-flag.jpg', coordinates: [17.9757, 102.6331] },
+        { name: 'Cambodia', flag: 'CB-flag.jpg', coordinates: [11.5564, 104.9282] },
+        { name: 'China', flag: 'CH-flag.jpg', coordinates: [39.9042, 116.4074] },
+        { name: 'Vietnam', flag: 'VM-flag.jpg', coordinates: [21.0285, 105.8544] }
     ];
-
-    // Data for blog posts
+    
+    // Data for blog posts with excerpts
     const blogs = [
-        { title: 'April 2025', link: 'april-2025.html' },
-        { title: 'March 2025', link: 'march-2025.html' },
-        { title: 'February 2025', link: 'february-2025.html' },
-        { title: 'January 2025', link: 'january-2025.html' },
-        { title: 'December 2024', link: 'december-2024.html' },
-        { title: 'November 2024', link: 'november-2024.html' },
-        { title: 'October 2024', link: 'october-2024.html' },
-        { title: 'September 2024', link: 'september-2024.html' }
+        {
+            title: "April 2025: Motorbiking Vietnam",
+            date: "April 2025",
+            excerpt: "Ride with me across terraced rice fields while enjoying traditional Vietnamese cuisne ",
+            image: "images/vietnam.jpg",
+            link: "april-2025.html"
+        },
+        {
+            title: "March 2025: Chilling in Cambodia",
+            date: "March 2025",
+            excerpt: "From the ancient temples of Angkor Wat to the pristine beaches of Koh Rong, exploring the wonders of Cambodia.",
+            image: "images/kohsdach.jpg",
+            link: "march-2025.html"
+        },
+        {
+            title: "February 2025: Adventures in Laos",
+            date: "February 2025",
+            excerpt: "Journeying through Laos's traditional villages and serene landscapes, discovering the heart of Southeast Asia.",
+            image: "images/farmlife.jpg",
+            link: "february-2025.html"
+        },
+        {
+            title: "January 2025: Thailand Discos",
+            date: "January 2025",
+            excerpt: "From island parties to serene sunsets, experiencing the magic of Thailand.",
+            image: "images/fullmoon.jpg",
+            link: "january-2025.html"
+        },
+        {
+            title: "December 2024: Trekking in Nepal",
+            date: "December 2024",
+            excerpt: "Exploring the majestic Himalayas and vibrant streets of Kathmandu. From ancient temples to mountain adventures, discover the spiritual and natural wonders of Nepal.",
+            image: "images/namaste8.jpg",
+            link: "december-2024.html"
+        },
+        {
+            title: "November 2024: Safaris of East Africa",
+            date: "November 2024",
+            excerpt: "From the vast savannas of Tanzania to the perfectious coffee of Rwanda, experiencing the incredible wildlife and cultures of East Africa.",
+            image: "images/serengeti.jpg",
+            link: "november-2024.html"
+        },
+        {
+            title: "October 2024: Investing in Georgia",
+            date: "October 2024",
+            excerpt: "Discovering the rich culture and ancient traditions of Georgia, from the vibrant streets of Tbilisi to the stunning mountains of Gudauri. Join me as I explore this hidden gem at the crossroads of Europe and Asia.",
+            image: "images/blarg.jpg",
+            link: "october-2024.html"
+        },
+        {
+            title: "September 2024: Beginning the Journey",
+            date: "September 2024",
+            excerpt: "The start of my world adventure, from the final days in Florida to the first experiences in Israel. Join me as I begin this life-changing journey.",
+            image: "images/IMG_2697.jpg",
+            link: "september-2024.html"
+        }
     ];
 
     // Add flags dynamically
     const flagsGrid = document.querySelector('.flags-grid');
-    countries.forEach(country => {
-        const flagItem = document.createElement('div');
-        flagItem.innerHTML = `<img src="images/${country.flag}" alt="${country.name} flag" loading="lazy"><p>${country.name}</p>`;
-        flagItem.className = 'flag-item'; // Add a class for styling
-        flagsGrid.appendChild(flagItem);
-    });
+    if (flagsGrid) {
+        countries.forEach(country => {
+            const flagItem = document.createElement('div');
+            flagItem.className = 'flag-item';
+            flagItem.innerHTML = `
+                <img src="images/${country.flag}" alt="${country.name} flag" loading="lazy">
+                <span>${country.name}</span>
+            `;
+            flagsGrid.appendChild(flagItem);
+        });
+    }
 
     // Add blog posts dynamically
-    const blogPosts = document.querySelector('.blog-posts');
-    blogs.forEach(blog => {
-        const post = document.createElement('article');
-        post.innerHTML = `<h3>${blog.title}</h3><a href="${blog.link}" class="btn-primary">Read More</a>`;
-        post.className = 'blog-post'; // Add a class for styling
-        blogPosts.appendChild(post);
+    const blogGrid = document.querySelector('.blog-grid');
+    if (blogGrid) {
+        blogs.forEach(blog => {
+            const blogCard = document.createElement('div');
+            blogCard.className = 'blog-card';
+            blogCard.innerHTML = `
+                <img src="${blog.image}" alt="${blog.title}" loading="lazy">
+                <div class="blog-content">
+                    <div class="blog-date">${blog.date}</div>
+                    <h3 class="blog-title">${blog.title}</h3>
+                    <p class="blog-excerpt">${blog.excerpt}</p>
+                    <a href="${blog.link}" class="btn-primary">Read More</a>
+                </div>
+            `;
+            blogGrid.appendChild(blogCard);
+        });
+    }
+
+    // Initialize slideshow
+    initSlideshow();
+
+    // Initialize map
+    initMap();
+
+    // Add smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
     });
 });
 
-function toggleMap() {
-    const mapElement = document.getElementById('map');
-    const mapContainer = document.querySelector('.map-container');
-    if (mapContainer.style.display === "none" || mapContainer.style.display === "") {
-        mapContainer.style.display = "block";
-        if (!window.mapInitialized) {
-            initMap();
-            window.mapInitialized = true;
-        }
-    } else {
-        mapContainer.style.display = "none";
-    }
+let map;
+let animationFrame;
+
+// Slideshow functionality
+const slides = [
+    { image: 'images/freedombeach.jpg' },
+    { image: 'images/layingdragon.jpg' },
+    { image: 'images/lands.jpg' },
+    { image: 'images/sheepsun.jpg' }
+];
+
+let currentSlide = 0;
+
+function initSlideshow() {
+    const slideshow = document.querySelector('.slideshow');
+    if (!slideshow) return;
+    
+    slides.forEach((slide, index) => {
+        const slideElement = document.createElement('div');
+        slideElement.className = `slide ${index === 0 ? 'active' : ''}`;
+        slideElement.style.backgroundImage = `url(${slide.image})`;
+        slideshow.appendChild(slideElement);
+    });
+
+    setInterval(nextSlide, 5000);
+}
+
+function nextSlide() {
+    const slideElements = document.querySelectorAll('.slide');
+    if (!slideElements.length) return;
+    
+    slideElements[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slideElements[currentSlide].classList.add('active');
 }
 
 function initMap() {
-    var mapOptions = {
-        zoom: 2,
-        center: { lat: 20.0, lng: 0.0 },
-        styles: [
-            {featureType: 'all', elementType: 'geometry', stylers: [{ color: '#ebe3cd' }]},
-            {featureType: 'all', elementType: 'labels.text.fill', stylers: [{ color: '#523735' }]},
-            {featureType: 'all', elementType: 'labels.text.stroke', stylers: [{ color: '#f5f1e6' }]},
-            {featureType: 'water', elementType: 'geometry.fill', stylers: [{ color: '#c9c9c9' }]},
-        ],
-    };
+    const mapContainer = document.getElementById('map');
+    if (!mapContainer) {
+        console.error('Map container not found. Please ensure there is a <div id="map"></div> in your HTML');
+        return;
+    }
 
-    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    // Check if Leaflet is available
+    if (typeof L === 'undefined') {
+        console.error('Leaflet library not loaded. Please include it in your HTML with: <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>');
+        return;
+    }
 
-    // Marker locations and titles
-    var locations = [
-        { lat: 32.7767, lng: -96.7970, title: 'Dallas, USA' },
-        { lat: 27.9759, lng: -82.8001, title: 'Clearwater, USA' },
-        { lat: 40.7128, lng: -74.0060, title: 'New York, USA' },
-        { lat: 41.9028, lng: 12.4964, title: 'Rome, Italy' },
-        { lat: 31.7683, lng: 35.2137, title: 'Jerusalem, Israel' },
-        { lat: 41.7151, lng: 44.8271, title: 'Tbilisi, Georgia' },
-        { lat: 25.2048, lng: 55.2708, title: 'Dubai, UAE' },
-        { lat: -1.286389, lng: 36.817223, title: 'Nairobi, Kenya' },
-        { lat: -3.3869, lng: 36.6829, title: 'Arusha, Tanzania' },
-        { lat: -4.2871, lng: 39.5944, title: 'Diani Beach, Kenya' },
-        { lat: -1.94995, lng: 30.05885, title: 'Kigali, Rwanda' },
-        { lat: 9.010793, lng: 38.761252, title: 'Addis Ababa, Ethiopia' },
-        { lat: 25.2048, lng: 55.2708, title: 'Dubai, UAE' },
-        { lat: 27.7172, lng: 85.3240, title: 'Kathmandu, Nepal' },
-        { lat: 13.7563, lng: 100.5018, title: 'Bangkok, Thailand' },
-        { lat: 19.8864, lng: 102.1355, title: 'Luang Prabang, Laos' },
-        { lat: 11.5564, lng: 104.9282, title: 'Phnom Penh, Cambodia' }
+    // Initialize the map
+    map = L.map('map', {
+        minZoom: 2,
+        maxBounds: [[-90, -180], [90, 180]],
+        worldCopyJump: true,
+        zoomControl: false
+    }).setView([20, 80], 3);
+
+    // Add zoom control to the right side
+    L.control.zoom({
+        position: 'topright'
+    }).addTo(map);
+    
+    // Add dark theme map tiles
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 19
+    }).addTo(map);
+
+    const orderedLocations = [
+        { name: 'Israel', coordinates: [31.7683, 35.2137] },
+        { name: 'Georgia', coordinates: [41.7151, 44.8271] },
+        { name: 'Kenya', coordinates: [-1.286389, 36.817223] },
+        { name: 'Tanzania', coordinates: [-6.1630, 35.7516] },
+        { name: 'Rwanda', coordinates: [-1.9403, 29.8739] },
+        { name: 'UAE', coordinates: [25.2048, 55.2708] },
+        { name: 'Nepal', coordinates: [27.7172, 85.3240] },
+        { name: 'Thailand', coordinates: [13.7563, 100.5018] },
+        { name: 'Laos', coordinates: [17.9757, 102.6331] },
+        { name: 'Cambodia', coordinates: [11.5564, 104.9282] },
+        { name: 'China', coordinates: [39.9042, 116.4074] },
+        { name: 'Vietnam', coordinates: [21.0285, 105.8544] }
     ];
+        
+    // Add markers and collect coordinates for the path using orderedLocations
+    const pathCoordinates = [];
+    orderedLocations.forEach((location, index) => {
+        // Create marker
+        const marker = L.marker(location.coordinates, {
+            icon: L.divIcon({
+                className: 'custom-marker',
+                html: `
+                    <div class="marker-pin"></div>
+                    <div class="marker-label">${location.name}</div>
+                `,
+                iconSize: [30, 30],
+                iconAnchor: [15, 15],
+                popupAnchor: [0, -15]
+            })
+        }).addTo(map);
 
-    var infoWindow = new google.maps.InfoWindow();
-
-    locations.forEach(function (location) {
-        var marker = new google.maps.Marker({
-            position: { lat: location.lat, lng: location.lng },
-            map: map,
-            title: location.title,
-            icon: { url: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png' }
+        // Add popup
+        marker.bindPopup(`
+            <div class="custom-popup">
+                <h3>${location.name}</h3>
+                <p>Stop #${index + 1}</p>
+            </div>
+        `, {
+            closeButton: false
         });
 
-        marker.addListener('click', function () {
-            infoWindow.setContent(`<h3>${location.title}</h3>`);
-            infoWindow.open(map, marker);
+        // Show popup on hover
+        marker.on('mouseover', function() {
+            this.openPopup();
         });
+        marker.on('mouseout', function() {
+            this.closePopup();
+        });
+
+        pathCoordinates.push(location.coordinates);
     });
 
-    // Fit map to markers
-    var bounds = new google.maps.LatLngBounds();
-    locations.forEach(loc => bounds.extend(new google.maps.LatLng(loc.lat, loc.lng)));
-    map.fitBounds(bounds);
+    // Create the animated path
+    const path = L.polyline(pathCoordinates, {
+        color: '#FF6B6B',
+        weight: 2.5,
+        opacity: 0.8,
+        dashArray: '10, 10',
+        lineCap: 'round',
+        lineJoin: 'round'
+    }).addTo(map);
 
-    // Draw a polyline
-    var pathCoordinates = locations.map(function (location) {
-        return { lat: location.lat, lng: location.lng };
+    // Animate the path
+    let offset = 0;
+    function animatePath() {
+        offset = (offset + 1) % 20;
+        path.setStyle({ dashOffset: -offset });
+        animationFrame = requestAnimationFrame(animatePath);
+    }
+    animatePath();
+
+    // Fit bounds to show all markers with padding
+    const bounds = L.latLngBounds(pathCoordinates);
+    map.fitBounds(bounds, {
+        padding: [50, 50]
     });
-
-    var polyline = new google.maps.Polyline({
-        path: pathCoordinates,
-        geodesic: true,
-        strokeColor: '#FF5733',
-        strokeOpacity: 0.8,
-        strokeWeight: 2,
-        icons: [
-            {
-                icon: {
-                    path: google.maps.SymbolPath.FORWARD_OPEN_ARROW,
-                    scale: 3,
-                    strokeColor: '#FF5733',
-                },
-                offset: '100%',
-            },
-        ],
-    });
-
-    polyline.setMap(map);
 }
+
+
+// Add custom styles for the markers and popups
+const style = document.createElement('style');
+style.textContent = `
+    .custom-marker {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .marker-pin {
+        width: 20px;
+        height: 20px;
+        background: #FF6B6B;
+        border: 3px solid white;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        transition: transform 0.3s ease;
+    }
+
+    .marker-label {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        white-space: nowrap;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+        margin-bottom: 5px;
+    }
+
+    .custom-marker:hover .marker-pin {
+        transform: scale(1.2);
+    }
+
+    .custom-marker:hover .marker-label {
+        opacity: 1;
+    }
+
+    .custom-popup {
+        text-align: center;
+    }
+
+    .custom-popup h3 {
+        color: #2a5298;
+        margin: 0 0 5px 0;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .custom-popup p {
+        color: #666;
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .leaflet-popup-content-wrapper {
+        border-radius: 8px;
+        padding: 5px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(5px);
+    }
+
+    .leaflet-popup-tip {
+        background: rgba(255, 255, 255, 0.95);
+    }
+`;
+document.head.appendChild(style);
