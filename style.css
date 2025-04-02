@@ -380,27 +380,58 @@ body {
     transform: translateY(-2px);
 }
 
-/* Responsive Design */
+    /* Responsive Design */
 @media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        padding: 10px;
-        height: auto;
+
+    .blog-posts {
+        padding: 0 15px;
+        margin-top: calc(var(--header-height) + 20px);
     }
 
-    .nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        background-color: inherit; /* Ensures background is visible */
+    .month-grid {
+        grid-template-columns: 1fr;
     }
+
+    .post {
+        padding: 20px;
+    }
+
+    .post img,
+    .post-images img {
+        max-width: 250px;
+        max-height: 250px;
+    }
+
+   /* Mobile header styles */
+.header-content {
+    flex-direction: column;
+    padding: 10px;
+    height: auto;
+    position: fixed; /* Change to fixed so it stays at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1010; /* Keep header above navbar */
+}
+
+/* Mobile navigation styles */
+.nav {
+    height: auto;
+    flex-direction: column;
+    position: fixed;
+    top: /* Calculate this based on header height, e.g. */ 60px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
     .nav ul {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 16px;
+        gap: 10px;
     }
 
     .map-container {
@@ -419,8 +450,9 @@ body {
     }
     
     .flags-grid img {
-        width: 60px; /* Adjust to make flags uniform */
-        height: auto;
+        width: 60px;  /* Set a fixed width */
+        height: 40px; /* Set a fixed height */
+        object-fit: cover; /* Ensures consistent sizing */
         display: block;
     }
     
@@ -431,13 +463,26 @@ body {
         text-align: center;
         width: 80px; /* Ensures text stays aligned */
     }
-    
 
     .footer-content {
         flex-direction: column;
         gap: 20px;
         text-align: center;
     }
+
+    .food-page {
+        padding: 1rem;
+    }
+
+    .food-entry {
+        padding: 1.5rem;
+    }
+
+    .food-images img {
+        max-width: 100%;
+        height: auto;
+    }
+
 }
 
 /* Blog Page Styles */
@@ -646,33 +691,6 @@ body {
     gap: 24px;
 }
 
-@media (max-width: 768px) {
-    .header-content {
-        padding: 0 15px;
-    }
-
-    .nav ul {
-        padding: 10px 0;
-    }
-
-    .blog-posts {
-        padding: 0 15px;
-        margin-top: calc(var(--header-height) + 20px);
-    }
-
-    .month-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .post {
-        padding: 20px;
-    }
-
-    .post img,
-    .post-images img {
-        max-width: 250px;
-        max-height: 250px;
-    }
 }
 
 /* Food Page Styles */
@@ -758,20 +776,6 @@ body {
     color: #ff5722; /* Same highlight color as food page */
 }
 
-@media (max-width: 768px) {
-    .food-page {
-        padding: 1rem;
-    }
-
-    .food-entry {
-        padding: 1.5rem;
-    }
-
-    .food-images img {
-        max-width: 100%;
-        height: auto;
-    }
-}
 
 
 
