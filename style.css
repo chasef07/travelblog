@@ -411,6 +411,28 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .flags-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .flags-grid img {
+        width: 60px; /* Adjust to make flags uniform */
+        height: auto;
+        display: block;
+    }
+    
+    .flag-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 80px; /* Ensures text stays aligned */
+    }
+    
+
     .footer-content {
         flex-direction: column;
         gap: 20px;
