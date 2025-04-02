@@ -168,13 +168,7 @@ function nextSlide() {
 function initMap() {
     const mapContainer = document.getElementById('map');
     if (!mapContainer) {
-        console.error('Map container not found. Please ensure there is a <div id="map"></div> in your HTML');
-        return;
-    }
-
-    // Check if Leaflet is available
-    if (typeof L === 'undefined') {
-        console.error('Leaflet library not loaded. Please include it in your HTML with: <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>');
+        console.error('Map container not found');
         return;
     }
 
@@ -183,7 +177,9 @@ function initMap() {
         minZoom: 2,
         maxBounds: [[-90, -180], [90, 180]],
         worldCopyJump: true,
-        zoomControl: false
+        zoomControl: false,
+        scrollWheelZoom: true,
+        dragging: true
     }).setView([20, 80], 3);
 
     // Add zoom control to the right side
@@ -213,22 +209,11 @@ function initMap() {
         { name: 'Vietnam', coordinates: [21.0285, 105.8544] }
     ];
         
-    // Add markers and collect coordinates for the path using orderedLocations
+    // Add markers and collect coordinates for the path
     const pathCoordinates = [];
     orderedLocations.forEach((location, index) => {
         // Create marker
-        const marker = L.marker(location.coordinates, {
-            icon: L.divIcon({
-                className: 'custom-marker',
-                html: `
-                    <div class="marker-pin"></div>
-                    <div class="marker-label">${location.name}</div>
-                `,
-                iconSize: [30, 30],
-                iconAnchor: [15, 15],
-                popupAnchor: [0, -15]
-            })
-        }).addTo(map);
+        const marker = L.marker(location.coordinates).addTo(map);
 
         // Add popup
         marker.bindPopup(`
@@ -236,46 +221,34 @@ function initMap() {
                 <h3>${location.name}</h3>
                 <p>Stop #${index + 1}</p>
             </div>
-        `, {
-            closeButton: false
-        });
-
-        // Show popup on hover
-        marker.on('mouseover', function() {
-            this.openPopup();
-        });
-        marker.on('mouseout', function() {
-            this.closePopup();
-        });
+        `);
 
         pathCoordinates.push(location.coordinates);
     });
 
-    // Create the animated path
-    const path = L.polyline(pathCoordinates, {
+    // Create the path
+    L.polyline(pathCoordinates, {
         color: '#FF6B6B',
-        weight: 2.5,
-        opacity: 0.8,
-        dashArray: '10, 10',
-        lineCap: 'round',
-        lineJoin: 'round'
+        weight: 3,
+        opacity: 0.8
     }).addTo(map);
-
-    // Animate the path
-    let offset = 0;
-    function animatePath() {
-        offset = (offset + 1) % 20;
-        path.setStyle({ dashOffset: -offset });
-        animationFrame = requestAnimationFrame(animatePath);
-    }
-    animatePath();
 
     // Fit bounds to show all markers with padding
     const bounds = L.latLngBounds(pathCoordinates);
     map.fitBounds(bounds, {
         padding: [50, 50]
     });
+    
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        map.invalidateSize();
+    });
 }
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+    initMap();
+});
 
 
 // Add custom styles for the markers and popups
