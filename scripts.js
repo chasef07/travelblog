@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { name: 'Thailand', flag: 'TH-flag.jpg', coordinates: [13.7563, 100.5018] },
         { name: 'Laos', flag: 'LA-flag.jpg', coordinates: [17.9757, 102.6331] },
         { name: 'Cambodia', flag: 'CB-flag.jpg', coordinates: [11.5564, 104.9282] },
-        { name: 'China', flag: 'CH-flag.jpg', coordinates: [39.9042, 116.4074] },
+        { name: 'China', flag: 'CH-flag.jpg', coordinates: [30.5728, 104.0668] },
         { name: 'Vietnam', flag: 'VM-flag.jpg', coordinates: [21.0285, 105.8544] }
     ];
     
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
             title: "April 2025: Motorbiking Vietnam",
             date: "April 2025",
             excerpt: "Ride with me across terraced rice fields while enjoying traditional Vietnamese cuisne ",
-            image: "images/vietnam.jpg",
+            image: "images/droneshotrice.jpg",
             link: "april-2025.html"
         },
         {
@@ -35,42 +35,42 @@ document.addEventListener('DOMContentLoaded', function() {
             title: "February 2025: Adventures in Laos",
             date: "February 2025",
             excerpt: "Journeying through Laos's traditional villages and serene landscapes, discovering the heart of Southeast Asia.",
-            image: "images/farmlife.jpg",
+            image: "images/laosfall-2.jpg",
             link: "february-2025.html"
         },
         {
             title: "January 2025: Thailand Discos",
             date: "January 2025",
             excerpt: "From island parties to serene sunsets, experiencing the magic of Thailand.",
-            image: "images/fullmoon.jpg",
+            image: "images/fullmoon-2.jpg",
             link: "january-2025.html"
         },
         {
             title: "December 2024: Trekking in Nepal",
             date: "December 2024",
             excerpt: "Exploring the majestic Himalayas and vibrant streets of Kathmandu. From ancient temples to mountain adventures, discover the spiritual and natural wonders of Nepal.",
-            image: "images/namaste8.jpg",
+            image: "images/namaste8-2.jpg",
             link: "december-2024.html"
         },
         {
             title: "November 2024: Safaris of East Africa",
             date: "November 2024",
             excerpt: "From the vast savannas of Tanzania to the perfectious coffee of Rwanda, experiencing the incredible wildlife and cultures of East Africa.",
-            image: "images/serengeti.jpg",
+            image: "images/serengeti-2.jpg",
             link: "november-2024.html"
         },
         {
             title: "October 2024: Investing in Georgia",
             date: "October 2024",
             excerpt: "Discovering the rich culture and ancient traditions of Georgia, from the vibrant streets of Tbilisi to the stunning mountains of Gudauri. Join me as I explore this hidden gem at the crossroads of Europe and Asia.",
-            image: "images/blarg.jpg",
+            image: "images/blarg-2.jpg",
             link: "october-2024.html"
         },
         {
             title: "September 2024: Beginning the Journey",
             date: "September 2024",
             excerpt: "The start of my world adventure, from the final days in Florida to the first experiences in Israel. Join me as I begin this life-changing journey.",
-            image: "images/IMG_2697.jpg",
+            image: "images/holyholy.jpg",
             link: "september-2024.html"
         }
     ];
@@ -205,7 +205,7 @@ function initMap() {
         { name: 'Thailand', coordinates: [13.7563, 100.5018] },
         { name: 'Laos', coordinates: [17.9757, 102.6331] },
         { name: 'Cambodia', coordinates: [11.5564, 104.9282] },
-        { name: 'China', coordinates: [39.9042, 116.4074] },
+        { name: 'China', coordinates: [30.5728, 104.0668] },
         { name: 'Vietnam', coordinates: [21.0285, 105.8544] }
     ];
         
