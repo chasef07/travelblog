@@ -426,6 +426,7 @@ body {
     background-color: #fff;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 14px; /* Adjust this value to make the text smaller */
 }
 
     .nav ul {
@@ -545,6 +546,11 @@ body {
     font-size: 0.95rem;
     color: #555;
   }
+
+  .transport-page {
+    padding-top: 00px; /* Adjust this value as needed */
+}
+
 
 }
 
