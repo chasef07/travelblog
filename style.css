@@ -380,179 +380,7 @@ body {
     transform: translateY(-2px);
 }
 
-    /* Responsive Design */
-@media (max-width: 768px) {
-
-    .blog-posts {
-        padding: 0 15px;
-        margin-top: calc(var(--header-height) + 20px);
-    }
-
-    .month-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .post {
-        padding: 20px;
-    }
-
-    .post img,
-    .post-images img {
-        max-width: 250px;
-        max-height: 250px;
-    }
-
-   /* Mobile header styles */
-.header-content {
-    flex-direction: column;
-    padding: 10px;
-    height: auto;
-    position: fixed; /* Change to fixed so it stays at the top */
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    z-index: 1010; /* Keep header above navbar */
-}
-
-/* Mobile navigation styles */
-.nav {
-    height: auto;
-    flex-direction: column;
-    position: fixed;
-    top: /* Calculate this based on header height, e.g. */ 60px;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    font-size: 14px; /* Adjust this value to make the text smaller */
-}
-
-    .nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .map-container {
-        height: 400px;
-    }
-
-    .blog-grid, .highlights-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .flags-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
     
-    .flags-grid img {
-        width: 60px;  /* Set a fixed width */
-        height: 40px; /* Set a fixed height */
-        object-fit: cover; /* Ensures consistent sizing */
-        display: block;
-    }
-    
-    .flag-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        width: 80px; /* Ensures text stays aligned */
-    }
-
-    .footer-content {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-
-/* Food Page Styling */
-.food-page {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px;
-    /* Add top padding to account for fixed header/nav */
-    padding-top: 90px; /* Match the transport page padding */
-    position: relative;
-    z-index: 1;
-  }
-  
-  .food-section {
-    margin-bottom: 40px;
-  }
-  
-  .food-section h2 {
-    font-size: 1.8rem;
-    color: #2c3e50; /* Same as transport page */
-    margin-bottom: 20px;
-    font-weight: 600;
-  }
-  
-  .food-entry {
-    background-color: #f8f9fa; /* Light gray background */
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 8px;
-    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .food-entry:hover {
-    transform: scale(1.01); /* Subtle scale effect */
-  }
-  
-  .food-description p {
-    line-height: 1.5;
-    margin-bottom: 15px;
-    color: #333;
-  }
-  
-  .food-description strong {
-    color: #2c3e50;
-    font-weight: 600;
-  }
-  
-  .food-images {
-    margin-top: 15px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
-  }
-  
-  .food-images img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 6px;
-    transition: transform 0.3s ease;
-  }
-  
-  .food-images img:hover {
-    transform: scale(1.05);
-  }
-  
-  .price-info {
-    margin-top: 15px;
-    padding-top: 15px;
-    border-top: 1px solid #e0e0e0;
-  }
-  
-  .price-info p {
-    margin: 5px 0;
-    font-size: 0.95rem;
-    color: #555;
-  }
-
-  .transport-page {
-    padding-top: 00px; /* Adjust this value as needed */
-}
-
-
-}
 
 /* Blog Page Styles */
 .blog-page {
@@ -870,44 +698,6 @@ body {
     border: none;
   }
 
-  * Add title styling if you want to display titles */
-.video-item h3 {
-  color: var(--primary-color);
-  font-size: 1.4rem;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  border-bottom: 2px solid var(--secondary-color);
-  padding-bottom: 0.5rem;
-}
-
-/* Add description styling */
-.video-item p {
-  color: var(--text-color);
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-  .video-item {
-    width: calc(50% - 2rem);
-  }
-}
-
-@media (max-width: 768px) {
-  .video-item {
-    width: 100%;
-  }
-  
-  .vlogs-page {
-    padding: 1.5rem;
-  }
-  
-  .vlog-section h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-}
 
 /* Transport Page Styling */
     .transportation-page {
@@ -1095,3 +885,183 @@ body {
   .packing-checklist-images img:hover {
     transform: scale(1.02);
   }
+
+
+
+  /* Responsive Design */
+@media (max-width: 768px) {
+
+    .blog-posts {
+        padding: 0 15px;
+        margin-top: calc(var(--header-height) + 20px);
+    }
+
+    .month-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .post {
+        padding: 20px;
+    }
+
+    .post img,
+    .post-images img {
+        max-width: 250px;
+        max-height: 250px;
+    }
+
+   /* Mobile header styles */
+.header-content {
+    flex-direction: column;
+    padding: 10px;
+    height: auto;
+    position: fixed; /* Change to fixed so it stays at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1010; /* Keep header above navbar */
+}
+
+/* Mobile navigation styles */
+.nav {
+    height: auto;
+    flex-direction: column;
+    position: fixed;
+    top: /* Calculate this based on header height, e.g. */ 60px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .map-container {
+        height: 400px;
+    }
+
+    .blog-grid, .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .flags-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .flags-grid img {
+        width: 60px;  /* Set a fixed width */
+        height: 40px; /* Set a fixed height */
+        object-fit: cover; /* Ensures consistent sizing */
+        display: block;
+    }
+    
+    .flag-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 80px; /* Ensures text stays aligned */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+/* Food Page Styling */
+.food-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    /* Add top padding to account for fixed header/nav */
+    padding-top: 90px; /* Match the transport page padding */
+    position: relative;
+    z-index: 1;
+  }
+  
+  .food-section {
+    margin-bottom: 40px;
+  }
+  
+  .food-section h2 {
+    font-size: 1.8rem;
+    color: #2c3e50; /* Same as transport page */
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  .food-entry {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .food-entry:hover {
+    transform: scale(1.01); /* Subtle scale effect */
+  }
+  
+  .food-description p {
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .food-description strong {
+    color: #2c3e50;
+    font-weight: 600;
+  }
+  
+  .food-images {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  
+  .food-images img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+  }
+  
+  .food-images img:hover {
+    transform: scale(1.05);
+  }
+  
+  .price-info {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .price-info p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    color: #555;
+  }
+
+  .transportation-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    /* Add top padding to account for fixed header/nav */
+    padding-top: 90px; /* Match the transport page padding */
+    position: relative;
+    z-index: 1;
+  }
+
+}
