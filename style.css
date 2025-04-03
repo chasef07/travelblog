@@ -820,6 +820,89 @@ body {
     color: #333;
 }
 
+
+/* Vlogs Page Styles */
+.vlogs-page {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: calc(var(--header-height) + 40px) auto 40px;
+  }
+  
+  .vlog-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+  }
+  
+  .video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .video-item {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    width: calc(33.333% - 2rem);
+    min-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .video-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .video-item iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    border: none;
+  }
+
+  * Add title styling if you want to display titles */
+.video-item h3 {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+}
+
+/* Add description styling */
+.video-item p {
+  color: var(--text-color);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .video-item {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .video-item {
+    width: 100%;
+  }
+  
+  .vlogs-page {
+    padding: 1.5rem;
+  }
+  
+  .vlog-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
 /* Transport Page Styling */
     .transportation-page {
     max-width: 1100px;
