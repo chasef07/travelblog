@@ -325,3 +325,32 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Add this to your JavaScript file or in a <script> tag at the end of your HTML
+document.addEventListener('DOMContentLoaded', function() {
+    function adjustContentPadding() {
+      const headerHeight = document.querySelector('.header-content').offsetHeight;
+      const navHeight = document.querySelector('.nav').offsetHeight;
+      const totalHeight = headerHeight + navHeight;
+      
+      const contentPages = document.querySelectorAll('.blog-posts, .transportation-page, .food-page, .packing-checklist-page');
+      contentPages.forEach(page => {
+        page.style.paddingTop = (totalHeight + 20) + 'px'; // Add 20px for spacing
+      });
+    }
+  
+    // Run on load and resize
+    adjustContentPadding();
+    window.addEventListener('resize', adjustContentPadding);
+  });
+
+  /* Add this JavaScript to make the checkboxes functional */
+
+document.addEventListener('DOMContentLoaded', function() {
+  const checklistItems = document.querySelectorAll('.checklist-column li');
+  checklistItems.forEach(item => {
+    item.addEventListener('click', function() {
+      this.classList.toggle('checked');
+    });
+  });
+});
