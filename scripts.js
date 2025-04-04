@@ -34,42 +34,42 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             title: "February 2025: Adventures in Laos",
             date: "February 2025",
-            excerpt: "Journeying through Laos's traditional villages and serene landscapes, discovering the heart of Southeast Asia.",
+            excerpt: "Journeying through Laos's traditional villages and beautiful landscapes, discovering the heart of Southeast Asia.",
             image: "images/laosfall-2.jpg",
             link: "february-2025.html"
         },
         {
             title: "January 2025: Thailand Discos",
             date: "January 2025",
-            excerpt: "From island parties to serene sunsets, experiencing the magic of Thailand.",
+            excerpt: "From island parties to serene sunsets, experiencing the allure of Thailand.",
             image: "images/fullmoon-2.jpg",
             link: "january-2025.html"
         },
         {
             title: "December 2024: Trekking in Nepal",
             date: "December 2024",
-            excerpt: "Exploring the majestic Himalayas and vibrant streets of Kathmandu. From ancient temples to mountain adventures, discover the spiritual and natural wonders of Nepal.",
+            excerpt: "Exploring the majestic Himalayas and vibrant streets of Kathmandu. From ancient temples to mountain adventures.",
             image: "images/namaste8-2.jpg",
             link: "december-2024.html"
         },
         {
             title: "November 2024: Safaris of East Africa",
             date: "November 2024",
-            excerpt: "From the vast savannas of Tanzania to the perfectious coffee of Rwanda, experiencing the incredible wildlife and cultures of East Africa.",
+            excerpt: "From the vast savannas of Tanzania to the perfectious coffee of Rwanda.",
             image: "images/serengeti-2.jpg",
             link: "november-2024.html"
         },
         {
             title: "October 2024: Investing in Georgia",
             date: "October 2024",
-            excerpt: "Discovering the rich culture and ancient traditions of Georgia, from the vibrant streets of Tbilisi to the stunning mountains of Gudauri. Join me as I explore this hidden gem at the crossroads of Europe and Asia.",
+            excerpt: "Discovering the rich culture and ancient traditions of Georgia, from the vibrant streets of Tbilisi to the stunning mountains of Gudauri.",
             image: "images/blarg-2.jpg",
             link: "october-2024.html"
         },
         {
-            title: "September 2024: Beginning the Journey",
+            title: "September 2024: Connecting in Israel",
             date: "September 2024",
-            excerpt: "The start of my world adventure, from the final days in Florida to the first experiences in Israel. Join me as I begin this life-changing journey.",
+            excerpt: "The start of my world adventure, from the final days in Florida to the first experiences in Israel.",
             image: "images/holyholy.jpg",
             link: "september-2024.html"
         }
