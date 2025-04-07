@@ -498,12 +498,7 @@ body {
     color: #666;
 }
 
-/* Blog Posts Styles */
-.blog-posts {
-    max-width: 1200px;
-    margin: calc(var(--header-height) + 40px) auto 40px;
-    padding: 0 20px;
-}
+
 
 .post {
     background: white;
@@ -588,12 +583,7 @@ body {
     gap: 24px;
 }
 
-/* Food Page Styles */
-.food-page {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: calc(var(--header-height) + 40px) auto 40px;
-}
+
 
 
 .food-section h2 {
