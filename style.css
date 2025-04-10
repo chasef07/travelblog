@@ -991,8 +991,7 @@ body {
       width: 100%;
       background-color: #fff;
       z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      
+      box-shadow: none; /* or match the header shadow */
     }
     
     .nav ul {
@@ -1007,7 +1006,7 @@ body {
     /* Make nav items take less space if needed */
     .nav ul li a {
         padding: 8px 5px; /* Reduce padding */
-        font-size: 0.7em; /* Slightly smaller text */
+        font-size: 0.8em; /* Slightly smaller text */
     }
     
     .map-container {
