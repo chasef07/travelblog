@@ -245,10 +245,6 @@ function initMap() {
     });
 }
 
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', function() {
-    initMap();
-});
 
 
 // Add custom styles for the markers and popups
