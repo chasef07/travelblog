@@ -134,10 +134,10 @@ let animationFrame;
 
 // Slideshow functionality
 const slides = [
-    { image: 'images/freedombeach.jpg' },
-    { image: 'images/layingdragon.jpg' },
-    { image: 'images/lands.jpg' },
-    { image: 'images/sheepsun.jpg' }
+    { image: 'images/chinastreet.jpg' },
+    { image: 'images/whitet.jpg' },
+    { image: 'images/waterfall2.jpg' },
+    { image: 'images/huanglong.jpg' }
 ];
 
 let currentSlide = 0;
