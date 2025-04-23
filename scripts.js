@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             title: "April 2025: Motorbiking Vietnam",
             date: "April 2025",
-            excerpt: "Ride with me across terraced rice fields while enjoying traditional Vietnamese cuisne ",
+            excerpt: "Ride with me across terraced rice fields while enjoying traditional Vietnamese cuisine. ",
             image: "images/droneshotrice.jpg",
             link: "april-2025.html"
         },
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             title: "February 2025: Adventures in Laos",
             date: "February 2025",
-            excerpt: "Journeying through Laos's traditional villages and beautiful landscapes, discovering the heart of Southeast Asia.",
+            excerpt: "Journeying through Laos' traditional villages and beautiful landscapes, discovering the heart of Southeast Asia.",
             image: "images/laosfall-2.jpg",
             link: "february-2025.html"
         },
