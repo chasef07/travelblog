@@ -12,15 +12,23 @@ document.addEventListener('DOMContentLoaded', function() {
         { name: 'Laos', flag: 'LA-flag.jpg', coordinates: [17.9757, 102.6331] },
         { name: 'Cambodia', flag: 'CB-flag.jpg', coordinates: [11.5564, 104.9282] },
         { name: 'China', flag: 'CH-flag.jpg', coordinates: [30.5728, 104.0668] },
-        { name: 'Vietnam', flag: 'VM-flag.jpg', coordinates: [21.0285, 105.8544] }
+        { name: 'Vietnam', flag: 'VM-flag.jpg', coordinates: [21.0285, 105.8544] },
+        { name: 'Singapore', flag: 'SN-flag.jpg', coordinates: [1.3521, 103.8198] }
     ];
     
     // Data for blog posts with excerpts
     const blogs = [
         {
+            title: "May 2025: :)",
+            date: "May 2025",
+            excerpt: "Loading ... ",
+            image: "images/input_here.jpg",
+            link: "may-2025.html"
+        },
+        {
             title: "April 2025: Motorbiking Vietnam",
             date: "April 2025",
-            excerpt: "Ride with me across terraced rice fields while enjoying traditional Vietnamese cuisine. ",
+            excerpt: "Ride with me across terraced rice fields while enjoying traditional Vietnamese cuisine.",
             image: "images/droneshotrice.jpg",
             link: "april-2025.html"
         },
@@ -206,7 +214,8 @@ function initMap() {
         { name: 'Laos', coordinates: [17.9757, 102.6331] },
         { name: 'Cambodia', coordinates: [11.5564, 104.9282] },
         { name: 'China', coordinates: [30.5728, 104.0668] },
-        { name: 'Vietnam', coordinates: [21.0285, 105.8544] }
+        { name: 'Vietnam', coordinates: [21.0285, 105.8544] },
+        { name: 'Singapore', coordinates: [1.3521, 103.8198] }
     ];
         
     // Add markers and collect coordinates for the path
