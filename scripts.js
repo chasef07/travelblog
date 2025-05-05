@@ -13,13 +13,14 @@ document.addEventListener('DOMContentLoaded', function() {
         { name: 'Cambodia', flag: 'CB-flag.jpg', coordinates: [11.5564, 104.9282] },
         { name: 'China', flag: 'CH-flag.jpg', coordinates: [30.5728, 104.0668] },
         { name: 'Vietnam', flag: 'VM-flag.jpg', coordinates: [21.0285, 105.8544] },
-        { name: 'Singapore', flag: 'SN-flag.jpg', coordinates: [1.3521, 103.8198] }
+        { name: 'Singapore', flag: 'SN-flag.jpg', coordinates: [1.3521, 103.8198] },
+        { name: 'Philippines', flag: 'RP-flag.jpg', coordinates: [9.9432, 123.3966] }
     ];
     
     // Data for blog posts with excerpts
     const blogs = [
         {
-            title: "May 2025: :)",
+            title: "May 2025: Island hopping in the Phillipines",
             date: "May 2025",
             excerpt: "Loading ... ",
             image: "images/input_here.jpg",
@@ -215,7 +216,8 @@ function initMap() {
         { name: 'Cambodia', coordinates: [11.5564, 104.9282] },
         { name: 'China', coordinates: [30.5728, 104.0668] },
         { name: 'Vietnam', coordinates: [21.0285, 105.8544] },
-        { name: 'Singapore', coordinates: [1.3521, 103.8198] }
+        { name: 'Singapore', coordinates: [1.3521, 103.8198] },
+        { name: 'Philippines', coordinates: [9.9432, 123.3966] }
     ];
         
     // Add markers and collect coordinates for the path
