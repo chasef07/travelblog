@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Data for blog posts with excerpts
     const blogs = [
         {
-            title: "May 2025: Island hopping in the Phillipines",
+            title: "May 2025: Island Hopping in the Phillipines",
             date: "May 2025",
-            excerpt: "Loading ... ",
-            image: "images/input_here.jpg",
+            excerpt: "Turquoise waterfalls, epic snorkeling, wild jungle roads, and laid-back beach vibes — the Philippines hits hard in every direction.",
+            image: "images/canyoneering.jpg",
             link: "may-2025.html"
         },
         {
