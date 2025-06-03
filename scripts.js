@@ -19,10 +19,18 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Data for blog posts with excerpts
     const blogs = [
+
+        {
+            title: "June 2025: Indonesia",
+            date: "June 2025",
+            excerpt: "Turquoise waterfalls, epic snorkeling, crazy surfing, and laid-back beach vibes — the Philippines hits hard in every direction.",
+            image: "images/test.jpg",
+            link: "june-2025.html"
+        },
         {
             title: "May 2025: Island Hopping in the Phillipines",
             date: "May 2025",
-            excerpt: "Turquoise waterfalls, epic snorkeling, wild jungle roads, and laid-back beach vibes — the Philippines hits hard in every direction.",
+            excerpt: "Turquoise waterfalls, epic snorkeling, crazy surfing, and laid-back beach vibes — the Philippines hits hard in every direction.",
             image: "images/canyoneering.jpg",
             link: "may-2025.html"
         },
@@ -143,10 +151,10 @@ let animationFrame;
 
 // Slideshow functionality
 const slides = [
-    { image: 'images/chinastreet.jpg' },
-    { image: 'images/whitet.jpg' },
-    { image: 'images/waterfall2.jpg' },
-    { image: 'images/huanglong.jpg' }
+    { image: 'images/slide1.jpg' },
+    { image: 'images/slide2.jpg' },
+    { image: 'images/slide3.jpg' },
+    { image: 'images/slide4.jpg' }
 ];
 
 let currentSlide = 0;
