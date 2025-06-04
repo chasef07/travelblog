@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             title: "June 2025: Indonesia",
             date: "June 2025",
-            excerpt: "Turquoise waterfalls, epic snorkeling, crazy surfing, and laid-back beach vibes — the Philippines hits hard in every direction.",
+            excerpt: "INDO INDO INDO",
             image: "images/test.jpg",
             link: "june-2025.html"
         },
