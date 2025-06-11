@@ -1169,6 +1169,7 @@ body {
     text-decoration: none;
     margin-left: 10px;
     transition: transform 0.3s ease;
+    opacity: 0%;
 }
 
 .secret-button:hover {
