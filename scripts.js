@@ -22,6 +22,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const blogs = [
 
         {
+            title: "July 2025: ???",
+            date: "July 2025",
+            excerpt: "Let's see where I go",
+            image: "images/",
+            link: "july-2025.html"
+        },
+
+        {
             title: "June 2025: Indonesia",
             date: "June 2025",
             excerpt: "From surfing worldclass waves to temple-hopping in Bali, Indonesia is a whirlwind of ancient culture, amazing wildlife, and adventure.",
