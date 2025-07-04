@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             title: "June 2025: Indonesia",
             date: "June 2025",
-            excerpt: "From surfing worldclass waves to temple-hopping in Bali, Indonesia is a whirlwind of ancient culture, amazing wildlife, and adventure. Wild, raw, and deeply soulful.",
+            excerpt: "From surfing worldclass waves to temple-hopping in Bali, Indonesia is a whirlwind of ancient culture, amazing wildlife, and adventure.",
             image: "images/indoprof.jpg",
             link: "june-2025.html"
         },
