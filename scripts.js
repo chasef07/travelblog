@@ -15,16 +15,17 @@ document.addEventListener('DOMContentLoaded', function() {
         { name: 'Vietnam', flag: 'VM-flag.jpg', coordinates: [21.0285, 105.8544] },
         { name: 'Singapore', flag: 'SN-flag.jpg', coordinates: [1.3521, 103.8198] },
         { name: 'Philippines', flag: 'RP-flag.jpg', coordinates: [9.9432, 123.3966] },
-        { name: 'Indonesia', flag: 'ID-flag.jpg', coordinates: [-8.5069, 115.2625] }
+        { name: 'Indonesia', flag: 'ID-flag.jpg', coordinates: [-8.5069, 115.2625] },
+        { name: 'Japan', flag: 'JA-flag.jpg', coordinates: [48.0618, 141.3545] }
     ];
     
     // Data for blog posts with excerpts
     const blogs = [
 
         {
-            title: "July 2025: ???",
+            title: "July 2025: Hokkaido, the Northern Gem of Japan",
             date: "July 2025",
-            excerpt: "Let's see where I go",
+            excerpt: "Hokkaido cuisine, nature, and culture",
             image: "images/",
             link: "july-2025.html"
         },
@@ -235,7 +236,8 @@ function initMap() {
         { name: 'Vietnam', coordinates: [21.0285, 105.8544] },
         { name: 'Singapore', coordinates: [1.3521, 103.8198] },
         { name: 'Philippines', coordinates: [9.9432, 123.3966] },
-        { name: 'Indonesia', coordinates: [-8.5069, 115.2625] }
+        { name: 'Indonesia', coordinates: [-8.5069, 115.2625] },
+        { name: 'Japan',coordinates: [48.0618, 141.3545] }
     ];
         
     // Add markers and collect coordinates for the path
