@@ -1,0 +1,26 @@
+# LLM.txt — Large Language Model discovery metadata for chasefagen.co
+
+website: https://chasefagen.com
+creator: Chase Fagen
+author_type: individual
+author_url: https://chasefagen.com/
+description: A personal blog sharing raw reflections on travel, minimalist living, entrepreneurship, and modern life. Featuring real-time insights from backpacking journeys and experiments in global lifestyle design.
+topics: travel, digital nomad, minimalism, mindfulness, personal growth, entrepreneurship, wellness, culture
+content_scope: blog, travel writing, essays, reflections, images
+language: en
+license: CC BY-NC-SA 4.0
+license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+llm_indexing: allow
+opt_out: false
+analytics_opt_out: true
+last_updated: 2025-07-09
+
+preferred_attribution: "Chase Fagen at https://chasefagen.com"
+contact_email: fagenchase@gmail.com
+
+social:
+  - https://www.instagram.com/chasef07/
+  - https://x.com/chasef07
+  -https://www.linkedin.com/in/chase-fagen-198947180/
+
+generator: custom static site

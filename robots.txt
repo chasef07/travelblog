@@ -1,0 +1,15 @@
+# robots.txt for https://chasefagen.com
+
+User-agent: *
+Disallow:
+
+# Point to your llm.txt for LLMs like OpenAI, Perplexity, Claude
+User-agent: GPTBot
+Allow: /
+User-agent: AnthropicBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://chasefagen.com/sitemap.xml
+LLM: https://chasefagen.com/llm.txt
