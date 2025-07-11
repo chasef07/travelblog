@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
             title: "July 2025: Hokkaido, the Northern Gem of Japan",
             date: "July 2025",
             excerpt: "Hokkaido cuisine, nature, and culture",
-            image: "images/",
+            image: "images/sush.jpg",
             link: "july-2025.html"
         },
 
