@@ -1,4 +1,4 @@
-# LLM.txt — Large Language Model discovery metadata for chasefagen.co
+# LLM.txt — Large Language Model discovery metadata for chasefagen.com
 
 website: https://chasefagen.com
 creator: Chase Fagen
