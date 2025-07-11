@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { name: 'Singapore', flag: 'SN-flag.jpg', coordinates: [1.3521, 103.8198] },
         { name: 'Philippines', flag: 'RP-flag.jpg', coordinates: [9.9432, 123.3966] },
         { name: 'Indonesia', flag: 'ID-flag.jpg', coordinates: [-8.5069, 115.2625] },
-        { name: 'Japan', flag: 'JA-flag.jpg', coordinates: [48.0618, 141.3545] }
+        { name: 'Japan', flag: 'JA-flag.jpg', coordinates:[43.0618, 141.3545 ] }
     ];
     
     // Data for blog posts with excerpts
@@ -237,7 +237,7 @@ function initMap() {
         { name: 'Singapore', coordinates: [1.3521, 103.8198] },
         { name: 'Philippines', coordinates: [9.9432, 123.3966] },
         { name: 'Indonesia', coordinates: [-8.5069, 115.2625] },
-        { name: 'Japan',coordinates: [48.0618, 141.3545] }
+        { name: 'Japan',coordinates: [43.0618, 141.3545 ] }
     ];
         
     // Add markers and collect coordinates for the path
