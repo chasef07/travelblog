@@ -4,39 +4,98 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
   <loc>https://www.chasefagen.com/</loc>
-  <lastmod>2025-04-08T12:30:46+00:00</lastmod>
+  <lastmod>2025-07-29T12:00:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.chasefagen.com/index.html</loc>
-  <lastmod>2025-04-08T12:30:46+00:00</lastmod>
+  <lastmod>2025-07-29T12:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.chasefagen.com/food.html</loc>
-  <lastmod>2025-04-08T12:30:46+00:00</lastmod>
+  <lastmod>2025-07-29T12:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.chasefagen.com/transportation.html</loc>
-  <lastmod>2025-04-08T12:30:46+00:00</lastmod>
+  <lastmod>2025-07-29T12:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.chasefagen.com/vlogs.html</loc>
-  <lastmod>2025-04-08T12:30:46+00:00</lastmod>
+  <lastmod>2025-07-29T12:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.chasefagen.com/packing-checklist.html</loc>
-  <lastmod>2025-04-08T12:30:46+00:00</lastmod>
+  <lastmod>2025-07-29T12:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
+<url>
+  <loc>https://www.chasefagen.com/love-letter.html</loc>
+  <lastmod>2025-07-29T12:00:00+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
 
+<!-- Blog Posts -->
+<url>
+  <loc>https://www.chasefagen.com/july-2025.html</loc>
+  <lastmod>2025-07-29T12:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.chasefagen.com/june-2025.html</loc>
+  <lastmod>2025-06-30T12:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.chasefagen.com/may-2025.html</loc>
+  <lastmod>2025-05-31T12:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.chasefagen.com/april-2025.html</loc>
+  <lastmod>2025-04-30T12:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.chasefagen.com/march-2025.html</loc>
+  <lastmod>2025-03-31T12:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.chasefagen.com/february-2025.html</loc>
+  <lastmod>2025-02-28T12:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.chasefagen.com/january-2025.html</loc>
+  <lastmod>2025-01-31T12:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.chasefagen.com/december-2024.html</loc>
+  <lastmod>2024-12-31T12:00:00+00:00</lastmod>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://www.chasefagen.com/november-2024.html</loc>
+  <lastmod>2024-11-30T12:00:00+00:00</lastmod>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://www.chasefagen.com/october-2024.html</loc>
+  <lastmod>2024-10-31T12:00:00+00:00</lastmod>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://www.chasefagen.com/september-2024.html</loc>
+  <lastmod>2024-09-30T12:00:00+00:00</lastmod>
+  <priority>0.85</priority>
+</url>
 
 </urlset>

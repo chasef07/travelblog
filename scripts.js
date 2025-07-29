@@ -195,31 +195,50 @@ function nextSlide() {
 function initMap() {
     const mapContainer = document.getElementById('map');
     if (!mapContainer) {
-        console.error('Map container not found');
+        console.warn('Map container not found, skipping map initialization');
         return;
     }
 
-    // Initialize the map
-    map = L.map('map', {
-        minZoom: 2,
-        maxBounds: [[-90, -180], [90, 180]],
-        worldCopyJump: true,
-        zoomControl: false,
-        scrollWheelZoom: true,
-        dragging: true
-    }).setView([20, 80], 3);
+    // Check if Leaflet is loaded
+    if (typeof L === 'undefined') {
+        console.error('Leaflet library not loaded, cannot initialize map');
+        mapContainer.innerHTML = '<div style="padding: 20px; text-align: center; color: #666;">Map temporarily unavailable</div>';
+        return;
+    }
 
-    // Add zoom control to the right side
-    L.control.zoom({
-        position: 'topright'
-    }).addTo(map);
-    
-    // Add dark theme map tiles
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
-        subdomains: 'abcd',
-        maxZoom: 19
-    }).addTo(map);
+    try {
+        // Initialize the map
+        map = L.map('map', {
+            minZoom: 2,
+            maxBounds: [[-90, -180], [90, 180]],
+            worldCopyJump: true,
+            zoomControl: false,
+            scrollWheelZoom: true,
+            dragging: true
+        }).setView([20, 80], 3);
+    } catch (error) {
+        console.error('Failed to initialize map:', error);
+        mapContainer.innerHTML = '<div style="padding: 20px; text-align: center; color: #666;">Map initialization failed</div>';
+        return;
+    }
+
+    try {
+        // Add zoom control to the right side
+        L.control.zoom({
+            position: 'topright'
+        }).addTo(map);
+        
+        // Add dark theme map tiles
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
+            subdomains: 'abcd',
+            maxZoom: 19
+        }).addTo(map);
+    } catch (error) {
+        console.error('Failed to add map tiles:', error);
+        mapContainer.innerHTML = '<div style="padding: 20px; text-align: center; color: #666;">Map tiles failed to load</div>';
+        return;
+    }
 
     const orderedLocations = [
         { name: 'Israel', coordinates: [31.7683, 35.2137] },
