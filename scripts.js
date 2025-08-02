@@ -23,82 +23,90 @@ document.addEventListener('DOMContentLoaded', function() {
     const blogs = [
 
         {
+            title: "August 2025: Coming Home to Florida",
+            date: "August 2025",
+            excerpt: "Reverse culture shock and finding home again after a year of global adventures. Reflections on returning to Florida and what 'home' means now.",
+            image: "assets/images/misc/posttrip.jpg",
+            link: "pages/blog/2025/august.html"
+        },
+
+        {
             title: "July 2025: Hokkaido, the Northern Gem of Japan",
             date: "July 2025",
             excerpt: "Hokkaido cuisine, nature, and culture",
-            image: "images/sush.jpg",
-            link: "july-2025.html"
+            image: "assets/images/food/sush.jpg",
+            link: "pages/blog/2025/july.html"
         },
 
         {
             title: "June 2025: Indonesia",
             date: "June 2025",
             excerpt: "From surfing worldclass waves to temple-hopping in Bali, Indonesia is a whirlwind of ancient culture, amazing wildlife, and adventure.",
-            image: "images/indoprof.jpg",
-            link: "june-2025.html"
+            image: "assets/images/misc/indoprof.jpg",
+            link: "pages/blog/2025/june.html"
         },
         {
             title: "May 2025: Island Hopping in the Phillipines",
             date: "May 2025",
             excerpt: "Turquoise waterfalls, epic snorkeling, crazy surfing, and laid-back beach vibes — the Philippines hits hard in every direction.",
-            image: "images/canyoneering.jpg",
-            link: "may-2025.html"
+            image: "assets/images/misc/canyoneering.jpg",
+            link: "pages/blog/2025/may.html"
         },
         {
             title: "April 2025: Motorbiking Vietnam",
             date: "April 2025",
             excerpt: "Ride with me across terraced rice fields while enjoying traditional Vietnamese cuisine.",
-            image: "images/droneshotrice.jpg",
-            link: "april-2025.html"
+            image: "assets/images/misc/droneshotrice.jpg",
+            link: "pages/blog/2025/april.html"
         },
         {
             title: "March 2025: Chilling in Cambodia",
             date: "March 2025",
             excerpt: "From the ancient temples of Angkor Wat to the pristine beaches of Koh Rong, exploring the wonders of Cambodia.",
-            image: "images/kohsdach.jpg",
-            link: "march-2025.html"
+            image: "assets/images/misc/kohsdach.jpg",
+            link: "pages/blog/2025/march.html"
         },
         {
             title: "February 2025: Adventures in Laos",
             date: "February 2025",
             excerpt: "Journeying through Laos' traditional villages and beautiful landscapes, discovering the heart of Southeast Asia.",
-            image: "images/laosfall-2.jpg",
-            link: "february-2025.html"
+            image: "assets/images/misc/laosfall-2.jpg",
+            link: "pages/blog/2025/february.html"
         },
         {
             title: "January 2025: Thailand Discos",
             date: "January 2025",
             excerpt: "From island parties to serene sunsets, experiencing the allure of Thailand.",
-            image: "images/fullmoon-2.jpg",
-            link: "january-2025.html"
+            image: "assets/images/misc/fullmoon-2.jpg",
+            link: "pages/blog/2025/january.html"
         },
         {
             title: "December 2024: Trekking in Nepal",
             date: "December 2024",
             excerpt: "Exploring the majestic Himalayas and vibrant streets of Kathmandu. From ancient temples to mountain adventures.",
-            image: "images/namaste8-2.jpg",
-            link: "december-2024.html"
+            image: "assets/images/misc/namaste8-2.jpg",
+            link: "pages/blog/2024/december.html"
         },
         {
             title: "November 2024: Safaris of East Africa",
             date: "November 2024",
             excerpt: "From the vast savannas of Tanzania to the perfectious coffee of Rwanda.",
-            image: "images/serengeti-2.jpg",
-            link: "november-2024.html"
+            image: "assets/images/misc/serengeti-2.jpg",
+            link: "pages/blog/2024/november.html"
         },
         {
             title: "October 2024: Investing in Georgia",
             date: "October 2024",
             excerpt: "Discovering the rich culture and ancient traditions of Georgia, from the vibrant streets of Tbilisi to the stunning mountains of Gudauri.",
-            image: "images/blarg-2.jpg",
-            link: "october-2024.html"
+            image: "assets/images/misc/blarg-2.jpg",
+            link: "pages/blog/2024/october.html"
         },
         {
             title: "September 2024: Connecting in Israel",
             date: "September 2024",
             excerpt: "The start of my world adventure, from the final days in Florida to the first experiences in Israel.",
-            image: "images/holyholy.jpg",
-            link: "september-2024.html"
+            image: "assets/images/misc/holyholy.jpg",
+            link: "pages/blog/2024/september.html"
         }
     ];
 
@@ -109,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const flagItem = document.createElement('div');
             flagItem.className = 'flag-item';
             flagItem.innerHTML = `
-                <img src="images/${country.flag}" alt="${country.name} flag" loading="lazy">
+                <img src="assets/images/flags/${country.flag}" alt="${country.name} flag" loading="lazy">
                 <span>${country.name}</span>
             `;
             flagsGrid.appendChild(flagItem);
@@ -161,10 +169,10 @@ let animationFrame;
 
 // Slideshow functionality
 const slides = [
-    { image: 'images/slide1.jpg' },
-    { image: 'images/slide2.jpg' },
-    { image: 'images/slide3.jpg' },
-    { image: 'images/slide4.jpg' }
+    { image: 'assets/images/slideshow/slide1.jpg' },
+    { image: 'assets/images/slideshow/slide2.jpg' },
+    { image: 'assets/images/slideshow/slide3.jpg' },
+    { image: 'assets/images/slideshow/slide4.jpg' }
 ];
 
 let currentSlide = 0;
